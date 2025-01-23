@@ -52,7 +52,7 @@ const tools: Tool[] = [
     name: 'Image Converter',
     description: 'Convert images between different formats',
     path: '/tools/image-converter',
-    icon: <Image className="w-6 h-6" aria-hidden="true" />,
+    icon: <Image className="w-6 h-6" role="img" aria-label="Image converter" />,
     category: 'Image Tools'
   },
   {

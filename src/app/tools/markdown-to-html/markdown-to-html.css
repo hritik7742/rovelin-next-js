@@ -1,0 +1,466 @@
+.formatter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #f8fafc;
+}
+
+.formatter-workspace {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  padding: 2rem;
+}
+
+.tool-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tool-header h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #7c3aed, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.tool-header p {
+  color: #94a3b8;
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.md2h-converter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.md2h-input-section,
+.md2h-output-section {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.md2h-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.md2h-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.md2h-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.md2h-upload-btn,
+.md2h-toggle-btn,
+.md2h-preview-btn,
+.md2h-copy-btn,
+.md2h-download-btn {
+  padding: 0.5rem 1rem;
+  background: rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  border-radius: 0.25rem;
+  color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.md2h-upload-btn:hover,
+.md2h-toggle-btn:hover,
+.md2h-preview-btn:hover,
+.md2h-copy-btn:hover,
+.md2h-download-btn:hover {
+  background: rgba(124, 58, 237, 0.3);
+  transform: translateY(-1px);
+}
+
+.md2h-dropzone {
+  flex: 1;
+  border: 2px dashed rgba(124, 58, 237, 0.2);
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  position: relative;
+  min-height: 300px;
+}
+
+.md2h-dropzone.drag-active {
+  border-color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.md2h-textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  color: #f8fafc;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  resize: none;
+}
+
+.md2h-textarea:focus {
+  outline: none;
+}
+
+.md2h-output {
+  flex: 1;
+  overflow: auto;
+}
+
+.md2h-code {
+  padding: 1rem;
+  margin: 0;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #f8fafc;
+}
+
+.md2h-preview {
+  background: #ffffff;
+  color: #1f2937;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  height: 100%;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* HTML Preview Styles */
+.md2h-preview h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1rem;
+  color: #1f2937;
+}
+
+.md2h-preview h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.75rem;
+  color: #1f2937;
+}
+
+.md2h-preview h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  color: #1f2937;
+}
+
+.md2h-preview p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.md2h-preview a {
+  color: #7c3aed;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.md2h-preview a:hover {
+  color: #6d28d9;
+}
+
+.md2h-preview ul, 
+.md2h-preview ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.md2h-preview ul {
+  list-style-type: disc;
+}
+
+.md2h-preview ol {
+  list-style-type: decimal;
+}
+
+.md2h-preview li {
+  margin-bottom: 0.5rem;
+}
+
+.md2h-preview code {
+  background: #f1f5f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #7c3aed;
+}
+
+.md2h-preview pre {
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.md2h-preview pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.md2h-preview blockquote {
+  border-left: 4px solid #7c3aed;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #4b5563;
+  font-style: italic;
+}
+
+.md2h-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.md2h-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.md2h-preview th,
+.md2h-preview td {
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.md2h-preview th {
+  background: #f8fafc;
+  font-weight: 600;
+}
+
+.md2h-preview tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.md2h-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.md2h-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+}
+
+.info-sections {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.info-box {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.info-box h2 {
+  color: #f8fafc;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.md2h-guide-grid,
+.md2h-use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.md2h-syntax-item,
+.md2h-use-case {
+  background: rgba(15, 23, 42, 0.3);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.md2h-syntax-item h3,
+.md2h-use-case h3 {
+  color: #7c3aed;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.md2h-syntax-item code {
+  display: block;
+  color: #94a3b8;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Dark mode optimization */
+@media (prefers-color-scheme: dark) {
+  .md2h-preview {
+    background: #1f2937;
+    color: #f8fafc;
+  }
+
+  .md2h-preview h1,
+  .md2h-preview h2,
+  .md2h-preview h3 {
+    color: #f8fafc;
+  }
+
+  .md2h-preview code {
+    background: #374151;
+    color: #818cf8;
+  }
+
+  .md2h-preview pre {
+    background: #111827;
+  }
+
+  .md2h-preview blockquote {
+    color: #9ca3af;
+  }
+
+  .md2h-preview th,
+  .md2h-preview td {
+    border-color: #374151;
+  }
+
+  .md2h-preview th {
+    background: #374151;
+  }
+
+  .md2h-preview tr:nth-child(even) {
+    background: #283548;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .formatter-container {
+    padding: 1rem;
+  }
+
+  .formatter-workspace {
+    padding: 1.5rem;
+  }
+
+  .md2h-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .md2h-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .md2h-textarea,
+  .md2h-output {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formatter-workspace {
+    padding: 1rem;
+  }
+
+  .md2h-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .md2h-upload-btn,
+  .md2h-toggle-btn,
+  .md2h-preview-btn,
+  .md2h-copy-btn,
+  .md2h-download-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .md2h-options {
+    flex-direction: column;
+  }
+}
+
+/* Touch device optimization */
+@media (hover: none) and (pointer: coarse) {
+  .md2h-textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  .md2h-upload-btn,
+  .md2h-toggle-btn,
+  .md2h-preview-btn,
+  .md2h-copy-btn,
+  .md2h-download-btn {
+    padding: 0.75rem;
+    min-height: 44px;
+  }
+}
+
+/* Custom scrollbar */
+.md2h-output::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.md2h-output::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+  border-radius: 4px;
+}
+
+.md2h-output::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.3);
+  border-radius: 4px;
+}
+
+.md2h-output::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 58, 237, 0.5);
+} 

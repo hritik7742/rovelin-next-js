@@ -1,0 +1,300 @@
+.eext-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #f8fafc;
+}
+
+.eext-workspace {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  padding: 1.5rem;
+}
+
+.eext-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.eext-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #7c3aed, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.eext-description {
+  color: #94a3b8;
+  max-width: 800px;
+  margin: 1rem auto;
+}
+
+.eext-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.eext-input-section,
+.eext-output-section {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.eext-input-header,
+.eext-output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.eext-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.eext-dropzone {
+  position: relative;
+  border: 2px dashed rgba(124, 58, 237, 0.2);
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  flex: 1;
+  min-height: 300px;
+}
+
+.eext-dropzone.drag-active {
+  border-color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.eext-textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  color: #f8fafc;
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.eext-textarea:focus {
+  outline: none;
+}
+
+.eext-results {
+  flex: 1;
+  overflow: auto;
+  padding: 0.5rem;
+}
+
+.eext-email-item {
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  font-family: monospace;
+}
+
+.eext-stats {
+  display: flex;
+  gap: 1rem;
+  color: #94a3b8;
+}
+
+.eext-upload-btn,
+.eext-copy-btn,
+.eext-download-btn {
+  padding: 0.5rem 1rem;
+  background: rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  border-radius: 0.25rem;
+  color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.eext-upload-btn:hover,
+.eext-copy-btn:hover,
+.eext-download-btn:hover {
+  background: rgba(124, 58, 237, 0.3);
+}
+
+.eext-info {
+  display: grid;
+  gap: 2rem;
+}
+
+.eext-features-grid,
+.eext-use-cases-grid,
+.eext-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.eext-feature-card,
+.eext-use-case,
+.eext-faq-item {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.eext-feature-card h3,
+.eext-use-case h3,
+.eext-faq-item h3 {
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.eext-feature-card p,
+.eext-use-case p,
+.eext-faq-item p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.eext-tips-list,
+.eext-benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.eext-tips-list li,
+.eext-benefits-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #94a3b8;
+}
+
+.eext-tips-list li::before {
+  content: "→";
+  color: #7c3aed;
+  position: absolute;
+  left: 0;
+}
+
+.eext-benefits-list li::before {
+  content: "✓";
+  color: #7c3aed;
+  position: absolute;
+  left: 0;
+}
+
+.eext-seo-content p {
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .eext-input-header,
+  .eext-output-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .eext-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .eext-textarea,
+  .eext-results {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .eext-container {
+    padding: 0.5rem;
+  }
+
+  .eext-workspace {
+    padding: 1rem;
+  }
+
+  .eext-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .eext-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .eext-actions {
+    gap: 0.5rem;
+  }
+
+  .eext-upload-btn,
+  .eext-copy-btn,
+  .eext-download-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+  }
+}
+
+/* Touch device optimization */
+@media (hover: none) and (pointer: coarse) {
+  .eext-upload-btn,
+  .eext-copy-btn,
+  .eext-download-btn {
+    min-height: 44px;
+    padding: 12px 24px;
+  }
+
+  .eext-textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  .eext-dropzone {
+    min-height: 200px;
+  }
+}
+
+/* Dark mode optimization */
+@media (prefers-color-scheme: dark) {
+  .eext-email-item {
+    background: rgba(124, 58, 237, 0.15);
+  }
+}
+
+/* High contrast mode */
+@media (forced-colors: active) {
+  .eext-dropzone {
+    border: 2px dashed CanvasText;
+  }
+
+  .eext-upload-btn,
+  .eext-copy-btn,
+  .eext-download-btn {
+    border: 2px solid CanvasText;
+  }
+}
+
+/* Add all your CSS styles here */ 
