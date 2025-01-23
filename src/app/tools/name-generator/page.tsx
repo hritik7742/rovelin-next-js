@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { logEvent } from '@/utils/analytics';
 import './name-generator.css';
 import { nameDatabase, invalidCombinations, nameRules, nameFormatting } from './data/nameData';
 
