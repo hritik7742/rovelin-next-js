@@ -1,0 +1,576 @@
+.generator-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #f8fafc;
+}
+
+.generator-workspace {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  padding: 2rem;
+}
+
+.tool-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tool-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #7c3aed, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.tool-header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* Controls Section */
+.controls-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.control-group label {
+  color: #f8fafc;
+  font-weight: 500;
+}
+
+.control-group select,
+.control-group input {
+  padding: 0.75rem;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 0.5rem;
+  color: #f8fafc;
+  font-size: 1rem;
+}
+
+.generate-button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: flex-end;
+}
+
+.generate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+/* Card Preview */
+.cards-preview {
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  padding: 1rem;
+  justify-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Card Preview with Flip Animation */
+.credit-card {
+  width: 380px;
+  height: 220px;
+  position: relative;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  border-radius: 15px;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.credit-card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.credit-card:hover .card-back {
+  transform: rotateY(0);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #1a1f71 0%, #2b357d 50%, #1a1f71 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Card Type Specific Styles */
+.credit-card.visa .card-front {
+  background: linear-gradient(135deg, #1a1f71 0%, #2b357d 50%, #1a1f71 100%);
+}
+
+.credit-card.mastercard .card-front {
+  background: linear-gradient(135deg, #eb001b 0%, #f79e1b 100%);
+}
+
+.credit-card.amex .card-front {
+  background: linear-gradient(135deg, #108168 0%, #0f7159 50%, #108168 100%);
+}
+
+.credit-card.discover .card-front {
+  background: linear-gradient(135deg, #ff6000 0%, #d14700 50%, #ff6000 100%);
+}
+
+.credit-card.jcb .card-front {
+  background: linear-gradient(135deg, #0f4c81 0%, #0b3b68 50%, #0f4c81 100%);
+}
+
+/* Card Front Details */
+.card-chip {
+  width: 45px;
+  height: 35px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.card-number {
+  font-family: 'Courier New', monospace;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  margin: 10px 0;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  word-spacing: 8px;
+}
+
+.card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 80px;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+}
+
+.card-holder,
+.card-expires {
+  text-transform: uppercase;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-holder span,
+.card-expires span {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.8;
+  margin-bottom: 4px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-holder div,
+.card-expires div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-logo {
+  width: 60px;
+  height: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.card-logo-back {
+  width: 60px;
+  height: auto;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  opacity: 0.8;
+}
+
+/* Improve card back design */
+.magnetic-strip {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to right,
+    #333 0%,
+    #444 5%,
+    #333 10%,
+    #444 15%,
+    #333 20%,
+    #444 25%,
+    #333 30%,
+    #444 35%,
+    #333 40%,
+    #444 45%,
+    #333 50%,
+    #444 55%,
+    #333 60%,
+    #444 65%,
+    #333 70%,
+    #444 75%,
+    #333 80%,
+    #444 85%,
+    #333 90%,
+    #444 95%,
+    #333 100%
+  );
+  margin: 20px 0;
+}
+
+.cvv-container {
+  background: #fff;
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 4px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.cvv-label {
+  font-size: 0.7rem;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.cvv-number {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+/* Holographic Effect */
+.card-front::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.05) 50%
+  );
+  pointer-events: none;
+  border-radius: 15px;
+}
+
+/* Add metallic shine effect */
+.card-front::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 10%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(255, 255, 255, 0) 40%
+  );
+  background-size: 400% 400%;
+  animation: shimmer 5s ease-in-out infinite;
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: -100% -100%;
+  }
+}
+
+/* Results Section */
+.results-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.copy-button {
+  padding: 0.5rem 1rem;
+  background: rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 0.5rem;
+  color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+  background: rgba(124, 58, 237, 0.3);
+}
+
+.cards-list {
+  display: grid;
+  gap: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124, 58, 237, 0.5) rgba(30, 41, 59, 0.4);
+}
+
+.cards-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cards-list::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 4px;
+}
+
+.cards-list::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.5);
+  border-radius: 4px;
+  border: 2px solid rgba(30, 41, 59, 0.4);
+}
+
+.cards-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 58, 237, 0.7);
+}
+
+.cards-list {
+  scroll-behavior: smooth;
+}
+
+.card-item {
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.card-info {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-label {
+  color: #94a3b8;
+}
+
+/* Info Sections */
+.info-sections {
+  margin-top: 3rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.info-box {
+  padding: 1.5rem;
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.info-box h2 {
+  color: #f8fafc;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-box p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.formats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.format-item {
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 0.5rem;
+}
+
+.format-item h3 {
+  color: #f8fafc;
+  margin-bottom: 0.75rem;
+}
+
+.format-item ul {
+  list-style: none;
+  padding: 0;
+  color: #94a3b8;
+}
+
+.format-item li {
+  margin-bottom: 0.5rem;
+}
+
+.guidelines-list {
+  list-style: none;
+  padding: 0;
+  color: #94a3b8;
+}
+
+.guidelines-list li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.guidelines-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #7c3aed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .generator-container {
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .generator-workspace {
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tool-header h1 {
+    font-size: 2rem;
+  }
+
+  .controls-section {
+    flex-direction: column;
+  }
+
+  .credit-card {
+    width: 340px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .card-front,
+  .card-back {
+    padding: 20px;
+  }
+
+  .card-number {
+    font-size: 1.2rem;
+    word-spacing: 6px;
+  }
+
+  .card-details {
+    font-size: 0.8rem;
+  }
+
+  .card-holder span,
+  .card-expires span {
+    font-size: 0.65rem;
+  }
+
+  .card-logo,
+  .card-logo-back {
+    width: 50px;
+  }
+
+  .formats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-preview {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem 0;
+    margin: 2rem auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 380px) {
+  .credit-card {
+    width: 300px;
+    height: 180px;
+    transform: scale(0.95);
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .control-group select,
+  .control-group input,
+  .generate-button,
+  .copy-button {
+    min-height: 44px;
+    padding: 12px 24px;
+  }
+} 
