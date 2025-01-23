@@ -187,7 +187,7 @@ export default function Pricing() {
         <div className="faq-grid">
           <div className="faq-item">
             <h3>How does the license key work?</h3>
-            <p>After purchasing through Gumroad, you'll receive a license key. Enter this key in the extension settings to unlock premium features.</p>
+            <p>After purchasing through Gumroad, you&apos;ll receive a license key. Enter this key in the extension settings to unlock premium features.</p>
           </div>
           <div className="faq-item">
             <h3>Can I upgrade my plan?</h3>
@@ -195,7 +195,7 @@ export default function Pricing() {
           </div>
           <div className="faq-item">
             <h3>Do you offer refunds?</h3>
-            <p>Yes, we offer a 30-day money-back guarantee if you're not satisfied with your purchase.</p>
+            <p>Yes, we offer a 30-day money-back guarantee if you&apos;re not satisfied with your purchase.</p>
           </div>
         </div>
       </div>

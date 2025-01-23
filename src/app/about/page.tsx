@@ -10,7 +10,7 @@ export default function About() {
     <div className="about-container">
       <div className="about-hero">
         <h1>About Rovelin Studio</h1>
-        <p className="subtitle">Innovating for Tomorrow's Solutions</p>
+        <p className="subtitle">Innovating for Tomorrow&apos;s Solutions</p>
       </div>
 
       <div className="about-content">
@@ -26,7 +26,7 @@ export default function About() {
           </div>
           <div className="about-text">
             <h2>Our Story</h2>
-            <p>At Rovelin Studio, we're passionate about creating innovative solutions that make a difference. Founded with a vision to transform how people interact with technology, we've grown into a team of dedicated professionals committed to excellence.</p>
+            <p>At Rovelin Studio, we&apos;re passionate about creating innovative solutions that make a difference. Founded with a vision to transform how people interact with technology, we&apos;ve grown into a team of dedicated professionals committed to excellence.</p>
           </div>
         </div>
 

@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import './globals.css';
 import SocialBanner from '@/components/SocialBanner';
-import { Cedarville_Cursive, Dancing_Script, Great_Vibes, Sacramento, Pacifico } from 'next/font/google';
+import { Cedarville_Cursive } from 'next/font/google';
 
 // Initialize fonts
 const cedarville = Cedarville_Cursive({ 

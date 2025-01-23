@@ -5,14 +5,15 @@ import { FormEvent } from 'react';
 export default function Contact() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    // Comment out until used
+    // const formData = new FormData(e.currentTarget);
     // Add your form submission logic here
   };
 
   return (
     <div className="contact-container">
       <h1>Contact Us</h1>
-      <p className="contact-subtitle">We'd love to hear from you!</p>
+      <p className="contact-subtitle">We&apos;d love to hear from you!</p>
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>

@@ -9,14 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^16.0.1",
-    "@contentful/rich-text-types": "^17.0.0",
     "@ffmpeg/ffmpeg": "^0.11.0",
     "@ffmpeg/core": "^0.11.0",
     "@types/dompurify": "^3.0.5",
     "@types/marked": "^5.0.2",
     "@types/pdfjs-dist": "^2.10.377",
-    "contentful": "^11.4.4",
     "dompurify": "^3.2.3",
     "file-saver": "^2.0.5",
     "heic2any": "^0.0.4",

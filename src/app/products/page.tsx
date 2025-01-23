@@ -87,14 +87,6 @@ const products: Product[] = [
 ];
 
 export default function Products() {
-  const handleProductClick = (product: Product) => {
-    // Add your analytics logic here
-  };
-
-  const handleFeatureView = (product: Product, feature: string) => {
-    // Add your analytics logic here
-  };
-
   return (
     <div className="products-page">
       <div className="products-hero">
@@ -118,7 +110,6 @@ export default function Products() {
                   <span 
                     key={idx} 
                     className="feature-tag"
-                    onMouseEnter={() => handleFeatureView(product, feature)}
                   >
                     {feature}
                   </span>
@@ -127,7 +118,6 @@ export default function Products() {
 
               <div className="product-actions">
                 <a 
-                  onClick={() => handleProductClick(product)}
                   href={product.src} 
                   target="_blank" 
                   rel="noopener noreferrer" 
@@ -136,7 +126,6 @@ export default function Products() {
                   Install Extension
                 </a>
                 <a 
-                  onClick={() => handleProductClick(product)}
                   href={product.src} 
                   target="_blank" 
                   rel="noopener noreferrer" 

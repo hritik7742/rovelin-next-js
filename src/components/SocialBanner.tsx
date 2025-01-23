@@ -1,5 +1,3 @@
-import { X } from 'lucide-react';
-
 const SocialBanner = () => {
   return (
     <div className="social-banner">

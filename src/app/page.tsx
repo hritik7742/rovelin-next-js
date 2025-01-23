@@ -117,7 +117,7 @@ export default function Home() {
             />
           </div>
           <p>
-            We are Rovelin Studio, an agency driven by the mission to solve global problems through innovative solutions. We specialize in developing apps, extensions, and software that make a meaningful impact worldwide. Our goal is to create value and positively influence people's lives through our work.
+            We are Rovelin Studio, an agency driven by the mission to solve global problems through innovative solutions. We specialize in developing apps, extensions, and software that make a meaningful impact worldwide. Our goal is to create value and positively influence people&apos;s lives through our work.
           </p>
           <Link href="/about" className="btn">READ MORE</Link>
         </div>
