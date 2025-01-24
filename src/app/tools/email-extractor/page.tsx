@@ -40,9 +40,11 @@ export default function EmailExtractor() {
     if (file) {
       const reader = new FileReader();
       reader.onload = (e) => {
-        const text = e.target?.result as string;
-        setInputText(text);
-        extractEmails(text); 
+        const text = e.target?.result as string | undefined;
+        if (text) {
+          setInputText(text);
+          extractEmails(text);
+        }
       };
       reader.readAsText(file);
     }
@@ -69,9 +71,11 @@ export default function EmailExtractor() {
     if (file) {
       const reader = new FileReader();
       reader.onload = (e) => {
-        const text = e.target?.result as string;
-        setInputText(text);
-        extractEmails(text);
+        const text = e.target?.result as string | undefined;
+        if (text) {
+          setInputText(text);
+          extractEmails(text);
+        }
       };
       reader.readAsText(file);
     }
@@ -243,7 +247,7 @@ export default function EmailExtractor() {
             <h2>Why Choose Our Email Extractor?</h2>
             <div className="eext-seo-content">
               <p>
-                {"Our email extraction tool is designed for professionals who need to quickly and accurately find email addresses in large texts and documents. Whether you're a marketer, researcher, or data analyst, our tool provides the perfect balance of power and ease of use."}
+                {" Our email extraction tool is designed for professionals who need to quickly and accurately find email addresses in large texts and documents. Whether you're a marketer, researcher, or data analyst, our tool provides the perfect balance of power and ease of use."}
               </p>
               <ul className="eext-benefits-list">
                 <li>Fast and accurate email extraction</li>

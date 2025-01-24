@@ -199,7 +199,7 @@ const products: Product[] = [
   Thank you for using ImageXtract. This privacy policy explains how we collect, use, and protect your information when you use our Chrome extension that allows you to extract text from images on the web and uploaded images. Your privacy is important to us, and we are committed to ensuring that your personal information is secure.
   
   1. Information We Collect
-  Our extension does not collect any personal information. Specifically, the extension operates entirely within your browser and does not transmit or store any data to our servers. However, to ensure transparency, here's a breakdown of the different types of data involved:
+  Our extension does not collect any personal information. Specifically, the extension operates entirely within your browser and does not transmit or store any data to our servers. However, to ensure transparency, here’s a breakdown of the different types of data involved:
   
   Text Extraction from Webpage Areas: When you select an area on a webpage to extract text, this action is performed locally in your browser. The selected image or text is never sent to our servers or any third-party service.
   
@@ -591,8 +591,8 @@ const products: Product[] = [
   2.1 Screenshot Content
   
   We capture webpage content only when explicitly requested by the user.
- Screenshots are processed and stored locally on your device.
- No automatic or background capture occurs.
+  Screenshots are processed and stored locally on your device.
+  No automatic or background capture occurs.
   2.2 Local Storage
   
   Recent screenshots are temporarily stored in browser local storage.
@@ -1081,7 +1081,7 @@ export default function PrivacyPolicy() {
     if (params.productId !== selectedProduct) {
       setSelectedProduct(params.productId as string);
     }
-  }, [params.productId, selectedProduct]);
+  }, [params.productId]);
 
   const handleProductChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
