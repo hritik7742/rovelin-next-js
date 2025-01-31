@@ -1067,7 +1067,57 @@ const products: Product[] = [
   By using the Extension, you acknowledge that you have read and understood this Privacy Policy and agree to its terms.`
   }
   
-  
+  ,{id:'Deepseekpro',name:'Deepseek Pro',policy:`
+    
+    Privacy Policy for DeepSeek Pro
+
+Last update Date: 31-01-2025
+
+Thank you for using DeepSeek Pro. Your privacy is important to us. This Privacy Policy explains how our Chrome extension handles your data.
+
+1. Data Collection and Usage
+
+DeepSeek Pro does not collect, store, or share any personal data. All data, including chat history, preferences, and settings, are stored locally on your device and are not transmitted to external servers.
+
+2. Permissions Used and Justification
+
+To provide the best user experience, our extension requires certain permissions:
+
+Storage: Used to save user preferences, custom prompts, chat themes, and folder structures locally.
+
+WebNavigation: Detects when the user is on the DeepSeek chat page to enable extension functionality.
+
+Tabs: Manages multiple DeepSeek chat tabs for better organization and access.
+
+Host Permissions:
+
+https://chat.deepseek.com/: Allows modification and enhancement of the chat interface.
+
+https://api.gumroad.com/: Used only to verify premium purchases securely. No payment details are stored or accessed.
+
+3. Data Security
+
+Since all data is stored locally on your device, we do not have access to any user information. The extension does not transmit data to any third-party services, ensuring your privacy and security.
+
+4. Third-Party Services
+
+DeepSeek: This extension interacts with DeepSeek’s chat platform but is not affiliated with or endorsed by DeepSeek.
+
+Gumroad: We use Gumroad’s API solely for verifying premium purchases. We do not collect or process payment information.
+
+5. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time. Any changes will be reflected in this document with an updated effective date.
+
+6. Contact Us
+
+If you have any questions about this Privacy Policy, please contact us at:Email: hritikkumarkota@gmail.com
+
+By using DeepSeek Pro, you agree to this Privacy Policy. If you do not agree, please discontinue use of the extension.
+
+
+
+    `} 
    
   ];
 
