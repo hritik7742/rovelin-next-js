@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import './products.css';
+import { trackEvent } from '@/lib/analytics';
 
 interface Product {
   name: string;
@@ -88,6 +89,14 @@ const products: Product[] = [
 ];
 
 export default function Products() {
+  const handleProductClick = (productName: string, action: 'Install' | 'Learn More') => {
+    trackEvent('Products', action, productName);
+  };
+
+  const handleInstallClick = (productName: string) => {
+    trackEvent('Products', 'Install Click', productName);
+  };
+
   return (
     <div className="products-page">
       <div className="products-hero">
@@ -123,6 +132,7 @@ export default function Products() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="install-button"
+                  onClick={() => handleInstallClick(product.name)}
                 >
                   Install Extension
                 </a>
@@ -131,6 +141,7 @@ export default function Products() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="learn-more"
+                  onClick={() => handleProductClick(product.name, 'Learn More')}
                 >
                   Learn More →
                 </a>

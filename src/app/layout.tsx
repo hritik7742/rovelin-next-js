@@ -4,6 +4,8 @@ import Footer from '@/components/Footer';
 import './globals.css';
 import SocialBanner from '@/components/SocialBanner';
 import { Cedarville_Cursive } from 'next/font/google';
+import { GoogleAnalytics } from '@/lib/analytics';
+import Script from 'next/script';
 
 // Initialize fonts
 const cedarville = Cedarville_Cursive({ 
@@ -49,12 +51,42 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${cedarville.variable} /* other font variables */`}>
+      <head>
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-6010KNTQ28`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-6010KNTQ28', {
+                page_path: window.location.pathname,
+                stream_id: '10187641018',
+                stream_name: 'rovelin',
+                stream_url: 'https://rovelin.com'
+              });
+            `,
+          }}
+        />
+      </head>
       <body>
         <SocialBanner />
         <Navbar />
         {children}
         <Footer />
+        <GoogleAnalytics />
       </body>
     </html>
   );
 }
+
+
+
+
+
+

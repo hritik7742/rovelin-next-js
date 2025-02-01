@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import './email-extractor.css';
+import { trackEvent } from '@/lib/analytics';
 
 interface Stats {
   total: number;
@@ -17,8 +18,7 @@ export default function EmailExtractor() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    // Add analytics tracking here if needed
-    // logEvent('Tools', 'View', 'Email Extractor');
+    trackEvent('Tools', 'View', 'Email Extractor');
   }, []);
 
   const extractEmails = (text: string) => {
@@ -33,6 +33,7 @@ export default function EmailExtractor() {
       total: matches.length,
       unique: uniqueEmails.length
     });
+    trackEvent('Tools', 'Extract', 'Email Extractor');
   };
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -92,6 +93,7 @@ export default function EmailExtractor() {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+    trackEvent('Tools', 'Download', 'Email Extractor');
   };
 
   return (

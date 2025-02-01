@@ -34,6 +34,7 @@ import {
   Files,
   Search
 } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 
 interface Tool {
   name: string;
@@ -421,6 +422,10 @@ export default function ToolsPage() {
     )
   };
 
+  const handleToolClick = (toolName: string) => {
+    trackEvent('Tools', 'Tool Click', toolName);
+  };
+
   return (
     <div className="tools-page">
       <div className="tools-header">
@@ -446,7 +451,12 @@ export default function ToolsPage() {
           <h2 className="tools-category">{category}</h2>
           <div className="tools-grid">
             {categoryTools.map((tool) => (
-              <Link href={tool.path} key={tool.path} className="tool-card">
+              <Link 
+                href={tool.path} 
+                key={tool.path} 
+                className="tool-card"
+                onClick={() => handleToolClick(tool.name)}
+              >
                 <span className="tool-icon" aria-hidden="true">{tool.icon}</span>
                 <h2>{tool.name}</h2>
                 <p>{tool.description}</p>
