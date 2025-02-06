@@ -14,6 +14,25 @@ interface Product {
 }
 
 const products: Product[] = [
+  
+  {
+    name: 'DeepSeek Pro',
+    description: 'DeepSeek Pro is a powerful Chrome extension that enhances your AI chat experience with custom prompts, voice input, themes, and organizational features.',
+    image: '/images/deepseekpro.png',
+    category: 'Development Tools',
+    features: ['Custom prompts', 'Voice input', 'Theme customization', 'Chat organization'],
+    src: 'https://chromewebstore.google.com/detail/deepseek-pro-custom-promp/noboaggalobomdpdggapfibgodeedkpl'
+  },
+
+  {
+    name: 'ChatGPT to PDF Export',
+    description: 'Transform your ChatGPT and Google Gemini conversations into professionally formatted documents with multiple theme styles. Export chats instantly in PDF, Word (DOCX), and TXT formats with custom styling.',
+    image: '/images/chatgpt-to-pdf.png',
+    category: 'Productivity',
+    features: ['Multiple themes', 'PDF/DOCX export', 'Offline support', 'Custom styling'],
+    src: 'https://chromewebstore.google.com/detail/chatgpt-to-pdf-export-mul/dgkahgofldcancbehocmoiadgijedili'
+  },
+
   {
     name: 'Leadspry',
     description: 'LeadSpry is a powerful Chrome extension designed to assist businesses and freelancers in efficiently finding leads across any niche.',
@@ -30,6 +49,23 @@ const products: Product[] = [
     features: ['Group discovery', 'Category filtering', 'Quick join'],
     src: 'https://chromewebstore.google.com/detail/wa-group-finder-find-what/dnhlhdlclknabfhnchaldipcidafnodj'
   },
+  {
+    name: 'Web Highlighter Pro',
+    description: 'Web Highlighter Pro helps you save and organize important text from any webpage with multi-color highlighting, smart folders, and beautiful notes. Perfect for students, researchers, and anyone who wants to organize web content.',
+    image: '/images/webhighlighter.png',
+    category: 'Productivity',
+    features: ['Multi-color highlighting', 'Smart folders', 'Custom notes', 'Research assistant'],
+    src: 'https://chromewebstore.google.com/detail/web-highlighter-pro-smart/phgcbcconbpfhfkopjgoejjbhfgohenm'
+  },
+  {
+    name: 'Mobile View Tester',
+    description: 'Mobile View Tester is a powerful Chrome extension for testing website responsiveness across 85+ device profiles, helping developers and designers ensure perfect mobile-first designs.',
+    image: '/images/mobileviewtester.png',
+    category: 'Development Tools',
+    features: ['85+ device profiles', 'Instant preview', 'Performance testing', 'One-click switching'],
+    src: 'https://chromewebstore.google.com/detail/mobile-view-tester-respon/lkndpmbcjincdjeddabmkokchnlhgmbi'
+  },
+  
   {
     name: 'FullPageScreenshot',
     description: 'FullPageScreenshot is a Chrome extension that enables users to capture complete webpage screenshots.',
@@ -85,7 +121,8 @@ const products: Product[] = [
     category: 'Productivity',
     features: ['Tab management', 'Organization tools', 'Privacy focused'],
     src: 'https://chromewebstore.google.com/detail/maintab-save-memory-manag/ghdkngiknandibhgcfmadapmiapopdel'
-  }
+  },
+  
 ];
 
 export default function Products() {
