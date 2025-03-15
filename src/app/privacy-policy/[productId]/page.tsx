@@ -1117,7 +1117,82 @@ By using DeepSeek Pro, you agree to this Privacy Policy. If you do not agree, pl
 
 
 
-    `} 
+    `} ,
+    {id:'Geminiprime',name:'Gemini Prime',policy:`
+      
+      Privacy PolicyLast Updated: 16-03-2025
+
+Thank you for using Gemini Prime. Your privacy is important to us, and we are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information.
+
+1. Information We Collect
+
+We do not collect or store personal data from users. However, our extension may process certain types of data locally to enhance user experience. The following types of information may be accessed:
+
+User Inputs & Chat Data: Your interactions with AI models are processed but not stored or shared.
+
+Settings & Preferences: We store user-selected preferences such as writing styles, language settings, and folder organization locally on your device.
+
+License Verification: If you purchase a Pro license, we verify your key via Gumroad, but we do not collect or store payment information.
+
+2. How We Use Your Information
+
+The data processed by the extension is used solely to provide and improve features, including:
+
+Enhancing chat organization and prompt-saving functionality.
+
+Enabling export options for saved chats.
+
+Providing a seamless user experience by remembering preferences.
+
+3. Data Sharing and Storage
+
+We do not share, sell, or distribute any user data.
+
+All chat data remains on your device unless exported by you.
+
+License verification occurs via Gumroad’s secure API, but we do not store your payment details.
+
+4. Third-Party Services
+
+Our extension may interact with third-party services, such as:
+
+Gumroad (for license verification and payments)
+
+Google Gemini AI (for AI-based chat responses)
+
+These services have their own privacy policies, and we recommend reviewing them for further details.
+
+5. Security Measures
+
+We implement industry-standard security measures to protect user data, including:
+
+Local storage of settings and preferences.
+
+Secure API interactions for license verification.
+
+No storage or transmission of user conversations outside the extension.
+
+6. User Rights & Control
+
+You have full control over your data within Gemini Prime:
+
+Modify Settings: You can customize preferences anytime.
+
+Delete Data: You can clear all stored data through the extension settings.
+
+Uninstall Extension: Removing the extension deletes all stored data from your device.
+
+7. Changes to This Policy
+
+We may update this Privacy Policy from time to time. Any changes will be reflected here, and significant updates will be communicated via the extension or our website.
+
+8. Contact Us
+
+If you have any questions or concerns about this Privacy Policy, feel free to contact us at:
+
+Email: hritikkumarkota@gmail.com
+
+      `}
    
   ];
 
