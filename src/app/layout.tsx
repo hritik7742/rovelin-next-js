@@ -52,6 +52,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cedarville.variable} /* other font variables */`}>
       <head>
+        <script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2357722369189639"
+          crossOrigin="anonymous"
+        ></script>
         <Script
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=G-6010KNTQ28`}
