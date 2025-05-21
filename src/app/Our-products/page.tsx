@@ -14,7 +14,16 @@ interface Product {
 }
 
 const products: Product[] = [
-  
+  {
+    name: 'Gemini Prime - Custom Prompts | Chat Export | Notes & Folders',
+    description: 'Gemini Prime is a powerful Chrome extension that enhances your AI chat experience with custom prompts, voice input,Instant Chat from Webpages, Note Taking system and organizational features.',
+    image: '/images/gemini.png',
+    category: 'Development Tools',
+    features: ['Custom prompts', 'Voice input', 'Instant Chat from Webpages', 'Chat organization','Note Taking system','165+ Custom Prompts Templates'], 
+
+    src: 'https://chromewebstore.google.com/detail/gemini-prime-165+custom-a/fejdghiopnhlijknlolkceklimkeopoe'
+  }
+  ,
   {
     name: 'DeepSeek Pro',
     description: 'DeepSeek Pro is a powerful Chrome extension that enhances your AI chat experience with custom prompts, voice input, themes, and organizational features.',
@@ -25,11 +34,11 @@ const products: Product[] = [
   },
 
   {
-    name: 'ChatGPT to PDF Export',
+    name: 'AI Chat Exporter: Save ChatGPT, Claude, Gemini & Deepseek as PDF/TXT/WORD',
     description: 'Transform your ChatGPT and Google Gemini conversations into professionally formatted documents with multiple theme styles. Export chats instantly in PDF, Word (DOCX), and TXT formats with custom styling.',
     image: '/images/chatgpt-to-pdf.png',
     category: 'Productivity',
-    features: ['Multiple themes', 'PDF/DOCX export', 'Offline support', 'Custom styling'],
+    features: ['Multiple themes', 'PDF/DOCX export', 'chatgpt', 'Deepseek','claude Ai','Gemini'],
     src: 'https://chromewebstore.google.com/detail/chatgpt-to-pdf-export-mul/dgkahgofldcancbehocmoiadgijedili'
   },
 
