@@ -1192,7 +1192,126 @@ If you have any questions or concerns about this Privacy Policy, feel free to co
 
 Email: hritikkumarkota@gmail.com
 
-      `}
+      `},
+      {id: 'claudetoolkit', name: 'Claude ToolKit', policy: `
+        Claude ToolKit - Privacy Policy
+Last updated: May 24, 2025
+Your Privacy Matters: Claude ToolKit is designed with privacy-first principles. All your data stays on your device, and we never transmit, sell, or share your personal information with third parties.
+1. Overview
+This Privacy Policy describes how Claude ToolKit ("we," "our," or "the extension") handles information when you use our Chrome browser extension. Claude ToolKit enhances your Claude AI experience by providing advanced conversation management, organization, and export capabilities.
+
+2. Information We Collect
+Claude ToolKit processes the following types of data locally on your device:
+
+2.1 Chat Conversations
+Content: Text of your conversations with Claude AI
+Metadata: Timestamps, conversation titles, and organization labels
+Purpose: To enable folder organization, search functionality, and export features
+
+2.2 User Preferences and Settings
+Folder structures: Your custom organization system for chats
+Custom prompts: Saved prompt templates you create
+Extension settings: Your preferences for features like voice input, export formats, and UI customizations
+Notes: Any notes you create within the extension
+
+2.3 User Activity Data
+Navigation patterns: Which chats you access and when (for organization purposes)
+Feature usage: How you interact with extension features (for maintaining functionality)
+
+3. How We Use Your Information
+All data processing occurs locally on your device. We use your information solely to:
+
+Organize your Claude AI conversations into folders and categories
+Enable search functionality across your conversation history
+Export your conversations in various formats (PDF, DOCX, TXT, etc.)
+Provide voice input capabilities
+Maintain your custom prompts and templates
+Save and organize your notes
+Remember your preferences and settings
+
+4. Data Storage and Security
+4.1 Local Storage Only
+Important: All your data is stored locally in your browser using Chrome's secure storage API. We do not transmit any of your personal data to external servers.
+
+4.2 Data Security Measures
+Data is encrypted using Chrome's built-in storage encryption
+No data transmission to third-party servers
+Access restricted to the extension's secure context only
+Regular security updates and best practices implementation
+
+5. Data Sharing and Third Parties
+We do not share, sell, or transfer your data to any third parties. The only data interactions that occur are:
+
+Claude AI: The extension interacts with Claude AI's official website (claude.ai) to enhance your existing conversations
+Local exports: When you choose to export conversations, files are generated locally and saved to your device
+
+6. Your Rights and Controls
+You have complete control over your data:
+
+6.1 Access Your Data
+View all stored conversations through the extension interface
+Access your custom prompts, notes, and settings at any time
+
+6.2 Modify Your Data
+Edit, organize, or delete conversations and folders
+Modify custom prompts and notes
+Update extension settings and preferences
+
+6.3 Delete Your Data
+Remove individual conversations, notes, or prompts
+Clear all extension data through Chrome's extension settings
+Uninstall the extension to remove all associated data
+
+7. Data Retention
+Your data is retained locally until you choose to:
+
+Manually delete specific items
+Clear browser data
+Uninstall the extension
+We do not automatically delete your data, ensuring you maintain full control over your information.
+
+8. Children's Privacy
+Claude ToolKit is not specifically designed for children under 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided personal information through the extension, please contact us.
+
+9. Changes to This Privacy Policy
+We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, regulatory, or operational reasons. When we make changes:
+
+We will update the "Last updated" date at the top of this policy
+Significant changes will be communicated through the extension's update notifications
+Continued use of the extension after changes constitutes acceptance of the updated policy
+
+10. Technical Information
+
+10.1 Permissions Used
+The extension requires the following permissions to function:
+
+Storage: To save your preferences and data locally
+Tabs: To manage conversation states across Claude AI tabs
+Scripting: To enhance the Claude AI interface
+Downloads: To enable conversation exports
+Context Menus: To provide right-click functionality
+Web Request/Navigation: To monitor Claude AI page interactions
+Host Access: Limited to claude.ai for core functionality
+
+10.2 No Remote Code
+Claude ToolKit does not load or execute any remote code. All functionality is contained within the extension package installed from the Chrome Web Store.
+
+11. Compliance and Certifications
+We certify that:
+
+We do not sell or transfer user data to third parties
+We do not use or transfer user data for purposes unrelated to the extension's core functionality
+We do not use or transfer user data to determine creditworthiness or for lending purposes
+
+12. Contact Us
+If you have any questions about this Privacy Policy or our privacy practices, please contact us:
+
+Email: hritikkumakota@gmail.com
+Support: Through the Chrome Web Store support section.
+We are committed to addressing your privacy concerns promptly and transparently.
+
+Remember: Your privacy is our priority. All data remains on your device, and you maintain complete control over your information at all times.
+        `}
    
   ];
 
