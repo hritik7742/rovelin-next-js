@@ -8,6 +8,7 @@
 .products-hero {
   text-align: center;
   margin-bottom: 4rem;
+  position: relative;
 }
 
 .products-hero h1 {
@@ -145,6 +146,33 @@
   object-fit: cover;
 }
 
+.user-count-badge {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background: rgba(124, 58, 237, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.user-count-badge .count {
+  font-weight: 700;
+  background: linear-gradient(135deg, #7c3aed, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.user-count-badge .icon {
+  color: #7c3aed;
+}
+
 @media (max-width: 768px) {
   .product-showcase {
     grid-template-columns: 1fr;
@@ -168,6 +196,14 @@
     width: 100%;
     text-align: center;
     justify-content: center;
+  }
+
+  .user-count-badge {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 1rem auto 0;
+    display: inline-flex;
   }
 }
 

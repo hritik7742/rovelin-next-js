@@ -3,31 +3,43 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Users, Star } from 'lucide-react';
+import '@/app/styles/stats.css';
 
 // Import images (we'll need to move these to public directory)
 const heroProducts = [
   {
+    name: 'AI Chat Exporter',
+    description: 'Transform your ChatGPT, Claude, Gemini & Deepseek conversations into professionally formatted documents. Export chats instantly in PDF, Word (DOCX), and TXT formats with multiple theme styles and custom formatting options.',
+    image: '/images/chatgpt-to-pdf.png',
+    src: 'https://chromewebstore.google.com/detail/chatgpt-to-pdf-export-mul/dgkahgofldcancbehocmoiadgijedili'
+  },
+  {
+    name: 'DeepSeek Pro',
+    description: 'DeepSeek Pro is a powerful Chrome extension that enhances your AI chat experience with custom prompts, voice input, themes, and organizational features. Streamline your AI interactions with advanced customization options.',
+    image: '/images/deepseekpro.png',
+    src: 'https://chromewebstore.google.com/detail/deepseek-pro-custom-promp/noboaggalobomdpdggapfibgodeedkpl'
+  },
+  {
+    name: 'Gemini Prime',
+    description: 'Gemini Prime enhances your AI chat experience with 165+ custom prompts, voice input, instant chat from webpages, and a powerful note-taking system. Organize and optimize your AI interactions like never before.',
+    image: '/images/gemini.png',
+    src: 'https://chromewebstore.google.com/detail/gemini-prime-165+custom-a/fejdghiopnhlijknlolkceklimkeopoe'
+  },
+  {
     name: 'Leadspry',
-    description: 'LeadSpry is a Chrome extension designed to help businesses and freelancers efficiently find leads across any niche. It allows you to collect valuable contact information such as emails, phone numbers, and locations, helping you generate high-quality leads quickly and efficiently.',
+    description: 'LeadSpry is a powerful Chrome extension designed to help businesses and freelancers efficiently find leads across any niche. Collect valuable contact information and generate high-quality leads quickly and efficiently.',
     image: '/images/Leadspry.png',
     src: 'https://chromewebstore.google.com/detail/leadspry-%E2%80%93-find-quality-l/blegkbedbdcoocieacjmpchfmcmdhfce'
-  },
-  {
-    name: 'WA Group Finder',
-    description: 'WA Group Finder is an innovative Chrome extension that helps users discover WhatsApp groups tailored to their interests. Find and join relevant groups effortlessly, connecting with like-minded individuals across various communities and professional networks.',
-    image: '/images/whatsapplogo.png',
-    src: 'https://chromewebstore.google.com/detail/wa-group-finder-find-what/dnhlhdlclknabfhnchaldipcidafnodj'
-  },
-  {
-    name: 'ImageXtract',
-    description: 'ImageXtract is a versatile Chrome extension that enables users to extract text from images on the web and uploaded images. Operating entirely within your browser, it ensures privacy while providing a seamless experience for converting image-based text.',
-    image: '/images/web.jpg',
-    src: 'https://chromewebstore.google.com/detail/imagextract-copy-text-fro/enafhefnjpdnhbmccghnphjjlflohpkg'
   }
 ];
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [animatedStats, setAnimatedStats] = useState({
+    users: 0,
+    rating: 0
+  });
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -37,6 +49,39 @@ export default function Home() {
     }, 5000);
 
     return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    // Animate statistics when component mounts
+    const animationDuration = 2000; // 2 seconds
+    const steps = 50;
+    const interval = animationDuration / steps;
+
+    const targetStats = {
+      users: 15000,
+      rating: 4.8
+    };
+
+    let currentStep = 0;
+
+    const animation = setInterval(() => {
+      if (currentStep >= steps) {
+        clearInterval(animation);
+        setAnimatedStats(targetStats);
+        return;
+      }
+
+      setAnimatedStats(() => ({
+       
+        users: Math.floor((targetStats.users / steps) * currentStep),
+        rating: Number(((targetStats.rating / steps) * currentStep).toFixed(1))
+        
+      }));
+
+      currentStep++;
+    }, interval);
+
+    return () => clearInterval(animation);
   }, []);
 
   return (
@@ -75,6 +120,28 @@ export default function Home() {
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
+          </div>
+        </section>
+
+        <section className="stats-section">
+          <div className="stats-grid">
+            <div className="stat-card">
+              <Users className="stat-icon" size={32} />
+              <div className="stat-number">{animatedStats.users.toLocaleString()}+</div>
+              <div className="stat-label">Active Users</div>
+              <div className="stat-description">Trust our extensions worldwide</div>
+            </div>
+            <div className="stat-card">
+              <Star className="stat-icon" size={32} />
+              <div className="stat-number">{animatedStats.rating}</div>
+              <div className="stat-label">Average Rating</div>
+              <div className="stat-description">Highly rated extensions on Chrome Web Store</div>
+            </div>
+          </div>
+          <div className="stats-cta">
+            <Link href="/Our-products" className="cta">
+              Explore Our Products
+            </Link>
           </div>
         </section>
 

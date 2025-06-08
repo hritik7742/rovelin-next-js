@@ -1,204 +1,138 @@
 "use client";
 
-import { useState } from 'react';
-
-interface Plan {
-  name: string;
-  price: string;
-  period: string;
-  features: string[];
-  isPopular?: boolean;
-  gumroadLink?: string;
-}
-
-interface Product {
-  name: string;
-  plans: Plan[];
-}
-
-interface Products {
-  [key: string]: Product;
-}
-
-const products: Products = {
-  leadspry: {
-    name: 'Leadspry',
-    plans: [
-      {
-        name: 'Free',
-        price: '$0',
-        period: 'forever',
-        features: [
-          'Up to 15 leads data',
-          'Basic lead information',
-          'CSV export',
-          'Community support'
-        ]
-      },
-      {
-        name: 'Monthly',
-        price: '$9.99',
-        period: 'per month',
-        features: [
-          'Unlimited leads data',
-          'Advanced lead information',
-          'Multiple export formats',
-          'Priority support',
-          'Regular updates',
-          'License key via Gumroad'
-        ],
-        isPopular: true,
-        gumroadLink: 'https://hritikkumarkota.gumroad.com/l/leadspry'
-      },
-      {
-        name: '6 Months',
-        price: '$59.94',
-        period: '6 months',
-        features: [
-          'All Monthly plan features',
-          'Save 16% ($10 off)',
-          'Extended support',
-          'Priority updates',
-          'License key via Gumroad'
-        ],
-        gumroadLink: 'https://hritikkumarkota.gumroad.com/l/leadspry'
-      }
-    ]
-  },
-  wagroupfinder: {
-    name: 'WA Group Finder',
-    plans: [
-      {
-        name: 'Free',
-        price: '$0',
-        period: 'forever',
-        features: [
-          'Limited group search',
-          'Basic filters',
-          'Community support',
-          'Standard features'
-        ]
-      },
-      {
-        name: 'Monthly',
-        price: '$5',
-        period: 'per month',
-        features: [
-          'Unlimited group search',
-          'Advanced filters',
-          'Priority support',
-          'Regular updates',
-          'License key via Gumroad'
-        ],
-        isPopular: true,
-        gumroadLink: 'https://hritikkumarkota.gumroad.com/l/psyhyd'
-      },
-      {
-        name: '6 Months',
-        price: '$30',
-        period: '6 months',
-        features: [
-          'All Monthly plan features',
-          'Save on 6-month access',
-          'Priority support',
-          'Regular updates',
-          'License key via Gumroad'
-        ],
-        gumroadLink: 'https://hritikkumarkota.gumroad.com/l/psyhyd'
-      }
-    ]
-  }
-};
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export default function Pricing() {
-  const [selectedProduct, setSelectedProduct] = useState('leadspry');
-
-  const handleProductSelect = (productName: string) => {
-    setSelectedProduct(productName);
+  const handleGumroadClick = () => {
+    window.open('https://hritikkumarkota.gumroad.com/', '_blank');
   };
 
   return (
     <div className="pricing-container">
       <div className="pricing-header">
-        <h1>Choose Your Plan</h1>
-        <p>Select a product to view pricing</p>
-        
-        <div className="product-selector">
-          <select 
-            value={selectedProduct} 
-            onChange={(e) => handleProductSelect(e.target.value)}
-            className="product-select"
-          >
-            {Object.entries(products).map(([key, product]) => (
-              <option key={key} value={key}>
-                {product.name}
-              </option>
-            ))}
-          </select>
-        </div>
+        <h1>Flexible Pricing for Every Need</h1>
+        <p className="subtitle">
+          We offer a range of software solutions and applications tailored to your needs
+        </p>
       </div>
 
-      <div className="pricing-grid">
-        {products[selectedProduct].plans.map((plan, index) => (
-          <div 
-            key={index} 
-            className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}
-          >
-            {plan.isPopular && <div className="popular-tag">Most Popular</div>}
-            <div className="plan-header">
-              <h2>{plan.name}</h2>
-              <div className="price">
-                <span className="amount">{plan.price}</span>
-                <span className="period">{plan.period}</span>
-              </div>
-            </div>
-
-            <ul className="features-list">
-              {plan.features.map((feature, idx) => (
-                <li key={idx}>
-                  <svg className="check-icon" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
-                  </svg>
-                  {feature}
-                </li>
-              ))}
+      <div className="pricing-content">
+        <div className="pricing-card main-card">
+          <div className="card-content">
+            <h2>Our Products on Gumroad</h2>
+            <p>
+              Find detailed pricing information and purchase our products directly through our Gumroad store.
+              We offer various pricing tiers and licensing options to suit different needs and budgets.
+            </p>
+            <ul className="benefits-list">
+              <li>
+                <svg className="check-icon" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                </svg>
+                Flexible pricing plans
+              </li>
+              <li>
+                <svg className="check-icon" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                </svg>
+                Secure payment processing
+              </li>
+              <li>
+                <svg className="check-icon" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                </svg>
+                Instant delivery
+              </li>
+              <li>
+                <svg className="check-icon" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                </svg>
+                Global payment support
+              </li>
             </ul>
-
-            {plan.gumroadLink ? (
-              <a 
-                href={plan.gumroadLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="plan-button"
-              >
-                Purchase on Gumroad
-              </a>
-            ) : (
-              <button className="plan-button free-plan">
-                Get Started Free
-              </button>
-            )}
+            <button onClick={handleGumroadClick} className="cta-button">
+              View Pricing on Gumroad
+              <ArrowRight size={16} />
+            </button>
           </div>
-        ))}
+        </div>
+
+        <div className="pricing-card contact-card">
+          <div className="card-content">
+            <h2>Custom Solutions</h2>
+            <p>
+              Need a custom solution or have specific requirements? Contact us for personalized pricing
+              and detailed information about our products and services.
+            </p>
+            <ul className="benefits-list">
+              <li>
+                <svg className="check-icon" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                </svg>
+                Tailored solutions
+              </li>
+              <li>
+                <svg className="check-icon" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                </svg>
+                Custom feature development
+              </li>
+              <li>
+                <svg className="check-icon" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                </svg>
+                Priority support
+              </li>
+              <li>
+                <svg className="check-icon" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                </svg>
+                Flexible payment options
+              </li>
+            </ul>
+            <Link href="/contact" className="cta-button">
+              Contact Us
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
       </div>
 
       <div className="pricing-faq">
         <h2>Frequently Asked Questions</h2>
         <div className="faq-grid">
           <div className="faq-item">
-            <h3>How does the license key work?</h3>
-            <p>After purchasing through Gumroad, you&apos;ll receive a license key. Enter this key in the extension settings to unlock premium features.</p>
+            <h3>How do I get started?</h3>
+            <p>Visit our Gumroad store to purchase our products or contact us for custom solutions. After purchase, you will receive instant access to your chosen product along with detailed setup instructions.</p>
           </div>
+          
           <div className="faq-item">
-            <h3>Can I upgrade my plan?</h3>
-            <p>Yes, you can upgrade to a higher plan at any time. Simply purchase the new plan and enter the new license key.</p>
+            <h3>What payment methods do you accept?</h3>
+            <p>Through Gumroad, we accept all major credit cards, PayPal, and various international payment methods, ensuring a secure and convenient purchase process for customers worldwide.</p>
           </div>
+
           <div className="faq-item">
-            <h3>Do you offer refunds?</h3>
-            <p>Yes, we offer a 30-day money-back guarantee if you&apos;re not satisfied with your purchase.</p>
+            <h3>What is your refund policy?</h3>
+            <p>Our refund policy varies by product. Some products offer a 7-day refund window, while others may have different terms or no refund option. Please check the specific product description on Gumroad for detailed refund terms before purchasing.</p>
+          </div>
+
+          <div className="faq-item">
+            <h3>Why do you use Gumroad for payments?</h3>
+            <p>We chose Gumroad for its robust digital product delivery system, secure payment processing, and excellent customer support. While they do take a commission, their platform provides us with reliable tax handling, easy refund management, and a trusted shopping experience for our customers worldwide.</p>
+          </div>
+
+          <div className="faq-item">
+            <h3>Is purchasing through Gumroad secure?</h3>
+            <p>Yes, absolutely! Gumroad is a trusted platform that processes millions of transactions. They use industry-standard encryption, comply with global security standards, and protect both buyers and sellers with their secure payment infrastructure.</p>
+          </div>
+
+          <div className="faq-item">
+            <h3>Need help choosing?</h3>
+            <p>If you are unsure which solution best fits your needs, dont hesitate to contact us. We are here to help you make the right choice and can provide detailed information about any products features and capabilities.</p>
           </div>
         </div>
       </div>
     </div>
   );
-} 
+}

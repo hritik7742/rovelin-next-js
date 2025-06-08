@@ -1,6 +1,14 @@
+"use client";
+
 import Link from 'next/link';
+import { Mail } from 'lucide-react';
 
 export default function Footer() {
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=hritikkumarkota@gmail.com', '_blank');
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -37,8 +45,13 @@ export default function Footer() {
             <div className="footer-section">
               <h3>Contact</h3>
               <ul>
-                <li>Email: contact@rovelinstudio.com</li>
-                <li>Location: India</li>
+                <li>
+                  <a href="#" onClick={handleEmailClick} className="footer-email-link">
+                    <Mail size={16} />
+                    <span>Email Us</span>
+                  </a>
+                </li>
+                
               </ul>
             </div>
           </div>

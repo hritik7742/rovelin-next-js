@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
+import '@/app/shared/legal.css';
 
 interface Product {
   id: string;
@@ -1150,7 +1151,7 @@ We do not share, sell, or distribute any user data.
 
 All chat data remains on your device unless exported by you.
 
-License verification occurs via Gumroad’s secure API, but we do not store your payment details.
+License verification occurs via Gumroad's secure API, but we do not store your payment details.
 
 4. Third-Party Services
 
@@ -1318,49 +1319,51 @@ Remember: Your privacy is our priority. All data remains on your device, and you
 export default function PrivacyPolicy() {
   const params = useParams();
   const router = useRouter();
-  const [selectedProduct, setSelectedProduct] = useState(params.productId as string || 'leadspry');
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   useEffect(() => {
-    // Ensure URL matches selected product on mount
-    if (params.productId !== selectedProduct) {
-      setSelectedProduct(params.productId as string);
+    const product = products.find(p => p.id === params.productId);
+    if (product) {
+      setSelectedProduct(product);
+    } else {
+      router.push('/privacy-policy/leadspry');
     }
-  }, [params.productId, selectedProduct]);
+  }, [params.productId, router]);
 
   const handleProductChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = event.target.value;
-    setSelectedProduct(value);
-    // Use Next.js router for navigation
-    router.push(`/privacy-policy/${value}`);
+    router.push(`/privacy-policy/${event.target.value}`);
   };
 
-  const currentPolicy = products.find(p => p.id === selectedProduct)?.policy || '';
+  if (!selectedProduct) {
+    return null;
+  }
 
   return (
-    <div className="privacy-policy-container">
-      <h1 className="privacy-policy-title">Privacy Policy</h1>
-      
-      <div className="select-container">
-        <select 
-          value={selectedProduct} 
-          onChange={handleProductChange}
-          className="product-select"
-        >
-          {products.map((product) => (
-            <option key={product.id} value={product.id}>
-              {product.name}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div className="policy-content">
-        <h2 className="policy-product-title">
-          {products.find(p => p.id === selectedProduct)?.name} Privacy Policy
-        </h2>
-        <div className="policy-text whitespace-pre-wrap">
-          {currentPolicy}
-        </div>
+    <div className="legal-container">
+      <h1>Privacy Policy</h1>
+      <select 
+        value={selectedProduct.id} 
+        onChange={handleProductChange}
+        className="product-selector"
+      >
+        {products.map(product => (
+          <option key={product.id} value={product.id}>
+            {product.name}
+          </option>
+        ))}
+      </select>
+      <div className="legal-content">
+        <div dangerouslySetInnerHTML={{ __html: selectedProduct.policy.split('\n').map(line => {
+          if (line.startsWith('# ')) {
+            return `<h2>${line.substring(2)}</h2>`;
+          } else if (line.startsWith('## ')) {
+            return `<h3>${line.substring(3)}</h3>`;
+          } else if (line.trim() === '') {
+            return '<br/>';
+          } else {
+            return `<p>${line}</p>`;
+          }
+        }).join('') }} />
       </div>
     </div>
   );

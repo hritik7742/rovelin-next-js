@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import './products.css';
 import { trackEvent } from '@/lib/analytics';
+import { Users } from 'lucide-react';
 
 interface Product {
   name: string;
@@ -148,6 +149,10 @@ export default function Products() {
       <div className="products-hero">
         <h1>Our Products</h1>
         <p>Discover our suite of powerful Chrome extensions</p>
+        <div className="user-count-badge">
+          <Users size={16} className="icon" />
+          <span>Trusted by <span className="count">15,000+</span> users</span>
+        </div>
       </div>
 
       <div className="products-container">

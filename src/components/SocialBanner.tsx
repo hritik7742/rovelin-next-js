@@ -7,7 +7,7 @@ const SocialBanner = () => {
         </div>
         <div className="social-links">
           <a 
-            href="YOUR_DISCORD_INVITE_LINK" 
+            href="https://discord.gg/czHDJmRv" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-link discord"
@@ -18,7 +18,7 @@ const SocialBanner = () => {
             Discord
           </a>
           <a 
-            href="YOUR_TELEGRAM_INVITE_LINK" 
+            href="https://t.me/+8aCxpczlf3oxZDJl" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-link telegram"
