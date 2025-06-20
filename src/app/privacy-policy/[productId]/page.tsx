@@ -1313,7 +1313,75 @@ We are committed to addressing your privacy concerns promptly and transparently.
 
 Remember: Your privacy is our priority. All data remains on your device, and you maintain complete control over your information at all times.
         `}
-   
+  ,
+  {id:'blurscreen' , name:'Blur screen' , policy:`
+    
+Privacy Policy
+Effective Date: 20-6-2025
+
+Welcome to BlurScreen – your real-time screen privacy tool. This Privacy Policy outlines how we handle your data when you use our extension. We are committed to protecting your privacy and ensuring your data stays with you.
+
+🔒 1. Data Collection
+We do not collect, store, or transmit any personal data or usage information.
+
+No user data is collected—BlurScreen operates entirely on your local browser.
+
+No tracking, no analytics, no cookies.
+
+No external servers are involved; all operations are processed on your device.
+
+BlurScreen does not require or request any permissions that access your personal data or browsing history.
+
+🔍 2. How BlurScreen Works
+BlurScreen is designed to provide real-time, on-screen blurring features:
+
+You choose what to blur.
+
+All blurring actions happen locally in your browser.
+
+No information about the websites you visit or the content you blur is collected or shared.
+
+🧠 3. Extension Permissions
+BlurScreen uses minimal permissions strictly necessary to:
+
+Allow you to click and select elements on a webpage to blur.
+
+Let you draw custom blur areas over content.
+
+These permissions are used solely to enable the extension’s core functionality and are never used for tracking or data collection.
+
+🛡️ 4. Data Security
+Because BlurScreen does not collect or transmit any data, there is no risk of data leaks or third-party access. All your actions are confined to your device.
+
+🤝 5. Third-Party Services
+BlurScreen does not use any third-party services, scripts, or APIs. It is a fully standalone extension that does not rely on or share data with external providers.
+
+👦 6. Children’s Privacy
+BlurScreen is not designed to collect information from anyone, including children under the age of 13. Since no personal data is collected, we comply with COPPA (Children’s Online Privacy Protection Act) by default.
+
+🔄 7. Changes to This Policy
+We may update this Privacy Policy in the future. Any changes will be posted here with a new "Effective Date" at the top. We encourage you to check this page occasionally to stay informed.
+
+📬 8. Contact Us
+If you have any questions or concerns about this Privacy Policy or BlurScreen in general, feel free to contact us at:
+
+📧 Email: hritikkumarkota@gmail.com
+
+✅ Summary
+❌ We don’t collect any data.
+
+❌ We don’t track your activity.
+
+✅ Everything stays on your device.
+
+✅ You’re fully in control of your privacy.
+
+Your screen. Your rules. Your data.
+    
+
+    `
+
+  }
   ];
 
 export default function PrivacyPolicy() {
