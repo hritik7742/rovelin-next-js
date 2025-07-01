@@ -1314,7 +1314,7 @@ We are committed to addressing your privacy concerns promptly and transparently.
 Remember: Your privacy is our priority. All data remains on your device, and you maintain complete control over your information at all times.
         `}
   ,
-  {id:'blurscreen' , name:'Blur screen' , policy:`
+  {id:'notepilot' , name:'NotePilot-Substack Notes Scheduler' , policy:`
     
 Privacy Policy
 Effective Date: 20-6-2025
@@ -1381,6 +1381,47 @@ Your screen. Your rules. Your data.
 
     `
 
+  } ,{id:'', name:'Screenshot Capture', policy:`
+    
+    Privacy Policy for NotePilot-Substack Notes Scheduler
+Effective Date: July 1, 2025
+
+Introduction
+NotePilot-Substack Notes Scheduler ("the Extension") is a Chrome extension designed to help users schedule and automate the posting of notes on Substack. We are committed to protecting your privacy and ensuring transparency about how your data is handled.
+
+Information We Collect
+The Extension may collect and store the following information locally in your browser:
+
+Scheduled Notes Content: The notes you compose and schedule for posting.
+Scheduling Information: The times and dates you set for your notes to be posted.
+License Key: If you use a paid version, your license key is stored for verification purposes.
+We do not collect, transmit, or store any personal information such as your name, email address, or browsing history.
+
+How We Use Your Information
+Scheduled Notes and Times: Used solely to automate posting your notes to Substack at your chosen times.
+License Key: Used only to verify your purchase and enable premium features.
+All data is stored locally in your browser and is not transmitted to any external server, except for:
+
+License Verification: Your license key is sent securely to Gumroad’s API for validation if you use a paid version.
+Posting Notes: Your note content is sent to Substack’s API when posting.
+Data Sharing
+We do not sell, share, or transfer your data to any third parties.
+Data is only used for the core functionality of the extension.
+
+Data Security
+All data is stored using Chrome’s local storage, protected by your browser’s security.
+No data is transferred to our servers.
+User Rights
+You can delete your scheduled notes and license key at any time by removing them from the extension or uninstalling the extension.
+Changes to This Policy
+We may update this policy from time to time. Any changes will be posted on this page with an updated effective date.
+
+Contact
+If you have any questions about this privacy policy or your data, please contact us at: [hritikkumarkota@gmail.com]
+
+
+
+    `
   }
   ];
 
