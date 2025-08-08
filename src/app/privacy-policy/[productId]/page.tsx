@@ -1315,7 +1315,7 @@ Remember: Your privacy is our priority. All data remains on your device, and you
         `}
   ,
   {id:'notepilot' , name:'NotePilot-Substack Notes Scheduler' , policy:`
-    
+     
 Privacy Policy
 Effective Date: 20-6-2025
 
