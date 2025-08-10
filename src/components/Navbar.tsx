@@ -105,7 +105,7 @@ const Navbar = () => {
             
             {/* Social Links */}
             <div className="mobile-social">
-              <p>Chat With Us Live - Join our community:</p>
+              <p>Chat With Us Live - Join Our Community</p>
               <div className="social-links">
                 <a 
                   href="https://discord.gg/bDpEvQ9cXD" 

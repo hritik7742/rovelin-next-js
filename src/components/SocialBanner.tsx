@@ -3,7 +3,7 @@ const SocialBanner = () => {
     <div className="social-banner">
       <div className="social-banner-content">
         <div className="social-text">
-          Chat With Us Live - Join our community:
+          Chat With Us Live - Join Our Community
         </div>
         <div className="social-links">
           <a 
