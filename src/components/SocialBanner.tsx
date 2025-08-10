@@ -3,11 +3,11 @@ const SocialBanner = () => {
     <div className="social-banner">
       <div className="social-banner-content">
         <div className="social-text">
-          Join our community:
+          Chat With Us Live - Join our community:
         </div>
         <div className="social-links">
           <a 
-            href="https://discord.gg/czHDJmRv" 
+            href="https://discord.gg/bDpEvQ9cXD" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-link discord"

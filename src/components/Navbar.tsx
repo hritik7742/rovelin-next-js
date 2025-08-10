@@ -105,10 +105,10 @@ const Navbar = () => {
             
             {/* Social Links */}
             <div className="mobile-social">
-              <p>Join our community:</p>
+              <p>Chat With Us Live - Join our community:</p>
               <div className="social-links">
                 <a 
-                  href="https://discord.gg/czHDJmRv" 
+                  href="https://discord.gg/bDpEvQ9cXD" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="social-link discord"
