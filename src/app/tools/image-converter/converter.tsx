@@ -520,7 +520,7 @@ export default function ImageConverter({ variant }: ImageConverterProps) {
           <article className="imgconv-article">
             <h2>Format Benefits</h2>
             <ul>
-              <li><strong>JPG:</strong> Smaller file sizes, best for photos</li>
+              <li><strong>JPG:</strong> Smaller file sizes, best for photo</li>
               <li><strong>PNG:</strong> Transparency support, lossless compression</li>
               <li><strong>WebP:</strong> Modern format with excellent compression</li>
               <li><strong>PDF:</strong> Document format, perfect for printing</li>
