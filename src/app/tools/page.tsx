@@ -387,6 +387,13 @@ const tools: Tool[] = [
     path: '/tools/qr-generator',
     icon: <QrCode className="w-6 h-6" aria-hidden="true" />,
     category: 'Image Tools'
+  },
+  {
+    name: 'Text Paragraph Splitter',
+    description: 'Split text into paragraphs by word count, sentences, or chunks',
+    path: '/tools/text-paragraph-splitter',
+    icon: <FileText className="w-6 h-6" aria-hidden="true" />,
+    category: 'Text Tools'
   }
 ];
 

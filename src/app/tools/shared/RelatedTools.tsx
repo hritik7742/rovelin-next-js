@@ -221,6 +221,13 @@ const allTools: RelatedTool[] = [
     path: '/tools/phone-generator',
     icon: <Smartphone className="w-5 h-5" />,
     category: 'Text Tools'
+  },
+  {
+    name: 'Text Paragraph Splitter',
+    description: 'Split text into paragraphs by word count, sentences, or chunks',
+    path: '/tools/text-paragraph-splitter',
+    icon: <FileText className="w-5 h-5" />,
+    category: 'Text Tools'
   }
 ];
 
