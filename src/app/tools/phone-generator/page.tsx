@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './phone-generator.css';
 
 // First, let's define an interface for the country format structure
@@ -226,6 +227,11 @@ export default function PhoneGenerator() {
           </article>
         </div>
 
+        <RelatedTools 
+          currentTool="/tools/phone-generator" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

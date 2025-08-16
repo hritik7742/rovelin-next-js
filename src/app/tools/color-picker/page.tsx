@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './color-picker.css';
 
 interface HSLColor {
@@ -258,6 +259,12 @@ export default function ColorPicker() {
             </p>
           </div>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/color-picker" 
+          category="Image Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

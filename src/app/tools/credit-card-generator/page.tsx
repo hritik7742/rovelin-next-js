@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './credit-card-generator.css';
 import { cardTypes } from './card-data';
 import { ChipSVG, VisaLogo, MastercardLogo, AmexLogo } from './card-logos';
@@ -256,6 +257,12 @@ export default function CreditCardGenerator() {
             </ul>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/credit-card-generator" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

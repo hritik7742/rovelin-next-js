@@ -3,13 +3,13 @@
 import { useState, ReactElement } from 'react';
 import Link from 'next/link';
 import './tools.css';
-import { 
-  FileText, 
-  Image, 
-  FileJson, 
-  Code, 
-  Mail, 
-  Phone, 
+import {
+  FileText,
+  Image,
+  FileJson,
+  Code,
+  Mail,
+  Phone,
   PenSquare,
   FileCog,
   QrCode,
@@ -51,9 +51,65 @@ interface ToolCategory {
 const tools: Tool[] = [
   {
     name: 'Image Converter',
-    description: 'Convert images between different formats',
+    description: 'Convert between JPG, PNG, WebP, PDF, HEIC, SVG formats',
     path: '/tools/image-converter',
     icon: <Image className="w-6 h-6" role="img" aria-label="Image converter" />,
+    category: 'Image Tools'
+  },
+  {
+    name: 'JPG to PNG Converter',
+    description: 'Convert JPG images to PNG format with transparency',
+    path: '/tools/jpg-to-png',
+    icon: <FileImage className="w-6 h-6" aria-hidden="true" />,
+    category: 'Image Tools'
+  },
+  {
+    name: 'PNG to JPG Converter',
+    description: 'Convert PNG images to JPG format with compression',
+    path: '/tools/png-to-jpg',
+    icon: <FileImage className="w-6 h-6" aria-hidden="true" />,
+    category: 'Image Tools'
+  },
+  {
+    name: 'WebP to JPG Converter',
+    description: 'Convert WebP images to JPG format for compatibility',
+    path: '/tools/webp-to-jpg',
+    icon: <Files className="w-6 h-6" aria-hidden="true" />,
+    category: 'Image Tools'
+  },
+  {
+    name: 'HEIC to JPG Converter',
+    description: 'Convert iPhone HEIC photos to JPG format',
+    path: '/tools/heic-to-jpg',
+    icon: <FileImage className="w-6 h-6" aria-hidden="true" />,
+    category: 'Image Tools'
+  },
+  {
+    name: 'SVG Converter',
+    description: 'Convert SVG files to PNG/JPG or vice versa',
+    path: '/tools/svg-converter',
+    icon: <FileCode className="w-6 h-6" aria-hidden="true" />,
+    category: 'Image Tools'
+  },
+  {
+    name: 'Image to PDF Converter',
+    description: 'Convert images to PDF format easily',
+    path: '/tools/image-to-pdf',
+    icon: <FileText className="w-6 h-6" aria-hidden="true" />,
+    category: 'Image Tools'
+  },
+  {
+    name: 'PDF to JPG Converter',
+    description: 'Convert PDF files to JPG images',
+    path: '/tools/pdf-to-jpg',
+    icon: <FileImage className="w-6 h-6" aria-hidden="true" />,
+    category: 'Image Tools'
+  },
+  {
+    name: 'PDF to PNG Converter',
+    description: 'Convert PDF files to PNG images',
+    path: '/tools/pdf-to-png',
+    icon: <FileDown className="w-6 h-6" aria-hidden="true" />,
     category: 'Image Tools'
   },
   {
@@ -70,66 +126,39 @@ const tools: Tool[] = [
     icon: <Crop className="w-6 h-6" aria-hidden="true" />,
     category: 'Image Tools'
   },
-  {
-    name: 'PDF to JPG Converter',
-    description: 'Convert PDF files to JPG images',
-    path: '/tools/converter/pdf-to-jpg',
-    icon: <FileImage className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
-  {
-    name: 'HEIC to JPG Converter',
-    description: 'Convert iPhone HEIC photos to JPG',
-    path: '/tools/converter/heic-to-jpg',
-    icon: <FileImage className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
-  {
-    name: 'SVG Converter',
-    description: 'Convert SVG files to PNG/JPG or vice versa',
-    path: '/tools/converter/svg-converter',
-    icon: <FileCode className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
-  {
-    name: 'PDF to PNG Converter',
-    description: 'Convert PDF files to PNG images',
-    path: '/tools/converter/pdf-to-png',
-    icon: <FileDown className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
-  {
-    name: 'WebP to JPG Converter',
-    description: 'Convert WebP images to JPG format',
-    path: '/tools/converter/webp-to-jpg',
-    icon: <Files className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
-  {
-    name: 'PNG to JPG Converter',
-    description: 'Convert PNG images to JPG format',
-    path: '/tools/converter/png-to-jpg',
-    icon: <FileImage className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
-  {
-    name: 'JPG to PNG Converter',
-    description: 'Convert JPG images to PNG format',
-    path: '/tools/converter/jpg-to-png',
-    icon: <FileImage className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
-  {
-    name: 'Image to PDF Converter',
-    description: 'Convert images to PDF format',
-    path: '/tools/converter/image-to-pdf',
-    icon: <FileText className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
+
   {
     name: 'Image Compressor',
     description: 'Compress and optimize images',
     path: '/tools/image-compressor',
+    icon: <Package className="w-6 h-6" aria-hidden="true" />,
+    category: 'Image Tools'
+  },
+  {
+    name: 'WebP Compressor',
+    description: 'Compress WebP images efficiently while maintaining quality',
+    path: '/tools/webp-compressor',
+    icon: <Package className="w-6 h-6" aria-hidden="true" />,
+    category: 'Image Tools'
+  },
+  {
+    name: 'PNG Compressor',
+    description: 'Compress PNG images while preserving transparency',
+    path: '/tools/png-compressor',
+    icon: <Package className="w-6 h-6" aria-hidden="true" />,
+    category: 'Image Tools'
+  },
+  {
+    name: 'JPEG Compressor',
+    description: 'Compress JPEG/JPG images with advanced optimization',
+    path: '/tools/jpeg-compressor',
+    icon: <Package className="w-6 h-6" aria-hidden="true" />,
+    category: 'Image Tools'
+  },
+  {
+    name: 'GIF Compressor',
+    description: 'Compress GIF images and animations effectively',
+    path: '/tools/gif-compressor',
     icon: <Package className="w-6 h-6" aria-hidden="true" />,
     category: 'Image Tools'
   },
@@ -164,7 +193,7 @@ const tools: Tool[] = [
   {
     name: 'URL Encoder/Decoder',
     description: 'Encode and decode URLs for safe transmission',
-    path: '/tools/url-encoder',
+    path: '/tools/url-encoder-decoder',
     icon: <LinkIcon className="w-6 h-6" aria-hidden="true" />,
     category: 'Text Tools'
   },
@@ -238,13 +267,7 @@ const tools: Tool[] = [
     icon: <FileText className="w-6 h-6" aria-hidden="true" />,
     category: 'Image Tools'
   },
-  {
-    name: 'PDF Compressor',
-    description: 'Compress PDF files while maintaining quality',
-    path: '/tools/pdf-compressor',
-    icon: <FileText className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
+
   {
     name: 'Emoji Generator',
     description: 'Generate perfect emojis based on mood or description',
@@ -294,34 +317,7 @@ const tools: Tool[] = [
     icon: <RefreshCw className="w-6 h-6" aria-hidden="true" />,
     category: 'Text Tools'
   },
-  {
-    name: 'MKV to MP4 Converter',
-    description: 'Convert MKV videos to MP4 format easily',
-    path: '/tools/mkv-to-mp4',
-    icon: <FileText className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
-  {
-    name: 'MP4 to MKV Converter',
-    description: 'Convert MP4 videos to MKV format',
-    path: '/tools/mp4-to-mkv',
-    icon: <FileText className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
-  {
-    name: 'MP3 to MP4 Converter',
-    description: 'Create videos from MP3 files with custom background',
-    path: '/tools/mp3-to-mp4',
-    icon: <FileText className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
-  {
-    name: 'MOV to MP4 Converter',
-    description: 'Convert QuickTime MOV videos to MP4 format',
-    path: '/tools/mov-to-mp4',
-    icon: <FileText className="w-6 h-6" aria-hidden="true" />,
-    category: 'Image Tools'
-  },
+
   {
     name: 'Archive Converter',
     description: 'Convert between ZIP, RAR, 7Z, TAR, GZ formats',
@@ -411,13 +407,13 @@ export default function ToolsPage() {
   };
 
   const groupedTools: ToolCategory = {
-    'Image Tools': filterTools(tools, searchQuery).filter(tool => 
+    'Image Tools': filterTools(tools, searchQuery).filter(tool =>
       tool.category === 'Image Tools'
     ),
-    'Text Tools': filterTools(tools, searchQuery).filter(tool => 
+    'Text Tools': filterTools(tools, searchQuery).filter(tool =>
       tool.category === 'Text Tools'
     ),
-    'Other Tools': filterTools(tools, searchQuery).filter(tool => 
+    'Other Tools': filterTools(tools, searchQuery).filter(tool =>
       !['Image Tools', 'Text Tools'].includes(tool.category)
     )
   };
@@ -431,7 +427,7 @@ export default function ToolsPage() {
       <div className="tools-header">
         <h1>Free Online Tools</h1>
         <p>A collection of {totalTools} free tools to help with your daily tasks</p>
-        
+
         <div className="search-container">
           <div className="search-box">
             <Search className="search-icon" />
@@ -451,9 +447,9 @@ export default function ToolsPage() {
           <h2 className="tools-category">{category}</h2>
           <div className="tools-grid">
             {categoryTools.map((tool) => (
-              <Link 
-                href={tool.path} 
-                key={tool.path} 
+              <Link
+                href={tool.path}
+                key={tool.path}
                 className="tool-card"
                 onClick={() => handleToolClick(tool.name)}
               >

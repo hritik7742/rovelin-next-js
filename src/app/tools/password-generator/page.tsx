@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './password-generator.css';
 
 type OptionsType = {
@@ -184,6 +185,12 @@ export default function PasswordGenerator() {
             </div>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/password-generator" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

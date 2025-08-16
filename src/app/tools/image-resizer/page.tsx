@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { convertDimension, getPreviewStyle } from './utils';
+import RelatedTools from '../shared/RelatedTools';
 import './image-resizer.css';
 import Image from 'next/image';
 
@@ -321,6 +322,12 @@ export default function ImageResizer() {
             </ul>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/image-resizer" 
+          category="Image Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './html-formatter.css';
 
 export default function HtmlFormatter() {
@@ -301,6 +302,12 @@ export default function HtmlFormatter() {
             </div>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/html-formatter" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

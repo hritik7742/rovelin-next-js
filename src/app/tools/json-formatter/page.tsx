@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './json-formatter.css';
 
 export default function JsonFormatter() {
@@ -161,6 +162,12 @@ export default function JsonFormatter() {
             </div>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/json-formatter" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

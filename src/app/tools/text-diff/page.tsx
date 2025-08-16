@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './text-diff.css';
 
 type DiffItem = {
@@ -176,6 +177,12 @@ export default function TextDiff() {
             </article>
           </div>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/text-diff" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

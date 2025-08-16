@@ -1,0 +1,405 @@
+.image-to-pdf-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #f8fafc;
+}
+
+.image-to-pdf-workspace {
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 1rem;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  padding: 2rem;
+  position: relative;
+}
+
+.image-to-pdf-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.image-to-pdf-header h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #7c3aed, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.image-to-pdf-description {
+  color: #94a3b8;
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.image-to-pdf-upload-section {
+  position: relative;
+  min-height: 200px;
+  border: 3px dashed rgba(124, 58, 237, 0.4);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 41, 59, 0.4);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.image-to-pdf-upload-section:hover:not(.disabled) {
+  border-color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.image-to-pdf-upload-section.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.image-to-pdf-file-input {
+  display: none;
+}
+
+.image-to-pdf-file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.image-to-pdf-upload-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.image-to-pdf-upload-text {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #f8fafc;
+  font-weight: 500;
+}
+
+.image-to-pdf-upload-hint {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.image-to-pdf-error {
+  color: #ef4444;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.image-to-pdf-progress {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.image-to-pdf-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(124, 58, 237, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.image-to-pdf-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7c3aed, #6d28d9);
+  border-radius: 4px;
+  animation: progress-animation 2s ease-in-out infinite;
+}
+
+@keyframes progress-animation {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+.image-to-pdf-progress-text {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.image-to-pdf-images {
+  margin: 2rem 0;
+}
+
+.image-to-pdf-images-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.image-to-pdf-images-header h3 {
+  color: #f8fafc;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.image-to-pdf-order-hint {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.image-to-pdf-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.image-to-pdf-image-card {
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.image-to-pdf-image-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+.image-to-pdf-image-container {
+  position: relative;
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.image-to-pdf-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0.25rem;
+}
+
+.image-to-pdf-remove-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.image-to-pdf-image-card:hover .image-to-pdf-remove-btn {
+  opacity: 1;
+}
+
+.image-to-pdf-remove-btn:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+
+.image-to-pdf-image-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.image-to-pdf-page-number {
+  color: #7c3aed;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.image-to-pdf-file-name {
+  color: #94a3b8;
+  font-size: 0.75rem;
+  truncate: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.image-to-pdf-controls {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.image-to-pdf-convert-btn {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.image-to-pdf-convert-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+.image-to-pdf-result {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: rgba(34, 197, 94, 0.1);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.image-to-pdf-result-header h3 {
+  color: #22c55e;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.image-to-pdf-result-header p {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.image-to-pdf-download-section {
+  display: flex;
+  justify-content: center;
+}
+
+.image-to-pdf-download-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.image-to-pdf-download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+}
+
+.image-to-pdf-articles {
+  margin-top: 3rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.image-to-pdf-article {
+  background: rgba(30, 41, 59, 0.4);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.image-to-pdf-article h2 {
+  color: #f8fafc;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.image-to-pdf-article p {
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.image-to-pdf-article ul {
+  list-style: none;
+  padding: 0;
+}
+
+.image-to-pdf-article li {
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.image-to-pdf-article li:before {
+  content: "→";
+  color: #7c3aed;
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-to-pdf-container {
+    padding: 1rem;
+  }
+
+  .image-to-pdf-workspace {
+    padding: 1rem;
+  }
+
+  .image-to-pdf-images-header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .image-to-pdf-image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .image-to-pdf-articles {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .image-to-pdf-upload-section,
+  .image-to-pdf-convert-btn,
+  .image-to-pdf-download-btn,
+  .image-to-pdf-remove-btn {
+    min-height: 44px;
+  }
+
+  .image-to-pdf-remove-btn {
+    opacity: 1;
+  }
+}

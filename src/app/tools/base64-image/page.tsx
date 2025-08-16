@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './base64-image.css';
 import Image from 'next/image';
 
@@ -233,6 +234,12 @@ export default function Base64Image() {
             </p>
           </div>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/base64-image" 
+          category="Image Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

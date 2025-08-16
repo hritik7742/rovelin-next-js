@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './phone-number-extractor.css';
 
 type NumberType = {
@@ -385,6 +386,11 @@ export default function PhoneNumberExtractor() {
           </article>
         </div>
 
+        <RelatedTools 
+          currentTool="/tools/phone-number-extractor" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

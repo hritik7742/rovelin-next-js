@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './word-counter.css';
 
 interface Stats {
@@ -204,6 +205,12 @@ export default function WordCounter() {
             </ul>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/word-counter" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import Cropper from 'react-easy-crop';
+import RelatedTools from '../shared/RelatedTools';
 import { 
   Square, 
   Circle, 
@@ -368,6 +369,12 @@ export default function ImageCropper() {
             </div>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/image-cropper" 
+          category="Image Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

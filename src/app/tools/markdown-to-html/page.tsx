@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
+import RelatedTools from '../shared/RelatedTools';
 import './markdown-to-html.css';
 
 const defaultMarkdown = `# Welcome to Markdown
@@ -276,6 +277,12 @@ export default function MarkdownToHtml() {
             </div>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/markdown-to-html" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

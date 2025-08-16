@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './email-extractor.css';
 import { trackEvent } from '@/lib/analytics';
 
@@ -285,6 +286,12 @@ export default function EmailExtractor() {
             </div>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/email-extractor" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

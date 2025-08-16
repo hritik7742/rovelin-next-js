@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './lorem-generator.css';
 
 export default function LoremGenerator() {
@@ -207,6 +208,12 @@ export default function LoremGenerator() {
             </ul>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/lorem-generator" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

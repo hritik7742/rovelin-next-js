@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './comma-separator.css';
 
 export default function CommaSeparator() {
@@ -215,6 +216,12 @@ export default function CommaSeparator() {
             </div>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/comma-separator" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

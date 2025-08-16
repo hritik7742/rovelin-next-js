@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import QRCode from 'qrcode';
 import Image from 'next/image';
+import RelatedTools from '../shared/RelatedTools';
 import './qr-generator.css';
 
 export default function QrGenerator() {
@@ -251,6 +252,11 @@ export default function QrGenerator() {
           </article>
         </div>
 
+        <RelatedTools 
+          currentTool="/tools/qr-generator" 
+          category="Image Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

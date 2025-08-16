@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { initializeCanvas, downloadSignature } from './utils';
+import RelatedTools from '../shared/RelatedTools';
 import './digital-signature.css';
 
 const fonts = [
@@ -427,6 +428,12 @@ export default function DigitalSignature() {
             </div>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/digital-signature" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

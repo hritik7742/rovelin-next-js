@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { CONVERSION_TYPES, formatValue } from './conversion-types';
+import RelatedTools from '../shared/RelatedTools';
 import './unit-converter.css';
 
 type ConversionType = keyof typeof CONVERSION_TYPES;
@@ -30,7 +31,7 @@ export default function UnitConverter() {
     let celsius;
     switch (from) {
       case 'fahrenheit':
-        celsius = (value - 32) * 5/9;
+        celsius = (value - 32) * 5 / 9;
         break;
       case 'kelvin':
         celsius = value - 273.15;
@@ -38,10 +39,10 @@ export default function UnitConverter() {
       default:
         celsius = value;
     }
-    
+
     switch (to) {
       case 'fahrenheit':
-        return (celsius * 9/5) + 32;
+        return (celsius * 9 / 5) + 32;
       case 'kelvin':
         return celsius + 273.15;
       default:
@@ -62,7 +63,7 @@ export default function UnitConverter() {
     }
 
     setToValue(formatValue(result));
-    
+
     const conversion: RecentConversion = {
       type: selectedType,
       from: `${fromValue} ${fromUnit}`,
@@ -122,8 +123,8 @@ export default function UnitConverter() {
               </select>
             </div>
 
-            <button 
-              className="swap-button" 
+            <button
+              className="swap-button"
               onClick={() => {
                 setFromUnit(toUnit);
                 setToUnit(fromUnit);
@@ -315,6 +316,12 @@ export default function UnitConverter() {
             </div>
           </article>
         </div>
+
+        <RelatedTools
+          currentTool="/tools/unit-converter"
+          category="Text Tools"
+          maxSuggestions={6}
+        />
       </div>
     </div>
   );

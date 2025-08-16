@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import RelatedTools from '../shared/RelatedTools';
 import './random-name-generator.css';
 import { generateName } from './nameUtils';
 import { blogContent } from './blog-content';
@@ -180,6 +181,12 @@ export default function RandomNameGenerator() {
             ))}
           </section>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/random-name-generator" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );

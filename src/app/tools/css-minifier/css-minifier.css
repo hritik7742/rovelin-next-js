@@ -1,0 +1,433 @@
+.cssmin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #f8fafc;
+}
+
+.cssmin-workspace {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border: 1px solid rgba(124, 58, 237, 0.1);
+    padding: 2rem;
+}
+
+.cssmin-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.cssmin-header h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #7c3aed, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.cssmin-header p {
+    color: #94a3b8;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cssmin-editor {
+    display: grid;
+    gap: 2rem;
+}
+
+.cssmin-input,
+.cssmin-output {
+    background: rgba(30, 41, 59, 0.4);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.cssmin-input h2,
+.cssmin-output h2 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: #f8fafc;
+}
+
+.cssmin-input textarea,
+.cssmin-output textarea {
+    width: 100%;
+    height: 300px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: #f8fafc;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.cssmin-input textarea:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+}
+
+.cssmin-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    background: rgba(30, 41, 59, 0.4);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.cssmin-options {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cssmin-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.cssmin-options input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #7c3aed;
+}
+
+.cssmin-btn-minify {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.cssmin-btn-minify:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+.cssmin-btn-minify:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.cssmin-output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cssmin-copy-btn {
+    padding: 0.5rem 1rem;
+    background: rgba(124, 58, 237, 0.2);
+    border: 1px solid rgba(124, 58, 237, 0.4);
+    border-radius: 0.5rem;
+    color: #f8fafc;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cssmin-copy-btn:hover {
+    background: rgba(124, 58, 237, 0.3);
+}
+
+.cssmin-copy-btn.copied {
+    background: #059669;
+    border-color: #059669;
+}
+
+.cssmin-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.stat-item {
+    background: rgba(30, 41, 59, 0.4);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.stat-item span:first-child {
+    display: block;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item span:last-child {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #7c3aed;
+}
+
+.cssmin-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cssmin-btn-copy,
+.cssmin-btn-download {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cssmin-btn-copy {
+    background: rgba(124, 58, 237, 0.1);
+    color: #f8fafc;
+    border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.cssmin-btn-download {
+    background: linear-gradient(135deg, #059669, #10b981);
+    color: white;
+    border: none;
+}
+
+.cssmin-error {
+    color: #ef4444;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.info-sections {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 3rem;
+}
+
+.cssmin-info-box {
+    background: rgba(30, 41, 59, 0.4);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.cssmin-info-box h2 {
+    font-size: 1.25rem;
+    color: #f8fafc;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.cssmin-info-box p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.cssmin-info-box ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.cssmin-info-box li {
+    margin: 0.75rem 0;
+    position: relative;
+    color: #94a3b8;
+}
+
+.cssmin-info-box li::before {
+    content: "→";
+    position: absolute;
+    left: -1.5rem;
+    color: #7c3aed;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.benefit-item {
+    background: rgba(15, 23, 42, 0.3);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.benefit-item h3 {
+    color: #7c3aed;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.faq-item {
+    background: rgba(15, 23, 42, 0.3);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.faq-item h3 {
+    color: #f8fafc;
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
+}
+
+.faq-item p {
+    color: #94a3b8;
+    line-height: 1.5;
+    font-size: clamp(0.875rem, 2.5vw, 0.95rem);
+    word-wrap: break-word;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cssmin-container {
+        padding: 1rem;
+    }
+
+    .cssmin-workspace {
+        padding: 1.5rem;
+    }
+
+    .cssmin-options {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cssmin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .cssmin-actions {
+        flex-direction: column;
+    }
+
+    .info-sections {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .faq-item {
+        padding: 0.75rem;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cssmin-container {
+        padding: 1.5rem;
+    }
+
+    .cssmin-workspace {
+        padding: 1.5rem;
+    }
+
+    .faq-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+/* Desktop Large Screens */
+@media (min-width: 1025px) {
+    .faq-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+/* Touch device optimization */
+@media (hover: none) and (pointer: coarse) {
+
+    .cssmin-btn-minify,
+    .cssmin-btn-copy,
+    .cssmin-btn-download {
+        min-height: 44px;
+        padding: 12px 24px;
+    }
+
+    .cssmin-options label {
+        min-height: 44px;
+    }
+
+    .cssmin-input textarea,
+    .cssmin-output textarea {
+        font-size: 16px;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    .cssmin-input textarea,
+    .cssmin-output textarea {
+        font-size: 14px;
+    }
+}
+
+/* Landscape Mode */
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .cssmin-input textarea,
+    .cssmin-output textarea {
+        height: 200px;
+    }
+}

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { minifyJS } from './minifier';
+import RelatedTools from '../shared/RelatedTools';
 import './js-minifier.css';
 
 export default function JsMinifier() {
@@ -224,6 +225,12 @@ export default function JsMinifier() {
             </article>
           </div>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/js-minifier" 
+          category="Text Tools" 
+          maxSuggestions={6} 
+        />
       </div>
     </div>
   );
