@@ -325,7 +325,7 @@ export default function TextParagraphSplitter() {
           <article className="text-splitter-article">
             <h2>What is the Text Paragraph Splitter Tool?</h2>
             <p>
-              Our advanced Text Paragraph Splitter is a powerful online tool designed to help content creators, writers, bloggers, and SEO professionals break down large blocks of text into well-structured, readable paragraphs. Whether you're working with lengthy articles, research papers, or any form of written content, this tool ensures optimal readability and user engagement.
+              Our advanced Text Paragraph Splitter is a powerful online tool designed to help content creators, writers, bloggers, and SEO professionals break down large blocks of text into well-structured, readable paragraphs. Whether you are working with lengthy articles, research papers, or any form of written content, this tool ensures optimal readability and user engagement.
             </p>
           </article>
 
@@ -365,7 +365,7 @@ export default function TextParagraphSplitter() {
           <article className="text-splitter-article">
             <h2>Perfect for SEO and Content Marketing</h2>
             <p>
-              Well-formatted paragraphs are crucial for SEO success and user experience. Search engines favor content with proper structure, and readers are more likely to engage with text that's easy to scan and read. Our tool helps you create content that ranks better and converts more effectively.
+              Well-formatted paragraphs are crucial for SEO success and user experience. Search engines favor content with proper structure, and readers are more likely to engage with text thats easy to scan and read. Our tool helps you create content that ranks better and converts more effectively.
             </p>
           </article>
         </div>
