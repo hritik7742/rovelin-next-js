@@ -17,13 +17,13 @@ const cedarville = Cedarville_Cursive({
 // ... Initialize other fonts similarly ...
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://rovelinstudio.com'),
+  metadataBase: new URL('https://rovelin.com'),
   title: 'Rovelin Studio | Innovative Software & Chrome Extension Development',
   description: 'Rovelin Studio specializes in creating powerful Chrome extensions, web applications, and custom software solutions that drive business growth and innovation.',
   openGraph: {
     title: 'Rovelin Studio | Innovative Software Development',
     description: 'Powerful Chrome extensions, web applications, and custom software solutions that drive business growth and innovation.',
-    url: 'https://rovelinstudio.com',
+    url: 'https://rovelin.com',
     siteName: 'Rovelin Studio',
     images: [
       {
@@ -52,11 +52,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cedarville.variable} /* other font variables */`}>
       <head>
-        <script 
+        <Script 
           async 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2357722369189639"
           crossOrigin="anonymous"
-        ></script>
+        ></Script>
         <Script
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=G-6010KNTQ28`}
