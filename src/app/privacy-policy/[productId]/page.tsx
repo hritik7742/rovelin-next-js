@@ -1420,9 +1420,68 @@ Contact
 If you have any questions about this privacy policy or your data, please contact us at: [hritikkumarkota@gmail.com]
 
 
+`},
+{id:'xml-to-airtable', name:'XML to Airtable', policy:`
+  
+  Privacy Policy – XML to Airtable (Extension)
 
-    `
-  }
+Last updated: August 18, 2025
+
+Thank you for using XML to Airtable, a plugin that helps you easily import XML files into Airtable by mapping fields and columns into structured tables.
+
+We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we handle data when you use our extension.
+
+1. Information We Collect
+
+Local Files: When you upload an XML file, the data is processed locally and imported into Airtable. We do not store or share your file contents.
+
+License Information: If you purchase a license key through Gumroad, we may verify the validity of that key to unlock premium features.
+
+2. How We Use Information
+
+To allow you to import XML files into Airtable.
+
+To validate your license key for premium/unlimited access.
+
+To provide basic usage analytics (such as free export limits).
+
+3. Data Storage
+
+We do not store your XML files or Airtable data on our servers.
+
+All data remains within your Airtable account.
+
+License key verification may require contacting Gumroad’s API.
+
+4. Third-Party Services
+
+Gumroad: Used for payment processing and license key distribution. We do not handle or store your payment details.
+
+Airtable: Your imported data stays entirely within Airtable.
+
+5. Free & Premium Usage
+
+Free users can perform 2 exports per day.
+
+To unlock unlimited access, users must purchase a license key via Gumroad.
+
+6. Your Rights
+
+You may contact us anytime to:
+
+Request deletion of any license-related information.
+
+Ask questions regarding this policy.
+
+7. Contact
+
+If you have any questions about this Privacy Policy, please contact us at:
+📧 hritikkumarkota@gmail.com
+
+🌐 https://rovelin.com
+  `},
+    
+  ,
   ];
 
 export default function PrivacyPolicy() {
