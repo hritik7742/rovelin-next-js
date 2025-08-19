@@ -1479,7 +1479,7 @@ If you have any questions about this Privacy Policy, please contact us at:
 📧 hritikkumarkota@gmail.com
 
 🌐 https://rovelin.com
-  `},
+  `}
     
   ,
   ];
