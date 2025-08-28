@@ -2,6 +2,8 @@
 
 import { useState, useRef } from 'react';
 import { WHEEL_COLORS } from './wheel-colors';
+import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './name-wheel.css';
 
 export default function NameWheel() {
@@ -82,6 +84,13 @@ export default function NameWheel() {
 
   return (
     <div className="formatter-container">
+      {/* Header Ad */}
+      <AdUnit 
+        className="header-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
+      
       <div className="formatter-workspace">
         <header className="tool-header">
           <h1>Random Name Wheel Spinner</h1>
@@ -215,6 +224,13 @@ export default function NameWheel() {
           </div>
         </div>
 
+        {/* Middle Ad */}
+        <AdUnit 
+          className="content-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
+        />
+
         {/* Info Sections */}
         <div className="info-sections">
           <article className="info-box">
@@ -267,6 +283,19 @@ export default function NameWheel() {
             </div>
           </article>
         </div>
+
+        <RelatedTools 
+          currentTool="/tools/name-wheel" 
+          category="Utility Tools" 
+          maxSuggestions={6} 
+        />
+        
+        {/* Footer Ad */}
+        <AdUnit 
+          className="footer-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
+        />
       </div>
     </div>
   );

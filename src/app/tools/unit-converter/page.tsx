@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { CONVERSION_TYPES, formatValue } from './conversion-types';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './unit-converter.css';
 
 type ConversionType = keyof typeof CONVERSION_TYPES;
@@ -80,6 +81,13 @@ export default function UnitConverter() {
           <h1>Unit Converter</h1>
           <p>Convert between different units of measurement with precision and ease.</p>
         </div>
+
+        {/* Header Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="header-ad"
+        />
 
         <div className="conversion-panel">
           <div className="type-selector">
@@ -178,6 +186,13 @@ export default function UnitConverter() {
             </div>
           )}
         </div>
+
+        {/* Middle Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="content-ad"
+        />
 
         <div className="info-sections">
           <article className="info-box">
@@ -316,6 +331,13 @@ export default function UnitConverter() {
             </div>
           </article>
         </div>
+
+        {/* Footer Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="footer-ad"
+        />
 
         <RelatedTools
           currentTool="/tools/unit-converter"

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './comma-separator.css';
 
 export default function CommaSeparator() {
@@ -44,6 +45,13 @@ export default function CommaSeparator() {
 
   return (
     <div className="csep-container">
+      {/* Header Ad */}
+      <AdUnit 
+        className="header-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
+      
       <div className="csep-workspace">
         <div className="csep-header">
           <h1>Comma Separator Tool</h1>
@@ -217,10 +225,24 @@ export default function CommaSeparator() {
           </article>
         </div>
 
+        {/* Middle Ad */}
+        <AdUnit 
+          className="content-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
+        />
+
         <RelatedTools 
           currentTool="/tools/comma-separator" 
           category="Text Tools" 
           maxSuggestions={6} 
+        />
+        
+        {/* Footer Ad */}
+        <AdUnit 
+          className="footer-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
         />
       </div>
     </div>

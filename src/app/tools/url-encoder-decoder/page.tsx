@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './url-encoder-decoder.css';
 
 type Mode = 'encode' | 'decode';
@@ -196,6 +197,13 @@ export default function URLEncoderDecoder() {
           </p>
         </header>
 
+        {/* Header Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="header-ad"
+        />
+
         <div className="main-content">
           {/* Mode Selector */}
           <div className="mode-selector">
@@ -312,6 +320,13 @@ export default function URLEncoderDecoder() {
           </div>
         </div>
 
+        {/* Middle Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="content-ad"
+        />
+
         <section className="features-section">
           <h2>Why Use Our URL Encoder/Decoder?</h2>
           <div className="features">
@@ -390,6 +405,13 @@ export default function URLEncoderDecoder() {
             </div>
           </div>
         </section>
+
+        {/* Footer Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="footer-ad"
+        />
 
         <RelatedTools 
           currentTool="/tools/url-encoder-decoder" 

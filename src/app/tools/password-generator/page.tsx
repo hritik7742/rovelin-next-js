@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './password-generator.css';
 
 type OptionsType = {
@@ -29,7 +30,7 @@ export default function PasswordGenerator() {
     if (pwd.match(/[0-9]/)) strength++;
     if (pwd.match(/[^a-zA-Z0-9]/)) strength++;
     if (pwd.length >= 12) strength++;
-    
+
     return ['Weak', 'Fair', 'Good', 'Strong', 'Very Strong'][strength - 1] || '';
   };
 
@@ -69,6 +70,13 @@ export default function PasswordGenerator() {
 
   return (
     <div className="formatter-container">
+      {/* Header Ad */}
+      <AdUnit
+        className="header-ad"
+        adSlot="8285940620"
+        adFormat="auto"
+      />
+
       <div className="formatter-workspace">
         <div className="tool-header">
           <h1>Password Generator</h1>
@@ -77,13 +85,13 @@ export default function PasswordGenerator() {
 
         <div className="generator-main">
           <div className="password-display">
-            <input 
-              type="text" 
-              value={password} 
-              readOnly 
+            <input
+              type="text"
+              value={password}
+              readOnly
               placeholder="Generated password will appear here"
             />
-            <button 
+            <button
               onClick={copyToClipboard}
               className={copyText === 'Copied!' ? 'copied' : ''}
             >
@@ -109,7 +117,7 @@ export default function PasswordGenerator() {
                   <input
                     type="checkbox"
                     checked={value}
-                    onChange={() => setOptions(prev => ({...prev, [key as keyof typeof options]: !prev[key as keyof typeof options]}))}
+                    onChange={() => setOptions(prev => ({ ...prev, [key as keyof typeof options]: !prev[key as keyof typeof options] }))}
                   />
                   Include {key}
                 </label>
@@ -130,6 +138,13 @@ export default function PasswordGenerator() {
             </div>
           )}
         </div>
+
+        {/* Middle Ad */}
+        <AdUnit
+          className="content-ad"
+          adSlot="8285940620"
+          adFormat="auto"
+        />
 
         <div className="info-sections">
           <article className="info-box">
@@ -186,10 +201,10 @@ export default function PasswordGenerator() {
           </article>
         </div>
 
-        <RelatedTools 
-          currentTool="/tools/password-generator" 
-          category="Text Tools" 
-          maxSuggestions={6} 
+        <RelatedTools
+          currentTool="/tools/password-generator"
+          category="Text Tools"
+          maxSuggestions={6}
         />
       </div>
     </div>

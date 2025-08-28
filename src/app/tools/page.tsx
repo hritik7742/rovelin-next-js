@@ -35,6 +35,7 @@ import {
   Search
 } from 'lucide-react';
 import { trackEvent } from '@/lib/analytics';
+import AdUnit from '@/components/AdUnit';
 
 interface Tool {
   name: string;
@@ -449,7 +450,14 @@ export default function ToolsPage() {
         </div>
       </div>
 
-      {Object.entries(groupedTools).map(([category, categoryTools]) => (
+      {/* Header Ad */}
+      <AdUnit
+        adSlot="8285940620"
+        adFormat="auto"
+        className="header-ad"
+      />
+
+      {Object.entries(groupedTools).map(([category, categoryTools], index) => (
         <div key={category}>
           <h2 className="tools-category">{category}</h2>
           <div className="tools-grid">
@@ -466,6 +474,15 @@ export default function ToolsPage() {
               </Link>
             ))}
           </div>
+
+          {/* Add ad after first category */}
+          {index === 0 && (
+            <AdUnit
+              adSlot="8285940620"
+              adFormat="auto"
+              className="content-ad"
+            />
+          )}
         </div>
       ))}
 
@@ -490,6 +507,13 @@ export default function ToolsPage() {
           </div>
         </div>
       </div>
+
+      {/* Footer Ad */}
+      <AdUnit
+        adSlot="8285940620"
+        adFormat="auto"
+        className="footer-ad"
+      />
     </div>
   );
 }

@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './pdf-to-png.css';
 
 
@@ -104,19 +106,19 @@ export default function PdfToPngConverter() {
       if (!blob) {
         throw new Error('Blob not found');
       }
-      
+
       // Create download link from blob
       const link = document.createElement('a');
       const downloadUrl = URL.createObjectURL(blob);
       link.href = downloadUrl;
       link.download = `page-${index + 1}.png`;
       link.style.display = 'none';
-      
+
       // Trigger download
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
+
       // Clean up
       setTimeout(() => URL.revokeObjectURL(downloadUrl), 100);
     } catch (error) {
@@ -135,11 +137,11 @@ export default function PdfToPngConverter() {
       const fileName = `page-${i + 1}.png`;
       const blob = imageBlobs[i];
       const imageBytes = new Uint8Array(await blob.arrayBuffer());
-      
+
       // Local file header
       const localHeader = new Uint8Array(30 + fileName.length);
       const view = new DataView(localHeader.buffer);
-      
+
       view.setUint32(0, 0x04034b50, true); // Local file header signature
       view.setUint16(4, 20, true); // Version needed to extract
       view.setUint16(6, 0, true); // General purpose bit flag
@@ -151,12 +153,12 @@ export default function PdfToPngConverter() {
       view.setUint32(22, imageBytes.length, true); // Uncompressed size
       view.setUint16(26, fileName.length, true); // File name length
       view.setUint16(28, 0, true); // Extra field length
-      
+
       // Add filename
       for (let j = 0; j < fileName.length; j++) {
         localHeader[30 + j] = fileName.charCodeAt(j);
       }
-      
+
       // Calculate CRC32 (simplified)
       let crc = 0xFFFFFFFF;
       for (let j = 0; j < imageBytes.length; j++) {
@@ -167,14 +169,14 @@ export default function PdfToPngConverter() {
       }
       crc = crc ^ 0xFFFFFFFF;
       view.setUint32(14, crc, true);
-      
+
       zipData.push(localHeader);
       zipData.push(imageBytes);
-      
+
       // Central directory entry
       const centralEntry = new Uint8Array(46 + fileName.length);
       const centralView = new DataView(centralEntry.buffer);
-      
+
       centralView.setUint32(0, 0x02014b50, true); // Central directory signature
       centralView.setUint16(4, 20, true); // Version made by
       centralView.setUint16(6, 20, true); // Version needed to extract
@@ -192,21 +194,21 @@ export default function PdfToPngConverter() {
       centralView.setUint16(36, 0, true); // Internal file attributes
       centralView.setUint32(38, 0, true); // External file attributes
       centralView.setUint32(42, offset, true); // Relative offset of local header
-      
+
       // Add filename to central directory
       for (let j = 0; j < fileName.length; j++) {
         centralEntry[46 + j] = fileName.charCodeAt(j);
       }
-      
+
       centralDirectory.push(centralEntry);
       offset += localHeader.length + imageBytes.length;
     }
-    
+
     // End of central directory record
     const centralDirSize = centralDirectory.reduce((sum, entry) => sum + entry.length, 0);
     const endRecord = new Uint8Array(22);
     const endView = new DataView(endRecord.buffer);
-    
+
     endView.setUint32(0, 0x06054b50, true); // End of central dir signature
     endView.setUint16(4, 0, true); // Number of this disk
     endView.setUint16(6, 0, true); // Number of disk with start of central directory
@@ -215,27 +217,27 @@ export default function PdfToPngConverter() {
     endView.setUint32(12, centralDirSize, true); // Size of central directory
     endView.setUint32(16, offset, true); // Offset of start of central directory
     endView.setUint16(20, 0, true); // ZIP file comment length
-    
+
     // Combine all parts
     const totalSize = zipData.reduce((sum, chunk) => sum + chunk.length, 0) + centralDirSize + endRecord.length;
     const zipBuffer = new Uint8Array(totalSize);
     let pos = 0;
-    
+
     // Add file data
     for (const chunk of zipData) {
       zipBuffer.set(chunk, pos);
       pos += chunk.length;
     }
-    
+
     // Add central directory
     for (const entry of centralDirectory) {
       zipBuffer.set(entry, pos);
       pos += entry.length;
     }
-    
+
     // Add end record
     zipBuffer.set(endRecord, pos);
-    
+
     return new Blob([zipBuffer], { type: 'application/zip' });
   };
 
@@ -247,11 +249,11 @@ export default function PdfToPngConverter() {
       link.href = downloadUrl;
       link.download = `${file?.name.replace('.pdf', '') || 'pdf-pages'}.zip`;
       link.style.display = 'none';
-      
+
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
+
       setTimeout(() => URL.revokeObjectURL(downloadUrl), 100);
     } catch (error) {
       console.error('ZIP download failed:', error);
@@ -263,22 +265,22 @@ export default function PdfToPngConverter() {
     try {
       for (let index = 0; index < imageBlobs.length; index++) {
         const blob = imageBlobs[index];
-        
+
         // Create download link from blob
         const link = document.createElement('a');
         const downloadUrl = URL.createObjectURL(blob);
         link.href = downloadUrl;
         link.download = `page-${index + 1}.png`;
         link.style.display = 'none';
-        
+
         // Trigger download with small delay to avoid browser blocking
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        
+
         // Clean up
         setTimeout(() => URL.revokeObjectURL(downloadUrl), 100);
-        
+
         // Small delay between downloads
         if (index < imageBlobs.length - 1) {
           await new Promise(resolve => setTimeout(resolve, 300));
@@ -300,7 +302,14 @@ export default function PdfToPngConverter() {
           </p>
         </div>
 
-        <div 
+        {/* Header Ad */}
+        <AdUnit
+          adSlot="8285940620"
+          adFormat="auto"
+          className="header-ad"
+        />
+
+        <div
           className={`pdf-converter-upload-section ${loading ? 'disabled' : ''}`}
           onClick={() => !loading && fileInputRef.current?.click()}
         >
@@ -354,13 +363,13 @@ export default function PdfToPngConverter() {
             <div className="pdf-converter-results-header">
               <h3>Converted Pages ({images.length})</h3>
               <div className="pdf-converter-download-options">
-                <button 
+                <button
                   className="pdf-converter-download-btn zip"
                   onClick={downloadAsZip}
                 >
                   📦 Download ZIP
                 </button>
-                <button 
+                <button
                   className="pdf-converter-download-btn all"
                   onClick={downloadAll}
                 >
@@ -373,10 +382,13 @@ export default function PdfToPngConverter() {
               {images.map((img, index) => (
                 <div key={index} className="pdf-converter-image-card">
                   <div className="pdf-converter-image-container">
-                    <img
+                    <Image
                       src={img}
                       alt={`Page ${index + 1}`}
                       className="pdf-converter-image"
+                      width={300}
+                      height={400}
+                      style={{ objectFit: 'contain' }}
                     />
                   </div>
                   <div className="pdf-converter-image-info">
@@ -393,6 +405,13 @@ export default function PdfToPngConverter() {
             </div>
           </div>
         )}
+
+        {/* Middle Ad */}
+        <AdUnit
+          adSlot="8285940620"
+          adFormat="auto"
+          className="content-ad"
+        />
 
         <div className="pdf-converter-articles">
           <article className="pdf-converter-article">
@@ -428,10 +447,17 @@ export default function PdfToPngConverter() {
           </article>
         </div>
 
-        <RelatedTools 
-          currentTool="/tools/pdf-to-png" 
-          category="PDF Tools" 
-          maxSuggestions={6} 
+        {/* Footer Ad */}
+        <AdUnit
+          adSlot="8285940620"
+          adFormat="auto"
+          className="footer-ad"
+        />
+
+        <RelatedTools
+          currentTool="/tools/pdf-to-png"
+          category="PDF Tools"
+          maxSuggestions={6}
         />
       </div>
     </div>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './random-name-generator.css';
 import { generateName } from './nameUtils';
 import { blogContent } from './blog-content';
@@ -32,6 +33,13 @@ export default function RandomNameGenerator() {
 
   return (
     <div className="rng-container">
+      {/* Header Ad */}
+      <AdUnit 
+        className="header-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
+      
       <div className="rng-workspace">
         <header className="rng-header">
           <h1>Random Name Generator</h1>
@@ -116,6 +124,13 @@ export default function RandomNameGenerator() {
           </button>
         </div>
 
+        {/* Middle Ad */}
+        <AdUnit 
+          className="content-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
+        />
+
         {names.length > 0 && (
           <div className="rng-results">
             <div className="rng-results-header">
@@ -186,6 +201,13 @@ export default function RandomNameGenerator() {
           currentTool="/tools/random-name-generator" 
           category="Text Tools" 
           maxSuggestions={6} 
+        />
+        
+        {/* Footer Ad */}
+        <AdUnit 
+          className="footer-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
         />
       </div>
     </div>

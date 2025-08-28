@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './color-picker.css';
 
 interface HSLColor {
@@ -122,6 +123,13 @@ export default function ColorPicker() {
 
   return (
     <div className="tool-page">
+      {/* Header Ad */}
+      <AdUnit 
+        className="header-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
+      
       <div className="tool-header">
         <h1>Color Picker</h1>
         <p className="tool-description">
@@ -214,6 +222,13 @@ export default function ColorPicker() {
         </article>
       </div>
 
+      {/* Middle Ad */}
+      <AdUnit 
+        className="content-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
+
       <div className="color-tips">
         <h2>Color Design Tips & Best Practices</h2>
         <div className="tips-grid">
@@ -264,6 +279,13 @@ export default function ColorPicker() {
           currentTool="/tools/color-picker" 
           category="Image Tools" 
           maxSuggestions={6} 
+        />
+        
+        {/* Footer Ad */}
+        <AdUnit 
+          className="footer-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
         />
       </div>
     </div>

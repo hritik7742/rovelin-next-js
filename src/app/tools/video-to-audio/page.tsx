@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './video-to-audio.css';
 
 // Extend Window interface to include webkit audio context
@@ -311,6 +312,13 @@ export default function VideoToAudioConverter() {
           </p>
         </header>
 
+        {/* Header Ad */}
+        <AdUnit
+          adSlot="8285940620"
+          adFormat="auto"
+          className="header-ad"
+        />
+
         <div className="main-content">
           <div className="upload-container">
             <div
@@ -520,6 +528,13 @@ export default function VideoToAudioConverter() {
           </div>
         </div>
 
+        {/* Middle Ad */}
+        <AdUnit
+          adSlot="8285940620"
+          adFormat="auto"
+          className="content-ad"
+        />
+
         <section className="features-section">
           <h2>Simple & Reliable Audio Extraction</h2>
           <div className="features">
@@ -537,6 +552,13 @@ export default function VideoToAudioConverter() {
             </div>
           </div>
         </section>
+
+        {/* Footer Ad */}
+        <AdUnit
+          adSlot="8285940620"
+          adFormat="auto"
+          className="footer-ad"
+        />
 
         <RelatedTools
           currentTool="/tools/video-to-audio"

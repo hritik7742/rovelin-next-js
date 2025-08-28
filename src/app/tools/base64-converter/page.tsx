@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './base64-converter.css';
 
 type Mode = 'encode' | 'decode';
@@ -334,6 +335,13 @@ export default function Base64Converter() {
           </p>
         </header>
 
+        {/* Header Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="header-ad"
+        />
+
         <div className="main-content">
           {/* Mode Selector */}
           <div className="mode-selector">
@@ -539,6 +547,13 @@ export default function Base64Converter() {
           )}
         </div>
 
+        {/* Middle Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="content-ad"
+        />
+
         <section className="features-section">
           <h2>Why Use Our Base64 Converter?</h2>
           <div className="features">
@@ -616,6 +631,13 @@ export default function Base64Converter() {
             </div>
           </div>
         </section>
+
+        {/* Footer Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="footer-ad"
+        />
 
         <RelatedTools 
           currentTool="/tools/base64-converter" 

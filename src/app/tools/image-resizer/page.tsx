@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { convertDimension, getPreviewStyle } from './utils';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './image-resizer.css';
 import Image from 'next/image';
 
@@ -147,6 +148,13 @@ export default function ImageResizer() {
 
   return (
     <div className="resizer-container">
+      {/* Header Ad */}
+      <AdUnit 
+        className="header-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
+      
       <div className="tool-header">
         <h1>Free Online Image Resizer</h1>
         <p>Resize any image to exact dimensions while maintaining quality. Perfect for social media, icons, and web graphics.</p>
@@ -323,10 +331,24 @@ export default function ImageResizer() {
           </article>
         </div>
 
+        {/* Middle Ad */}
+        <AdUnit 
+          className="content-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
+        />
+
         <RelatedTools 
           currentTool="/tools/image-resizer" 
           category="Image Tools" 
           maxSuggestions={6} 
+        />
+        
+        {/* Footer Ad */}
+        <AdUnit 
+          className="footer-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
         />
       </div>
     </div>

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { FileText, Upload, Download, Copy, Settings, Zap, Users, Star } from 'lucide-react';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './text-paragraph-splitter.css';
 
 export default function TextParagraphSplitter() {
@@ -118,6 +119,13 @@ export default function TextParagraphSplitter() {
 
   return (
     <div className="text-splitter-container">
+      {/* Header Ad */}
+      <AdUnit 
+        className="header-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
+      
       <div className="text-splitter-workspace">
         <div className="text-splitter-header">
           <h1>Text Paragraph Splitter</h1>
@@ -170,6 +178,13 @@ export default function TextParagraphSplitter() {
               className="text-splitter-textarea"
             />
           </div>
+
+          {/* Middle Ad */}
+          <AdUnit 
+            className="content-ad"
+            adSlot="8285940620" 
+            adFormat="auto"
+          />
 
           <div className="text-splitter-output">
             <div className="text-splitter-output-header">
@@ -374,6 +389,13 @@ export default function TextParagraphSplitter() {
           currentTool="/tools/text-paragraph-splitter"
           category="Text Tools"
           maxSuggestions={6}
+        />
+        
+        {/* Footer Ad */}
+        <AdUnit 
+          className="footer-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
         />
       </div>
     </div>

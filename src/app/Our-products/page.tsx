@@ -366,6 +366,7 @@ import Image from 'next/image';
 import './products.css';
 import { trackEvent } from '@/lib/analytics';
 import { Users, ExternalLink, Download } from 'lucide-react';
+import AdUnit from '@/components/AdUnit';
 
 interface Product {
   name: string;
@@ -642,6 +643,13 @@ const Products: React.FC = () => {
 
   return (
     <div className="products-page">
+      {/* Header Ad */}
+      <AdUnit 
+        className="header-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
+      
       {/* Compact Hero Section */}
       <div className="products-hero">
         <span className="hero-badge">New releases every month</span>
@@ -732,6 +740,13 @@ const Products: React.FC = () => {
         ))}
       </div>
 
+      {/* Middle Ad */}
+      <AdUnit 
+        className="content-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
+
       {/* Freebies Section */}
       <div className="freebies-section">
         <div className="section-header">
@@ -766,6 +781,13 @@ const Products: React.FC = () => {
           ))}
         </div>
       </div>
+      
+      {/* Footer Ad */}
+      <AdUnit 
+        className="footer-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
     </div>
   );
 };

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './email-extractor.css';
 import { trackEvent } from '@/lib/analytics';
 
@@ -99,6 +100,13 @@ export default function EmailExtractor() {
 
   return (
     <div className="eext-container">
+      {/* Header Ad */}
+      <AdUnit 
+        className="header-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
+      
       <div className="eext-workspace">
         <div className="eext-header">
           <h1>Email Extractor</h1>
@@ -287,10 +295,24 @@ export default function EmailExtractor() {
           </article>
         </div>
 
+        {/* Middle Ad */}
+        <AdUnit 
+          className="content-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
+        />
+
         <RelatedTools 
           currentTool="/tools/email-extractor" 
           category="Text Tools" 
           maxSuggestions={6} 
+        />
+        
+        {/* Footer Ad */}
+        <AdUnit 
+          className="footer-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
         />
       </div>
     </div>

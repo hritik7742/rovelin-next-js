@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback, useMemo } from 'react';
 import NextImage from 'next/image';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './image-converter.css';
 
 interface ConversionOptions {
@@ -307,6 +308,13 @@ export default function ImageConverter() {
           </p>
         </div>
 
+        {/* Header Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="header-ad"
+        />
+
         <div
           className={`imgconv-upload-section ${loading ? 'disabled' : ''}`}
           onDrop={handleDrop}
@@ -454,6 +462,13 @@ export default function ImageConverter() {
           </div>
         )}
 
+        {/* Middle Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="content-ad"
+        />
+
         <div className="imgconv-articles">
           <article className="imgconv-article">
             <h2>Supported Conversions</h2>
@@ -489,6 +504,13 @@ export default function ImageConverter() {
             </ul>
           </article>
         </div>
+
+        {/* Footer Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="footer-ad"
+        />
 
         <RelatedTools
           currentTool="/tools/image-converter"

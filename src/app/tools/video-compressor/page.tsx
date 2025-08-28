@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './video-compressor.css';
 
 interface VideoStats {
@@ -197,6 +198,13 @@ export default function VideoCompressor() {
 
   return (
     <div className="video-compressor">
+      {/* Header Ad */}
+      <AdUnit 
+        className="header-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
+      
       <div className="container">
         <header className="header">
           <h1>Video Compressor</h1>
@@ -334,6 +342,13 @@ export default function VideoCompressor() {
           </div>
         </div>
 
+        {/* Middle Ad */}
+        <AdUnit 
+          className="content-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
+        />
+
         <section className="features-section">
           <h2>Why Choose Our Video Compressor?</h2>
           <div className="features">
@@ -391,6 +406,13 @@ export default function VideoCompressor() {
           currentTool="/tools/video-compressor" 
           category="Media Tools" 
           maxSuggestions={6} 
+        />
+        
+        {/* Footer Ad */}
+        <AdUnit 
+          className="footer-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
         />
       </div>
     </div>

@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback } from 'react';
 import NextImage from 'next/image';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './heic-to-jpg.css';
 
 interface ConversionOptions {
@@ -183,6 +184,13 @@ export default function HeicToJpgConverter() {
           </p>
         </div>
 
+        {/* Header Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="header-ad"
+        />
+
         <div
           className={`heic-upload-section ${loading ? 'disabled' : ''}`}
           onDrop={handleDrop}
@@ -322,6 +330,13 @@ export default function HeicToJpgConverter() {
           </div>
         )}
 
+        {/* Middle Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="content-ad"
+        />
+
         <div className="heic-info">
           <div className="heic-info-grid">
             <div className="heic-info-card">
@@ -364,6 +379,13 @@ export default function HeicToJpgConverter() {
           </div>
         </div>
       </div>
+
+      {/* Footer Ad */}
+      <AdUnit 
+        adSlot="8285940620" 
+        adFormat="auto"
+        className="footer-ad"
+      />
 
       <RelatedTools
         currentTool="/tools/heic-to-jpg"

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { minifyJS } from './minifier';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './js-minifier.css';
 
 export default function JsMinifier() {
@@ -79,6 +80,13 @@ export default function JsMinifier() {
           <h1>JavaScript & Library Minifier</h1>
           <p>Compress and optimize JavaScript code and popular libraries for production</p>
         </div>
+
+        {/* Header Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="header-ad"
+        />
 
         <div className="jsmin-editor">
           <div className="jsmin-input">
@@ -179,6 +187,13 @@ export default function JsMinifier() {
             </div>
           )}
 
+          {/* Middle Ad */}
+          <AdUnit 
+            adSlot="8285940620" 
+            adFormat="auto"
+            className="content-ad"
+          />
+
           <div className="info-sections">
             <article className="jsmin-info-box">
               <h2>What is JavaScript Minification?</h2>
@@ -225,6 +240,13 @@ export default function JsMinifier() {
             </article>
           </div>
         </div>
+
+        {/* Footer Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="footer-ad"
+        />
 
         <RelatedTools 
           currentTool="/tools/js-minifier" 

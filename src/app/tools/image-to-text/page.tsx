@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { validateFile, processImage } from './utils';
 import { languages, type LanguageCode } from './languages';
+import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './image-to-text.css';
 import Image from 'next/image';
 
@@ -99,6 +101,13 @@ export default function ImageToText() {
 
   return (
     <div className="ocr-container">
+      {/* Header Ad */}
+      <AdUnit 
+        className="header-ad"
+        adSlot="8285940620" 
+        adFormat="auto"
+      />
+      
       <div className="ocr-workspace">
         <div className="ocr-header">
           <h1>Image to Text Converter (OCR)</h1>
@@ -283,6 +292,26 @@ export default function ImageToText() {
             </ul>
           </article>
         </div>
+
+        {/* Middle Ad */}
+        <AdUnit 
+          className="content-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
+        />
+
+        <RelatedTools 
+          currentTool="/tools/image-to-text" 
+          category="Image Tools" 
+          maxSuggestions={6} 
+        />
+        
+        {/* Footer Ad */}
+        <AdUnit 
+          className="footer-ad"
+          adSlot="8285940620" 
+          adFormat="auto"
+        />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import RelatedTools from '../shared/RelatedTools';
+import AdUnit from '@/components/AdUnit';
 import './word-counter.css';
 
 interface Stats {
@@ -81,6 +82,13 @@ export default function WordCounter() {
         <p>Count words, characters, sentences, and paragraphs. Get instant text statistics and reading time estimates.</p>
       </div>
 
+      {/* Header Ad */}
+      <AdUnit 
+        adSlot="8285940620" 
+        adFormat="auto"
+        className="header-ad"
+      />
+
       <div className="counter-workspace">
         <div className="text-input-section">
           <textarea
@@ -121,6 +129,13 @@ export default function WordCounter() {
             <span className="stat-number">{stats.speakingTime} min</span>
           </div>
         </div>
+
+        {/* Middle Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="content-ad"
+        />
 
         <div className="info-sections">
           <article className="info-box">
@@ -205,6 +220,13 @@ export default function WordCounter() {
             </ul>
           </article>
         </div>
+
+        {/* Footer Ad */}
+        <AdUnit 
+          adSlot="8285940620" 
+          adFormat="auto"
+          className="footer-ad"
+        />
 
         <RelatedTools 
           currentTool="/tools/word-counter" 
