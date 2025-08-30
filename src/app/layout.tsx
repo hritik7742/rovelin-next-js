@@ -52,11 +52,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cedarville.variable} /* other font variables */`}>
       <head>
-        <Script 
-          async 
+        {/* Google AdSense Account Meta Tag - CRITICAL FOR ADS TO SHOW */}
+        <meta name="google-adsense-account" content="ca-pub-2357722369189639" />
+         
+        {/* AdSense Script - Load with higher priority */}
+        <Script
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2357722369189639"
           crossOrigin="anonymous"
-        ></Script>
+          strategy="afterInteractive"
+        />
+        
+        {/* Google Analytics Scripts */}
         <Script
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=G-6010KNTQ28`}
@@ -89,8 +96,6 @@ export default function RootLayout({
     </html>
   );
 }
-
-
 
 
 
