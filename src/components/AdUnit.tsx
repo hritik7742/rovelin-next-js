@@ -93,7 +93,7 @@ export default function AdUnit({
                     minWidth: '300px',
                     minHeight: '90px',
                 }}
-                data-ad-client="ca-pub-2357722369189639"
+                data-ad-client="pub-2357722369189639"
                 data-ad-slot={adSlot}
                 data-ad-format={adFormat}
                 data-full-width-responsive="true"
