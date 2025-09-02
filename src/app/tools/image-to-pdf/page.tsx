@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './image-to-pdf.css';
 
 interface ImageFile {
@@ -281,13 +280,6 @@ export default function ImageToPdfConverter() {
           </p>
         </div>
 
-        {/* Header Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="header-ad"
-        />
-
         <div
           className={`image-to-pdf-upload-section ${loading ? 'disabled' : ''}`}
           onClick={() => !loading && fileInputRef.current?.click()}
@@ -389,11 +381,6 @@ export default function ImageToPdfConverter() {
         )}
 
         {/* Middle Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="content-ad"
-        />
 
         <div className="image-to-pdf-articles">
           <article className="image-to-pdf-article">
@@ -429,13 +416,6 @@ export default function ImageToPdfConverter() {
             </ul>
           </article>
         </div>
-
-        {/* Footer Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="footer-ad"
-        />
 
         <RelatedTools
           currentTool="/tools/image-to-pdf"

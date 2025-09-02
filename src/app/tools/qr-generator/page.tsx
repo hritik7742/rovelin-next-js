@@ -4,7 +4,6 @@ import { useState } from 'react';
 import QRCode from 'qrcode';
 import Image from 'next/image';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './qr-generator.css';
 
 export default function QrGenerator() {
@@ -74,13 +73,6 @@ export default function QrGenerator() {
           </p>
         </div>
 
-        {/* Header Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="header-ad"
-        />
-
         <div className="qr-generator">
           <div className="controls">
             <div className="control-group">
@@ -146,11 +138,6 @@ export default function QrGenerator() {
         </div>
 
         {/* Middle Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="content-ad"
-        />
 
         <div className="info-sections">
           <article className="info-box">
@@ -266,13 +253,6 @@ export default function QrGenerator() {
             </div>
           </article>
         </div>
-
-        {/* Footer Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="footer-ad"
-        />
 
         <RelatedTools 
           currentTool="/tools/qr-generator" 

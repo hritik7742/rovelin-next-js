@@ -53,14 +53,14 @@ export default function RootLayout({
     <html lang="en" className={`${cedarville.variable} /* other font variables */`}>
       <head>
         {/* Google AdSense Account Meta Tag - CRITICAL FOR ADS TO SHOW */}
-        <meta name="google-adsense-account" content="pub-2357722369189639" />
+        <meta name="google-adsense-account" content="ca-pub-2357722369189639" />
          
-        {/* Google AdSense Auto Ads Code */}
+        {/* AdSense Script - Load with higher priority */}
         <Script
           async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2357722369189639`}
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2357722369189639"
           crossOrigin="anonymous"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
         
         {/* Google Analytics Scripts */}

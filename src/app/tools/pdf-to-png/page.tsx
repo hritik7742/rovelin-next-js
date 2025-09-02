@@ -3,9 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './pdf-to-png.css';
-
 
 export default function PdfToPngConverter() {
   const [file, setFile] = useState<File | null>(null);
@@ -302,13 +300,6 @@ export default function PdfToPngConverter() {
           </p>
         </div>
 
-        {/* Header Ad */}
-        <AdUnit
-          adSlot="8285940620"
-          adFormat="auto"
-          className="header-ad"
-        />
-
         <div
           className={`pdf-converter-upload-section ${loading ? 'disabled' : ''}`}
           onClick={() => !loading && fileInputRef.current?.click()}
@@ -407,11 +398,6 @@ export default function PdfToPngConverter() {
         )}
 
         {/* Middle Ad */}
-        <AdUnit
-          adSlot="8285940620"
-          adFormat="auto"
-          className="content-ad"
-        />
 
         <div className="pdf-converter-articles">
           <article className="pdf-converter-article">
@@ -446,13 +432,6 @@ export default function PdfToPngConverter() {
             </ul>
           </article>
         </div>
-
-        {/* Footer Ad */}
-        <AdUnit
-          adSlot="8285940620"
-          adFormat="auto"
-          className="footer-ad"
-        />
 
         <RelatedTools
           currentTool="/tools/pdf-to-png"

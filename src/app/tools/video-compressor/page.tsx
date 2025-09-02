@@ -2,7 +2,6 @@
 
 import { useState, useRef } from 'react';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './video-compressor.css';
 
 interface VideoStats {
@@ -60,7 +59,7 @@ export default function VideoCompressor() {
 
       const videoElement = document.createElement('video');
       videoElement.src = previewUrl;
-      
+
       await new Promise((resolve) => {
         videoElement.onloadedmetadata = resolve;
       });
@@ -94,11 +93,11 @@ export default function VideoCompressor() {
 
       const chunks: Blob[] = [];
       mediaRecorder.ondataavailable = (e) => chunks.push(e.data);
-      
+
       mediaRecorder.onstop = () => {
         const blob = new Blob(chunks, { type: 'video/webm' });
         const url = URL.createObjectURL(blob);
-        
+
         setStats({
           originalSize: video.size,
           compressedSize: blob.size,
@@ -111,7 +110,7 @@ export default function VideoCompressor() {
         link.download = `compressed_${video.name.split('.')[0]}.webm`;
         link.click();
         URL.revokeObjectURL(url);
-        
+
         setLoading(false);
         setProgress(100);
       };
@@ -124,19 +123,19 @@ export default function VideoCompressor() {
 
       const processFrameBatch = async () => {
         const batchEnd = Math.min(currentTime + (interval * batchSize) / 1000, duration);
-        
+
         while (currentTime <= batchEnd) {
           videoElement.currentTime = currentTime;
           await new Promise(resolve => {
             videoElement.onseeked = resolve;
           });
-          
+
           ctx.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
           currentTime += interval / 1000;
         }
 
         setProgress(Math.round((currentTime / duration) * 100));
-        
+
         if (currentTime < duration) {
           setTimeout(processFrameBatch, 0); // Use setTimeout for better UI responsiveness
         } else {
@@ -165,7 +164,7 @@ export default function VideoCompressor() {
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     setIsDragging(false);
-    
+
     const file = e.dataTransfer.files[0];
     if (file) {
       processFile(file);
@@ -198,13 +197,7 @@ export default function VideoCompressor() {
 
   return (
     <div className="video-compressor">
-      {/* Header Ad */}
-      <AdUnit 
-        className="header-ad"
-        adSlot="8285940620" 
-        adFormat="auto"
-      />
-      
+
       <div className="container">
         <header className="header">
           <h1>Video Compressor</h1>
@@ -229,7 +222,7 @@ export default function VideoCompressor() {
                 className="file-input"
                 aria-label="Choose video file"
               />
-              
+
               {!video ? (
                 <div className="upload-content">
                   <div className="upload-icon">📁</div>
@@ -343,11 +336,6 @@ export default function VideoCompressor() {
         </div>
 
         {/* Middle Ad */}
-        <AdUnit 
-          className="content-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
-        />
 
         <section className="features-section">
           <h2>Why Choose Our Video Compressor?</h2>
@@ -406,13 +394,6 @@ export default function VideoCompressor() {
           currentTool="/tools/video-compressor" 
           category="Media Tools" 
           maxSuggestions={6} 
-        />
-        
-        {/* Footer Ad */}
-        <AdUnit 
-          className="footer-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
         />
       </div>
     </div>

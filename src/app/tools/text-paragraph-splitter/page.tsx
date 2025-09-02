@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { FileText, Upload, Download, Copy, Settings, Zap, Users, Star } from 'lucide-react';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './text-paragraph-splitter.css';
 
 export default function TextParagraphSplitter() {
@@ -46,7 +45,7 @@ export default function TextParagraphSplitter() {
     if (splitMethod === 'paragraphs') {
       const words = processedText.split(/\s+/).filter(word => word.length > 0);
       const wordsPerParagraph = Math.ceil(words.length / paragraphCount);
-      
+
       for (let i = 0; i < paragraphCount && i * wordsPerParagraph < words.length; i++) {
         const paragraphWords = words.slice(i * wordsPerParagraph, (i + 1) * wordsPerParagraph);
         result += paragraphWords.join(' ');
@@ -119,13 +118,7 @@ export default function TextParagraphSplitter() {
 
   return (
     <div className="text-splitter-container">
-      {/* Header Ad */}
-      <AdUnit 
-        className="header-ad"
-        adSlot="8285940620" 
-        adFormat="auto"
-      />
-      
+
       <div className="text-splitter-workspace">
         <div className="text-splitter-header">
           <h1>Text Paragraph Splitter</h1>
@@ -180,11 +173,6 @@ export default function TextParagraphSplitter() {
           </div>
 
           {/* Middle Ad */}
-          <AdUnit 
-            className="content-ad"
-            adSlot="8285940620" 
-            adFormat="auto"
-          />
 
           <div className="text-splitter-output">
             <div className="text-splitter-output-header">
@@ -220,7 +208,7 @@ export default function TextParagraphSplitter() {
             <Settings className="w-5 h-5" />
             Separation Options
           </h3>
-          
+
           <div className="settings-grid">
             <div className="setting-group">
               <h4>Splitting Method</h4>
@@ -295,7 +283,7 @@ export default function TextParagraphSplitter() {
                 className="number-input"
               />
               <p className="setting-hint">Number of new lines after each paragraph</p>
-              
+
               <div className="checkbox-group">
                 <label className="checkbox-label">
                   <input
@@ -389,13 +377,6 @@ export default function TextParagraphSplitter() {
           currentTool="/tools/text-paragraph-splitter"
           category="Text Tools"
           maxSuggestions={6}
-        />
-        
-        {/* Footer Ad */}
-        <AdUnit 
-          className="footer-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
         />
       </div>
     </div>

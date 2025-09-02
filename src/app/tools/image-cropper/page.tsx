@@ -4,7 +4,6 @@ import { useState, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import Cropper from 'react-easy-crop';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import { 
   Square, 
   Circle, 
@@ -76,7 +75,7 @@ export default function ImageCropper() {
 
   const handleDownload = useCallback(async () => {
     if (!croppedAreaPixels) return;
-    
+
     try {
       const croppedImage = await getCroppedImg(
         imgSrc,
@@ -95,7 +94,7 @@ export default function ImageCropper() {
 
   const handleShapeSelect = async (shape: string) => {
     setSelectedShape(shape);
-    
+
     // Update preview with new shape if we have a cropped area
     if (croppedAreaPixels) {
       try {
@@ -121,7 +120,7 @@ export default function ImageCropper() {
     setRotation(0);
     setSelectedShape('freeform');
     setCroppedAreaPixels(null);
-    
+
     // Trigger file input click
     if (fileInputRef.current) {
       fileInputRef.current.value = ''; // Clear the input
@@ -131,13 +130,7 @@ export default function ImageCropper() {
 
   return (
     <div className="ic-container">
-      {/* Header Ad */}
-      <AdUnit 
-        className="header-ad"
-        adSlot="8285940620" 
-        adFormat="auto"
-      />
-      
+
       <div className="ic-workspace">
         <header className="ic-header">
           <h1>Image Cropper</h1>
@@ -321,7 +314,7 @@ export default function ImageCropper() {
 
           <div className="ic-faq">
             <h2>Frequently Asked Questions</h2>
-            
+
             <div className="ic-faq-item">
               <h3>What image formats are supported?</h3>
               <p>
@@ -379,23 +372,11 @@ export default function ImageCropper() {
         </div>
 
         {/* Middle Ad */}
-        <AdUnit 
-          className="content-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
-        />
 
         <RelatedTools 
           currentTool="/tools/image-cropper" 
           category="Image Tools" 
           maxSuggestions={6} 
-        />
-        
-        {/* Footer Ad */}
-        <AdUnit 
-          className="footer-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
         />
       </div>
     </div>

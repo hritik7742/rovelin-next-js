@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './password-generator.css';
 
 type OptionsType = {
@@ -70,12 +69,6 @@ export default function PasswordGenerator() {
 
   return (
     <div className="formatter-container">
-      {/* Header Ad */}
-      <AdUnit
-        className="header-ad"
-        adSlot="8285940620"
-        adFormat="auto"
-      />
 
       <div className="formatter-workspace">
         <div className="tool-header">
@@ -140,11 +133,6 @@ export default function PasswordGenerator() {
         </div>
 
         {/* Middle Ad */}
-        <AdUnit
-          className="content-ad"
-          adSlot="8285940620"
-          adFormat="auto"
-        />
 
         <div className="info-sections">
           <article className="info-box">

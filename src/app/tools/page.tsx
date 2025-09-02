@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { useState, ReactElement } from 'react';
 import Link from 'next/link';
 import './tools.css';
@@ -35,7 +36,6 @@ import {
   Search
 } from 'lucide-react';
 import { trackEvent } from '@/lib/analytics';
-import AdUnit from '@/components/AdUnit';
 
 interface Tool {
   name: string;
@@ -450,14 +450,8 @@ export default function ToolsPage() {
         </div>
       </div>
 
-      {/* Header Ad */}
-      <AdUnit
-        adSlot="8285940620"
-        adFormat="auto"
-        className="header-ad"
-      />
-
-      {Object.entries(groupedTools).map(([category, categoryTools], index) => (
+      {Object.entries(groupedTools).map(([category, categoryTools], ) => (
+       
         <div key={category}>
           <h2 className="tools-category">{category}</h2>
           <div className="tools-grid">
@@ -475,14 +469,7 @@ export default function ToolsPage() {
             ))}
           </div>
 
-          {/* Add ad after first category */}
-          {index === 0 && (
-            <AdUnit
-              adSlot="8285940620"
-              adFormat="auto"
-              className="content-ad"
-            />
-          )}
+
         </div>
       ))}
 
@@ -507,13 +494,6 @@ export default function ToolsPage() {
           </div>
         </div>
       </div>
-
-      {/* Footer Ad */}
-      <AdUnit
-        adSlot="8285940620"
-        adFormat="auto"
-        className="footer-ad"
-      />
     </div>
   );
 }

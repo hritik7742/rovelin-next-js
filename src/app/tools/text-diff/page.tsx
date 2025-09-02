@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './text-diff.css';
 
 type DiffItem = {
@@ -72,13 +71,7 @@ export default function TextDiff() {
 
   return (
     <div className="formatter-container">
-      {/* Header Ad */}
-      <AdUnit 
-        className="header-ad"
-        adSlot="8285940620" 
-        adFormat="auto"
-      />
-      
+
       <div className="formatter-workspace">
         <div className="tool-header">
           <h1>Text Diff Tool</h1>
@@ -121,12 +114,7 @@ export default function TextDiff() {
             ) : (
               <>
                 {/* Middle Ad */}
-                <AdUnit 
-                  className="content-ad"
-                  adSlot="8285940620" 
-                  adFormat="auto"
-                />
-                
+
                 <div className="output-section full-width">
                 <div className="output-header">
                   <h2>Differences</h2>
@@ -199,13 +187,6 @@ export default function TextDiff() {
           currentTool="/tools/text-diff" 
           category="Text Tools" 
           maxSuggestions={6} 
-        />
-        
-        {/* Footer Ad */}
-        <AdUnit 
-          className="footer-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
         />
       </div>
     </div>

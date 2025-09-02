@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { convertDimension, getPreviewStyle } from './utils';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './image-resizer.css';
 import Image from 'next/image';
 
@@ -43,7 +42,7 @@ export default function ImageResizer() {
           const pixelWidth = img.width;
           const pixelHeight = img.height;
           setOriginalDimensions({ width: pixelWidth, height: pixelHeight });
-          
+
           const convertedWidth = convertDimension(pixelWidth, 'px', unit);
           const convertedHeight = convertDimension(pixelHeight, 'px', unit);
           setDimensions({ 
@@ -59,7 +58,7 @@ export default function ImageResizer() {
 
   const handleDimensionChange = (dimension: 'width' | 'height', value: string) => {
     const numValue = parseInt(value) || '';
-    
+
     if (maintainAspectRatio && originalDimensions.width && originalDimensions.height) {
       const aspectRatio = originalDimensions.width / originalDimensions.height;
       if (dimension === 'width') {
@@ -85,10 +84,10 @@ export default function ImageResizer() {
     if (dimensions.width && dimensions.height) {
       const pxWidth = convertDimension(Number(dimensions.width), unit, 'px');
       const pxHeight = convertDimension(Number(dimensions.height), unit, 'px');
-      
+
       const newWidth = convertDimension(pxWidth, 'px', newUnit);
       const newHeight = convertDimension(pxHeight, 'px', newUnit);
-      
+
       setDimensions({
         width: newWidth.toString(),
         height: newHeight.toString()
@@ -119,14 +118,14 @@ export default function ImageResizer() {
       const canvas = document.createElement('canvas');
       const pxWidth = convertDimension(Number(dimensions.width), unit, 'px');
       const pxHeight = convertDimension(Number(dimensions.height), unit, 'px');
-      
+
       canvas.width = pxWidth;
       canvas.height = pxHeight;
       const ctx = canvas.getContext('2d');
-      
+
       if (ctx) {
         ctx.drawImage(img, 0, 0, pxWidth, pxHeight);
-        
+
         canvas.toBlob((blob) => {
           if (blob) {
             const url = URL.createObjectURL(blob);
@@ -148,13 +147,7 @@ export default function ImageResizer() {
 
   return (
     <div className="resizer-container">
-      {/* Header Ad */}
-      <AdUnit 
-        className="header-ad"
-        adSlot="8285940620" 
-        adFormat="auto"
-      />
-      
+
       <div className="tool-header">
         <h1>Free Online Image Resizer</h1>
         <p>Resize any image to exact dimensions while maintaining quality. Perfect for social media, icons, and web graphics.</p>
@@ -235,7 +228,7 @@ export default function ImageResizer() {
                   >
                     {loading ? 'Processing...' : 'Download Resized Image'}
                   </button>
-                  
+
                   <button 
                     onClick={handleReset}
                     className="back-button"
@@ -332,23 +325,11 @@ export default function ImageResizer() {
         </div>
 
         {/* Middle Ad */}
-        <AdUnit 
-          className="content-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
-        />
 
         <RelatedTools 
           currentTool="/tools/image-resizer" 
           category="Image Tools" 
           maxSuggestions={6} 
-        />
-        
-        {/* Footer Ad */}
-        <AdUnit 
-          className="footer-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
         />
       </div>
     </div>

@@ -6,7 +6,6 @@ import Image from 'next/image';
 import './products.css';
 import { trackEvent } from '@/lib/analytics';
 import { Users, ExternalLink, Download } from 'lucide-react';
-import AdUnit from '@/components/AdUnit';
 
 interface Product {
   name: string;
@@ -282,13 +281,7 @@ const Products: React.FC = () => {
 
   return (
     <div className="products-page">
-      {/* Header Ad - Use unique slot ID for header */}
-      <AdUnit 
-        className="header-ad"
-        adSlot="9474246248" 
-        adFormat="auto"
-      />
-      
+
       {/* Compact Hero Section */}
       <div className="products-hero">
         <span className="hero-badge">New releases every month</span>
@@ -338,16 +331,16 @@ const Products: React.FC = () => {
               />
               {product.featured && <span className="featured-indicator">Featured</span>}
             </div>
-            
+
             <div className="product-info">
               <div className="product-header">
                 <span className="product-category">{product.category}</span>
                 <h3>{product.name}</h3>
                 {product.subtitle && <p className="product-subtitle">{product.subtitle}</p>}
               </div>
-              
+
               <p className="product-description">{product.description}</p>
-              
+
               <div className="product-features">
                 {product.features.slice(0, 3).map((feature, idx) => (
                   <span key={idx} className="feature-tag">{feature}</span>
@@ -380,11 +373,6 @@ const Products: React.FC = () => {
       </div>
 
       {/* Middle Ad - Use different slot ID for content */}
-      <AdUnit 
-        className="content-ad"
-        adSlot="5895197531" 
-        adFormat="auto"
-      />
 
       {/* Freebies Section */}
       <div className="freebies-section">
@@ -420,13 +408,6 @@ const Products: React.FC = () => {
           ))}
         </div>
       </div>
-      
-      {/* Footer Ad - Use third unique slot ID */}
-      <AdUnit 
-        className="footer-ad"
-        adSlot="9698711174" 
-        adFormat="auto"
-      />
     </div>
   );
 };

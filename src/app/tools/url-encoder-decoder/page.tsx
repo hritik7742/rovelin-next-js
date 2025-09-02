@@ -2,7 +2,6 @@
 
 import { useState, useRef } from 'react';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './url-encoder-decoder.css';
 
 type Mode = 'encode' | 'decode';
@@ -49,7 +48,7 @@ export default function URLEncoderDecoder() {
 
     try {
       let result = '';
-      
+
       if (mode === 'encode') {
         result = encodeURL(inputText);
         setStatusMessage({ type: 'success', message: 'URL encoded successfully!' });
@@ -57,9 +56,9 @@ export default function URLEncoderDecoder() {
         result = decodeURL(inputText);
         setStatusMessage({ type: 'success', message: 'URL decoded successfully!' });
       }
-      
+
       setOutputText(result);
-      
+
       // Clear status message after 3 seconds
       setTimeout(() => setStatusMessage(null), 3000);
     } catch (error) {
@@ -81,7 +80,7 @@ export default function URLEncoderDecoder() {
       await navigator.clipboard.writeText(text);
       setCopyStatus('copied');
       setStatusMessage({ type: 'success', message: 'Copied to clipboard!' });
-      
+
       setTimeout(() => {
         setCopyStatus('idle');
         setStatusMessage(null);
@@ -107,7 +106,7 @@ export default function URLEncoderDecoder() {
       setStatusMessage({ type: 'error', message: 'No output to swap' });
       return;
     }
-    
+
     setInputText(outputText);
     setOutputText('');
     setMode(mode === 'encode' ? 'decode' : 'encode');
@@ -196,13 +195,6 @@ export default function URLEncoderDecoder() {
             Encode and decode URLs and text for web-safe transmission. Convert special characters, spaces, and symbols with ease.
           </p>
         </header>
-
-        {/* Header Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="header-ad"
-        />
 
         <div className="main-content">
           {/* Mode Selector */}
@@ -321,11 +313,6 @@ export default function URLEncoderDecoder() {
         </div>
 
         {/* Middle Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="content-ad"
-        />
 
         <section className="features-section">
           <h2>Why Use Our URL Encoder/Decoder?</h2>
@@ -405,13 +392,6 @@ export default function URLEncoderDecoder() {
             </div>
           </div>
         </section>
-
-        {/* Footer Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="footer-ad"
-        />
 
         <RelatedTools 
           currentTool="/tools/url-encoder-decoder" 

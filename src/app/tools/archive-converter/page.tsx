@@ -2,7 +2,6 @@
 
 import { useState, useRef } from 'react';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './archive-converter.css';
 
 interface ConversionStats {
@@ -44,7 +43,7 @@ export default function ArchiveConverter() {
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
-    
+
     const file = e.dataTransfer.files[0];
     handleFile(file);
   };
@@ -59,7 +58,7 @@ export default function ArchiveConverter() {
 
   const convertArchive = async () => {
     if (!selectedFile) return;
-    
+
     setIsProcessing(true);
     setProgress(0);
 
@@ -73,7 +72,7 @@ export default function ArchiveConverter() {
       // For demo purposes - in production, implement actual archive conversion
       const blob = new Blob([await selectedFile.arrayBuffer()], { type: 'application/octet-stream' });
       const url = URL.createObjectURL(blob);
-      
+
       setDownloadUrl(url);
       setConversionStats({
         originalSize: selectedFile.size,
@@ -90,13 +89,7 @@ export default function ArchiveConverter() {
 
   return (
     <div className="archive-container">
-      {/* Header Ad */}
-      <AdUnit 
-        className="header-ad"
-        adSlot="8285940620" 
-        adFormat="auto"
-      />
-      
+
       <div className="archive-workspace">
         <div className="archive-header">
           <h1>Archive Format Converter</h1>
@@ -118,7 +111,7 @@ export default function ArchiveConverter() {
             className="archive-file-input"
             hidden
           />
-          
+
           {!selectedFile ? (
             <div className="archive-upload-prompt">
               <span className="archive-upload-icon">📦</span>
@@ -163,7 +156,7 @@ export default function ArchiveConverter() {
             >
               {isProcessing ? 'Converting...' : 'Convert Archive'}
             </button>
-            
+
             {isProcessing && (
               <div className="archive-progress">
                 <div className="archive-progress-bar">
@@ -297,23 +290,11 @@ export default function ArchiveConverter() {
         </div>
 
         {/* Middle Ad */}
-        <AdUnit 
-          className="content-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
-        />
 
         <RelatedTools 
           currentTool="/tools/archive-converter" 
           category="File Tools" 
           maxSuggestions={6} 
-        />
-        
-        {/* Footer Ad */}
-        <AdUnit 
-          className="footer-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
         />
       </div>
     </div>

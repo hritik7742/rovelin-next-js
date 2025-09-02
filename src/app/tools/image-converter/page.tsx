@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback, useMemo } from 'react';
 import NextImage from 'next/image';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './image-converter.css';
 
 interface ConversionOptions {
@@ -283,7 +282,6 @@ export default function ImageConverter() {
     link.click();
     document.body.removeChild(link);
 
-
   };
 
   const resetConverter = () => {
@@ -307,13 +305,6 @@ export default function ImageConverter() {
             Convert between JPG, PNG, WebP, HEIC, and SVG formats with ease. Upload any supported format and convert to your desired output format.
           </p>
         </div>
-
-        {/* Header Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="header-ad"
-        />
 
         <div
           className={`imgconv-upload-section ${loading ? 'disabled' : ''}`}
@@ -432,8 +423,6 @@ export default function ImageConverter() {
               </div>
             )}
 
-
-
             {convertedFile && (
               <div className="imgconv-preview-box">
                 <h3>Converted ({options.outputFormat.toUpperCase()})</h3>
@@ -463,11 +452,6 @@ export default function ImageConverter() {
         )}
 
         {/* Middle Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="content-ad"
-        />
 
         <div className="imgconv-articles">
           <article className="imgconv-article">
@@ -504,13 +488,6 @@ export default function ImageConverter() {
             </ul>
           </article>
         </div>
-
-        {/* Footer Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="footer-ad"
-        />
 
         <RelatedTools
           currentTool="/tools/image-converter"

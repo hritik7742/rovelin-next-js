@@ -4,7 +4,6 @@ import { useState, useRef, useCallback, useMemo } from 'react';
 import Image from 'next/image';
 import imageCompression from 'browser-image-compression';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './image-compressor.css';
 
 interface CompressedImage {
@@ -226,13 +225,6 @@ export default function ImageCompressor() {
           <p>Compress and optimize your images while maintaining quality. Reduce file sizes for faster web loading.</p>
         </div>
 
-        {/* Header Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="header-ad"
-        />
-
         {/* Upload Section */}
         <div
           className={`imgcomp-upload-zone ${dragActive ? 'drag-active' : ''}`}
@@ -385,11 +377,6 @@ export default function ImageCompressor() {
         )}
 
         {/* Middle Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="content-ad"
-        />
 
         {/* SEO Content */}
         <div className="imgcomp-articles">
@@ -481,13 +468,6 @@ export default function ImageCompressor() {
             </div>
           </article>
         </div>
-
-        {/* Footer Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="footer-ad"
-        />
 
         <RelatedTools
           currentTool="/tools/image-compressor"

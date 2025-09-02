@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './email-extractor.css';
 import { trackEvent } from '@/lib/analytics';
 
@@ -26,10 +25,10 @@ export default function EmailExtractor() {
   const extractEmails = (text: string) => {
     // Advanced email regex pattern
     const emailPattern = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/gi;
-    
+
     const matches = text.match(emailPattern) || [];
     const uniqueEmails = [...new Set(matches)];
-    
+
     setExtractedEmails(uniqueEmails);
     setStats({
       total: matches.length,
@@ -69,7 +68,7 @@ export default function EmailExtractor() {
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
-    
+
     const file = e.dataTransfer.files[0];
     if (file) {
       const reader = new FileReader();
@@ -100,13 +99,7 @@ export default function EmailExtractor() {
 
   return (
     <div className="eext-container">
-      {/* Header Ad */}
-      <AdUnit 
-        className="header-ad"
-        adSlot="8285940620" 
-        adFormat="auto"
-      />
-      
+
       <div className="eext-workspace">
         <div className="eext-header">
           <h1>Email Extractor</h1>
@@ -136,7 +129,7 @@ export default function EmailExtractor() {
                 </button>
               </div>
             </div>
-            
+
             <div 
               className={`eext-dropzone ${dragActive ? 'drag-active' : ''}`}
               onDragOver={handleDragOver}
@@ -182,7 +175,7 @@ export default function EmailExtractor() {
                 </button>
               </div>
             </div>
-            
+
             <div className="eext-results">
               {extractedEmails.map((email, index) => (
                 <div key={index} className="eext-email-item">
@@ -296,23 +289,11 @@ export default function EmailExtractor() {
         </div>
 
         {/* Middle Ad */}
-        <AdUnit 
-          className="content-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
-        />
 
         <RelatedTools 
           currentTool="/tools/email-extractor" 
           category="Text Tools" 
           maxSuggestions={6} 
-        />
-        
-        {/* Footer Ad */}
-        <AdUnit 
-          className="footer-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
         />
       </div>
     </div>

@@ -2,7 +2,6 @@
 
 import { useState, useRef } from 'react';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './base64-converter.css';
 
 type Mode = 'encode' | 'decode';
@@ -78,7 +77,7 @@ export default function Base64Converter() {
       }
       const byteArray = new Uint8Array(byteNumbers);
       const blob = new Blob([byteArray], { type: mimeType });
-      
+
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
       link.download = filename;
@@ -100,7 +99,7 @@ export default function Base64Converter() {
 
     try {
       let result = '';
-      
+
       if (mode === 'encode') {
         result = encodeBase64(inputText);
         setStatusMessage({ type: 'success', message: 'Text encoded to Base64 successfully!' });
@@ -108,9 +107,9 @@ export default function Base64Converter() {
         result = decodeBase64(inputText);
         setStatusMessage({ type: 'success', message: 'Base64 decoded to text successfully!' });
       }
-      
+
       setOutputText(result);
-      
+
       // Clear status message after 3 seconds
       setTimeout(() => setStatusMessage(null), 3000);
     } catch (error) {
@@ -139,7 +138,7 @@ export default function Base64Converter() {
         setOutputText(decoded);
         setStatusMessage({ type: 'success', message: 'Base64 file decoded successfully!' });
       }
-      
+
       setTimeout(() => setStatusMessage(null), 3000);
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'An error occurred';
@@ -180,7 +179,7 @@ export default function Base64Converter() {
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     setIsDragging(false);
-    
+
     const file = e.dataTransfer.files[0];
     if (file) {
       handleFileSelect(file);
@@ -199,7 +198,7 @@ export default function Base64Converter() {
       await navigator.clipboard.writeText(text);
       setCopyStatus('copied');
       setStatusMessage({ type: 'success', message: 'Copied to clipboard!' });
-      
+
       setTimeout(() => {
         setCopyStatus('idle');
         setStatusMessage(null);
@@ -234,7 +233,7 @@ export default function Base64Converter() {
         document.body.removeChild(link);
         URL.revokeObjectURL(link.href);
       }
-      
+
       setStatusMessage({ type: 'success', message: 'File downloaded successfully!' });
       setTimeout(() => setStatusMessage(null), 2000);
     } catch (error) {
@@ -264,12 +263,12 @@ export default function Base64Converter() {
       setStatusMessage({ type: 'error', message: 'Swap is only available for text input' });
       return;
     }
-    
+
     if (!outputText) {
       setStatusMessage({ type: 'error', message: 'No output to swap' });
       return;
     }
-    
+
     setInputText(outputText);
     setOutputText('');
     setMode(mode === 'encode' ? 'decode' : 'encode');
@@ -335,13 +334,6 @@ export default function Base64Converter() {
           </p>
         </header>
 
-        {/* Header Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="header-ad"
-        />
-
         <div className="main-content">
           {/* Mode Selector */}
           <div className="mode-selector">
@@ -394,7 +386,7 @@ export default function Base64Converter() {
                     className="file-input"
                     accept={mode === 'decode' ? '.txt,.base64' : '*/*'}
                   />
-                  
+
                   <div className="upload-content">
                     <div className="upload-icon">📁</div>
                     <p>
@@ -548,11 +540,6 @@ export default function Base64Converter() {
         </div>
 
         {/* Middle Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="content-ad"
-        />
 
         <section className="features-section">
           <h2>Why Use Our Base64 Converter?</h2>
@@ -631,13 +618,6 @@ export default function Base64Converter() {
             </div>
           </div>
         </section>
-
-        {/* Footer Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="footer-ad"
-        />
 
         <RelatedTools 
           currentTool="/tools/base64-converter" 

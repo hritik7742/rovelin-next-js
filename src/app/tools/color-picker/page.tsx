@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './color-picker.css';
 
 interface HSLColor {
@@ -21,7 +20,7 @@ export default function ColorPicker() {
   const generatePalette = useCallback((baseColor: string) => {
     const rgb = hexToRgb(baseColor);
     if (!rgb) return;
-    
+
     const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
     const newPalette: HSLColor[] = [];
 
@@ -94,7 +93,7 @@ export default function ColorPicker() {
   const getFormattedColor = () => {
     const rgb = hexToRgb(color);
     if (!rgb) return color;
-    
+
     const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
 
     switch (format) {
@@ -123,13 +122,7 @@ export default function ColorPicker() {
 
   return (
     <div className="tool-page">
-      {/* Header Ad */}
-      <AdUnit 
-        className="header-ad"
-        adSlot="8285940620" 
-        adFormat="auto"
-      />
-      
+
       <div className="tool-header">
         <h1>Color Picker</h1>
         <p className="tool-description">
@@ -223,11 +216,6 @@ export default function ColorPicker() {
       </div>
 
       {/* Middle Ad */}
-      <AdUnit 
-        className="content-ad"
-        adSlot="8285940620" 
-        adFormat="auto"
-      />
 
       <div className="color-tips">
         <h2>Color Design Tips & Best Practices</h2>
@@ -279,13 +267,6 @@ export default function ColorPicker() {
           currentTool="/tools/color-picker" 
           category="Image Tools" 
           maxSuggestions={6} 
-        />
-        
-        {/* Footer Ad */}
-        <AdUnit 
-          className="footer-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
         />
       </div>
     </div>

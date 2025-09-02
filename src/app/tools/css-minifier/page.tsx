@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { minifyCSS } from './minifier';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './css-minifier.css';
 
 export default function CssMinifier() {
@@ -36,7 +35,7 @@ export default function CssMinifier() {
       const originalSize = new Blob([input]).size;
       const minifiedCode = minifyCSS(input, options);
       const minifiedSize = new Blob([minifiedCode]).size;
-      
+
       setOutput(minifiedCode);
       setStats({
         originalSize,
@@ -80,13 +79,6 @@ export default function CssMinifier() {
           <h1>CSS Minifier & Optimizer</h1>
           <p>Compress and optimize CSS code to reduce file size and improve website performance</p>
         </div>
-
-        {/* Header Ad */}
-        <AdUnit 
-          adSlot="8285940620" 
-          adFormat="auto"
-          className="header-ad"
-        />
 
         <div className="cssmin-editor">
           <div className="cssmin-input">
@@ -188,11 +180,6 @@ export default function CssMinifier() {
           )}
 
           {/* Middle Ad */}
-          <AdUnit 
-            adSlot="8285940620" 
-            adFormat="auto"
-            className="content-ad"
-          />
 
           <div className="info-sections">
             <article className="cssmin-info-box">

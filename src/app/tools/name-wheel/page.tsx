@@ -3,7 +3,6 @@
 import { useState, useRef } from 'react';
 import { WHEEL_COLORS } from './wheel-colors';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './name-wheel.css';
 
 export default function NameWheel() {
@@ -51,12 +50,12 @@ export default function NameWheel() {
     if (!isSpinning && names.length > 1) {
       setIsSpinning(true);
       setWinner('');
-      
+
       const minSpins = 5;
       const maxSpins = 8;
       const extraDegrees = Math.random() * 360;
       const totalDegrees = (minSpins + Math.random() * (maxSpins - minSpins)) * 360 + extraDegrees;
-      
+
       setRotationDegree(prevRotation => prevRotation + totalDegrees);
 
       setTimeout(() => {
@@ -84,13 +83,7 @@ export default function NameWheel() {
 
   return (
     <div className="formatter-container">
-      {/* Header Ad */}
-      <AdUnit 
-        className="header-ad"
-        adSlot="8285940620" 
-        adFormat="auto"
-      />
-      
+
       <div className="formatter-workspace">
         <header className="tool-header">
           <h1>Random Name Wheel Spinner</h1>
@@ -130,7 +123,7 @@ export default function NameWheel() {
                 </g>
               ))}
             </svg>
-            
+
             <button
               onClick={spinWheel}
               disabled={isSpinning || names.length < 2}
@@ -225,11 +218,6 @@ export default function NameWheel() {
         </div>
 
         {/* Middle Ad */}
-        <AdUnit 
-          className="content-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
-        />
 
         {/* Info Sections */}
         <div className="info-sections">
@@ -288,13 +276,6 @@ export default function NameWheel() {
           currentTool="/tools/name-wheel" 
           category="Utility Tools" 
           maxSuggestions={6} 
-        />
-        
-        {/* Footer Ad */}
-        <AdUnit 
-          className="footer-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
         />
       </div>
     </div>

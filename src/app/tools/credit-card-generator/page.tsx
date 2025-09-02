@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './credit-card-generator.css';
 import { cardTypes } from './card-data';
 import { ChipSVG, VisaLogo, MastercardLogo, AmexLogo } from './card-logos';
@@ -39,11 +38,11 @@ export default function CreditCardGenerator() {
     const card = cardTypes[type as keyof typeof cardTypes];
     const prefix = card.prefix[Math.floor(Math.random() * card.prefix.length)];
     let number = prefix;
-    
+
     while (number.length < card.length - 1) {
       number += Math.floor(Math.random() * 10);
     }
-    
+
     number += generateLuhnNumber(number);
     return number.match(/.{1,4}/g)?.join(' ') || '';
   };
@@ -107,13 +106,7 @@ export default function CreditCardGenerator() {
 
   return (
     <div className="generator-container">
-      {/* Header Ad */}
-      <AdUnit 
-        className="header-ad"
-        adSlot="8285940620" 
-        adFormat="auto"
-      />
-      
+
       <div className="generator-workspace">
         <div className="tool-header">
           <h1>Credit Card Generator</h1>
@@ -267,23 +260,11 @@ export default function CreditCardGenerator() {
         </div>
 
         {/* Middle Ad */}
-        <AdUnit 
-          className="content-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
-        />
 
         <RelatedTools 
           currentTool="/tools/credit-card-generator" 
           category="Text Tools" 
           maxSuggestions={6} 
-        />
-        
-        {/* Footer Ad */}
-        <AdUnit 
-          className="footer-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
         />
       </div>
     </div>

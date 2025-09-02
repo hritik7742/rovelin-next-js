@@ -2,7 +2,6 @@
 
 import { useState, useRef } from 'react';
 import RelatedTools from '../shared/RelatedTools';
-import AdUnit from '@/components/AdUnit';
 import './phone-number-extractor.css';
 
 type NumberType = {
@@ -28,7 +27,7 @@ export default function PhoneNumberExtractor() {
 
   const extractPhoneNumbers = (text: string) => {
     const phonePattern = /(?:[-+() ]*\d){10,13}/g;
-    
+
     const matches = text.match(phonePattern) || [];
     const processedNumbers = matches
       .map(number => {
@@ -82,7 +81,7 @@ export default function PhoneNumberExtractor() {
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
-    
+
     const file = e.dataTransfer.files[0];
     if (file) {
       const reader = new FileReader();
@@ -131,13 +130,7 @@ export default function PhoneNumberExtractor() {
 
   return (
     <div className="formatter-container">
-      {/* Header Ad */}
-      <AdUnit 
-        className="header-ad"
-        adSlot="8285940620" 
-        adFormat="auto"
-      />
-      
+
       <div className="formatter-workspace">
         <div className="tool-header">
           <h1>Phone Number Extractor</h1>
@@ -222,7 +215,7 @@ export default function PhoneNumberExtractor() {
                     </svg>
                     Download TXT
                   </button>
-                  
+
                   <button 
                     className="pext-btn pext-download-excel-btn"
                     onClick={downloadExcel}
@@ -395,23 +388,11 @@ export default function PhoneNumberExtractor() {
         </div>
 
         {/* Middle Ad */}
-        <AdUnit 
-          className="content-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
-        />
 
         <RelatedTools 
           currentTool="/tools/phone-number-extractor" 
           category="Text Tools" 
           maxSuggestions={6} 
-        />
-        
-        {/* Footer Ad */}
-        <AdUnit 
-          className="footer-ad"
-          adSlot="8285940620" 
-          adFormat="auto"
         />
       </div>
     </div>
