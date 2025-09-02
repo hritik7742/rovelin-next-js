@@ -55,10 +55,10 @@ export default function RootLayout({
         {/* Google AdSense Account Meta Tag - CRITICAL FOR ADS TO SHOW */}
         <meta name="google-adsense-account" content="pub-2357722369189639" />
          
-        {/* AdSense Script - Load with higher priority */}
-       <Script
+        {/* Google AdSense Auto Ads Code */}
+        <Script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-2357722369189639"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2357722369189639`}
           crossOrigin="anonymous"
           strategy="beforeInteractive"
         />
