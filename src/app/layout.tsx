@@ -6,7 +6,7 @@ import SocialBanner from '@/components/SocialBanner';
 import { Cedarville_Cursive } from 'next/font/google';
 import { GoogleAnalytics } from '@/lib/analytics';
 import Script from 'next/script';
-
+import AdSense from '@/components/adsense';
 // Initialize fonts
 const cedarville = Cedarville_Cursive({ 
   weight: '400',
@@ -56,11 +56,7 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-2357722369189639" />
          
         {/* AdSense Script - Load with higher priority */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2357722369189639"
-          crossOrigin="anonymous"
-        />
+       
         
         {/* Google Analytics Scripts */}
         <Script
@@ -91,6 +87,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <GoogleAnalytics />
+        <AdSense/>
       </body>
     </html>
   );
