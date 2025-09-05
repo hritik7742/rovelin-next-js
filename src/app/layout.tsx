@@ -57,7 +57,27 @@ export default function RootLayout({
          
         {/* AdSense Script - Load with higher priority */}
        
+        <Script
+          id="adsterra-config"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              atOptions = {
+                'key': '6edef2400bcc0e82c1a11ee2d77e65a4',
+                'format': 'iframe',
+                'height': 90,
+                'width': 728,
+                'params': {}
+              };
+            `
+          }}
+        />
         
+        {/* Adsterra Script */}
+        <Script
+          src="//www.highperformanceformat.com/6edef2400bcc0e82c1a11ee2d77e65a4/invoke.js"
+          strategy="beforeInteractive"
+        />
         {/* Google Analytics Scripts */}
         <Script
           strategy="lazyOnload"
