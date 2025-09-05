@@ -87,7 +87,6 @@ export default function RootLayout({
         {children}
         <Footer />
         <GoogleAnalytics />
-        {/* <AdSense/> */}
       </body>
     </html>
   );

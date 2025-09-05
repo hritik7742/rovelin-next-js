@@ -7,6 +7,20 @@ import './products.css';
 import { trackEvent } from '@/lib/analytics';
 import { Users, ExternalLink, Download } from 'lucide-react';
 
+declare global {
+  interface Window {
+    atOptions?: {
+      key: string;
+      format: string;
+      height: number;
+      width: number;
+      params: Record<string, unknown>;
+      initialized?: boolean;
+    };
+    invoke?: () => void;
+  }
+}
+
 interface Product {
   name: string;
   description: string;
@@ -266,7 +280,7 @@ const Products: React.FC = () => {
     document.head.appendChild(script);
 
     // Set up atOptions for Adsterra
-    (window as any).atOptions = {
+    window.atOptions = {
       'key': '6edef2400bcc0e82c1a11ee2d77e65a4',
       'format': 'iframe',
       'height': 90,
@@ -279,11 +293,11 @@ const Products: React.FC = () => {
       // Initialize header ad
       if (document.getElementById('adsterra-header')) {
         const headerAd = document.getElementById('adsterra-header');
-        if (headerAd && !(window as any).atOptions.initialized) {
+        if (headerAd && !window.atOptions?.initialized) {
           // Trigger ad loading for header
           setTimeout(() => {
-            if ((window as any).invoke) {
-              (window as any).invoke();
+            if (window.invoke) {
+              window.invoke();
             }
           }, 100);
         }
@@ -294,8 +308,8 @@ const Products: React.FC = () => {
         const middleAd = document.getElementById('adsterra-middle');
         if (middleAd) {
           setTimeout(() => {
-            if ((window as any).invoke) {
-              (window as any).invoke();
+            if (window.invoke) {
+              window.invoke();
             }
           }, 200);
         }
@@ -306,8 +320,8 @@ const Products: React.FC = () => {
         const footerAd = document.getElementById('adsterra-footer');
         if (footerAd) {
           setTimeout(() => {
-            if ((window as any).invoke) {
-              (window as any).invoke();
+            if (window.invoke) {
+              window.invoke();
             }
           }, 300);
         }
