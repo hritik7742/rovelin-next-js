@@ -6,7 +6,7 @@ import SocialBanner from '@/components/SocialBanner';
 import { Cedarville_Cursive } from 'next/font/google';
 import { GoogleAnalytics } from '@/lib/analytics';
 import Script from 'next/script';
-import AdSense from '@/components/adsense';
+// import AdSense from '@/components/adsense';
 // Initialize fonts
 const cedarville = Cedarville_Cursive({ 
   weight: '400',
@@ -87,7 +87,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <GoogleAnalytics />
-        <AdSense/>
+        {/* <AdSense/> */}
       </body>
     </html>
   );

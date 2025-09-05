@@ -1,7 +1,7 @@
 
 "use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import './products.css';
 import { trackEvent } from '@/lib/analytics';
@@ -258,6 +258,70 @@ const Products: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
 
+  useEffect(() => {
+    // Load Adsterra script
+    const script = document.createElement('script');
+    script.src = '//www.highperformanceformat.com/6edef2400bcc0e82c1a11ee2d77e65a4/invoke.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Set up atOptions for Adsterra
+    (window as any).atOptions = {
+      'key': '6edef2400bcc0e82c1a11ee2d77e65a4',
+      'format': 'iframe',
+      'height': 90,
+      'width': 728,
+      'params': {}
+    };
+
+    // Initialize ads after script loads
+    script.onload = () => {
+      // Initialize header ad
+      if (document.getElementById('adsterra-header')) {
+        const headerAd = document.getElementById('adsterra-header');
+        if (headerAd && !(window as any).atOptions.initialized) {
+          // Trigger ad loading for header
+          setTimeout(() => {
+            if ((window as any).invoke) {
+              (window as any).invoke();
+            }
+          }, 100);
+        }
+      }
+
+      // Initialize middle ad
+      if (document.getElementById('adsterra-middle')) {
+        const middleAd = document.getElementById('adsterra-middle');
+        if (middleAd) {
+          setTimeout(() => {
+            if ((window as any).invoke) {
+              (window as any).invoke();
+            }
+          }, 200);
+        }
+      }
+
+      // Initialize footer ad
+      if (document.getElementById('adsterra-footer')) {
+        const footerAd = document.getElementById('adsterra-footer');
+        if (footerAd) {
+          setTimeout(() => {
+            if ((window as any).invoke) {
+              (window as any).invoke();
+            }
+          }, 300);
+        }
+      }
+    };
+
+    return () => {
+      // Cleanup script when component unmounts
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
+  }, []);
+
   const handleProductClick = (productName: string, action: 'Install' | 'Learn More') => {
     trackEvent('Products', action, productName);
   };
@@ -291,6 +355,11 @@ const Products: React.FC = () => {
           <Users size={14} className="icon" />
           <span>Trusted by <span className="count">15,000+</span> users</span>
         </div>
+      </div>
+
+      {/* Header Ad Unit */}
+      <div className="ad-container header-ad">
+        <div id="adsterra-header"></div>
       </div>
 
       {/* Category Filter */}
@@ -372,7 +441,10 @@ const Products: React.FC = () => {
         ))}
       </div>
 
-      {/* Middle Ad - Use different slot ID for content */}
+      {/* Middle Ad Unit */}
+      <div className="ad-container middle-ad">
+        <div id="adsterra-middle"></div>
+      </div>
 
       {/* Freebies Section */}
       <div className="freebies-section">
@@ -407,6 +479,11 @@ const Products: React.FC = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Footer Ad Unit */}
+      <div className="ad-container footer-ad">
+        <div id="adsterra-footer"></div>
       </div>
     </div>
   );

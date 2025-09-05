@@ -475,3 +475,64 @@
     font-size: 1.75rem;
   }
 }
+
+/* Ad Container Styles */
+.ad-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  min-height: 100px;
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  padding: 1rem;
+}
+
+.ad-container.header-ad {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ad-container.middle-ad {
+  margin: 3rem 0;
+}
+
+.ad-container.footer-ad {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.ad-container div[id^="adsterra-"] {
+  width: 100%;
+  max-width: 728px;
+  min-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Ad Styles */
+@media (max-width: 768px) {
+  .ad-container {
+    margin: 1.5rem 0;
+    padding: 0.75rem;
+  }
+
+  .ad-container div[id^="adsterra-"] {
+    max-width: 100%;
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ad-container {
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+
+  .ad-container div[id^="adsterra-"] {
+    min-height: 50px;
+  }
+}
