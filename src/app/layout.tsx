@@ -81,27 +81,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        {/* <Script
-          id="adsterra-script"
-          strategy="afterInteractive" // runs only on client after page loads
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(){
-                var script = document.createElement('script');
-                script.src = "//pl27585168.revenuecpmgate.com/1c/4c/0f/1c4c0f41f8ca6245b3807abb6f8d6c67.js"; // paste from Adsterra
-                script.async = true;
-                document.body.appendChild(script);
-              })();
-            `,
-          }}
-        /> */}
         
-        {/* Adsterra Script */}
-        {/* <Script
-          src="//www.highperformanceformat.com/6edef2400bcc0e82c1a11ee2d77e65a4/invoke.js"
-          strategy="beforeInteractive"
-        /> */}
-        {/* Google Analytics Scripts */}
         <Script
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=G-6010KNTQ28`}

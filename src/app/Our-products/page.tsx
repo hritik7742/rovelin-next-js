@@ -291,25 +291,6 @@ const Products: React.FC = () => {
         </div>
       </div>
 
-      {/* Header Ad Unit - Clean Implementation */}
-      <div className="ad-container header-ad">
-        <script type="text/javascript">
-          {`
-            atOptions = {
-              'key': '6edef2400bcc0e82c1a11ee2d77e65a4',
-              'format': 'iframe',
-              'height': 90,
-              'width': 728,
-              'params': {}
-            };
-          `}
-        </script>
-        <script 
-          type="text/javascript" 
-          src="//www.highperformanceformat.com/6edef2400bcc0e82c1a11ee2d77e65a4/invoke.js"
-          async
-        />
-      </div>
 
       {/* Category Filter */}
       <div className="category-filter">
