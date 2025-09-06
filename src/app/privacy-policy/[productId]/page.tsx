@@ -1480,8 +1480,72 @@ If you have any questions about this Privacy Policy, please contact us at:
 
 🌐 https://rovelin.com
   `}
-    
-  ,
+      ,{id:'scanzia' , name:'scanzia' , policy:`
+        
+        📜 Privacy Policy for Scanzia
+
+Effective Date: 6-09-2025
+
+Rovlin (“we,” “our,” or “us”) built the Scanzia app as a free utility application. This Privacy Policy explains how Scanzia handles user data and ensures transparency regarding the information we collect, store, and use.
+
+1. Information We Collect
+
+Scanzia is designed as a utility tool and does not collect or share personally identifiable information from users. The app only processes information locally on the device to provide its features:
+
+QR & Barcode Scanning: When you scan a QR code or barcode, the content is processed locally on your device. No scan data is sent to our servers.
+
+Image Uploads: If you choose to upload an image from your gallery, it is processed locally for scanning purposes and never uploaded or stored externally.
+
+Flashlight Access: The flashlight feature is used only to assist scanning in low-light environments. We do not track or store its usage.
+
+QR Code Generation: When creating QR codes (e.g., text, links, Wi-Fi, contact details), the entered content remains on your device. We do not collect or transmit this data.
+
+History: Scanzia saves your scan and generation history locally on your device for your convenience. You can clear this history anytime from within the app.
+
+2. How We Use Information
+
+All data processed in Scanzia is handled locally on your device. We do not collect, store, or share any personal or sensitive information with third parties.
+
+3. Permissions Used
+
+Scanzia requests the following permissions solely for app functionality:
+
+Camera: To scan QR codes and barcodes.
+
+Storage / Gallery Access: To allow users to upload images for scanning.
+
+Flashlight: To assist scanning in low-light environments.
+
+Internet (Optional): Required only for opening links scanned from QR codes in your browser.
+
+4. Data Sharing
+
+We do not share, sell, or transmit your data to any third party. All scanned and generated information remains private to you.
+
+5. Data Security
+
+Since Scanzia processes all data locally, your information stays on your device. We do not collect or maintain a backend server, minimizing any risk of data leaks.
+
+6. Children’s Privacy
+
+Scanzia is safe for all users. We do not knowingly collect personal data from children under 13.
+
+7. Changes to This Policy
+
+We may update this Privacy Policy from time to time. Any changes will be reflected in this document with an updated effective date.
+
+8. Contact Us
+
+If you have any questions or concerns about this Privacy Policy, please contact us at:
+
+Rovlin
+Email: hritikchoudharykota@gmail.com
+
+Website: https://rovelin.com
+
+
+        `}
+  
   ];
 
 export default function PrivacyPolicy() {
