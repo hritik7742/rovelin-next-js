@@ -6,6 +6,7 @@ import SocialBanner from '@/components/SocialBanner';
 import { Cedarville_Cursive } from 'next/font/google';
 import { GoogleAnalytics } from '@/lib/analytics';
 import Script from 'next/script';
+
 // import AdSense from '@/components/adsense';
 // Initialize fonts
 const cedarville = Cedarville_Cursive({ 
@@ -55,10 +56,8 @@ export default function RootLayout({
         {/* Google AdSense Account Meta Tag - CRITICAL FOR ADS TO SHOW */}
         <meta name="google-adsense-account" content="ca-pub-2357722369189639" />
          
-        {/* AdSense Script - Load with higher priority */}
-       <Script type='text/javascript' src='//pl27585168.revenuecpmgate.com/1c/4c/0f/1c4c0f41f8ca6245b3807abb6f8d6c67.js'></Script>
 
-        <Script
+        {/* <Script
           id="adsterra-config"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
@@ -72,13 +71,36 @@ export default function RootLayout({
               };
             `
           }}
+        /> */}
+
+       <Script
+          id="adsense-auto-ads"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2357722369189639"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
+
+        {/* <Script
+          id="adsterra-script"
+          strategy="afterInteractive" // runs only on client after page loads
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                var script = document.createElement('script');
+                script.src = "//pl27585168.revenuecpmgate.com/1c/4c/0f/1c4c0f41f8ca6245b3807abb6f8d6c67.js"; // paste from Adsterra
+                script.async = true;
+                document.body.appendChild(script);
+              })();
+            `,
+          }}
+        /> */}
         
         {/* Adsterra Script */}
-        <Script
+        {/* <Script
           src="//www.highperformanceformat.com/6edef2400bcc0e82c1a11ee2d77e65a4/invoke.js"
           strategy="beforeInteractive"
-        />
+        /> */}
         {/* Google Analytics Scripts */}
         <Script
           strategy="lazyOnload"
