@@ -56,7 +56,8 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-2357722369189639" />
          
         {/* AdSense Script - Load with higher priority */}
-       
+       <Script type='text/javascript' src='//pl27585168.revenuecpmgate.com/1c/4c/0f/1c4c0f41f8ca6245b3807abb6f8d6c67.js'></Script>
+
         <Script
           id="adsterra-config"
           strategy="beforeInteractive"
