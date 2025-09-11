@@ -1544,7 +1544,68 @@ Email: hritikchoudharykota@gmail.com
 Website: https://rovelin.com
 
 
-        `}
+        `},
+        {id:'TokMaster' , name:'tokmaster' , policy:`
+          
+          Privacy Policy for TokMaster – TikTok Auto Follow Scroll, Like, Save
+
+Last Updated: 11-9-2025
+
+TokMaster (“the Extension”) respects your privacy. This Privacy Policy explains how we handle information when you use our Chrome extension.
+
+1. Information We Collect
+
+TokMaster does not collect, store, or share any personal information from its users.
+
+We do not require you to create an account.
+
+We do not collect your TikTok login details.
+
+We do not track your browsing history outside of TikTok.
+
+The extension runs locally in your browser and only performs actions you choose, such as auto scrolling, liking, saving, or downloading videos.
+
+2. Permissions
+
+TokMaster may request certain permissions in your browser, such as:
+
+Access to TikTok pages: Required to enable auto-follow, auto-like, auto-scroll, and save functions directly on the site.
+
+Storage permission: Allows saving your custom settings (e.g., speed, intervals) locally in your browser.
+
+Downloads permission: Enables the extension to download TikTok videos or audio to your device.
+
+These permissions are used only for the stated functionality and are not shared with anyone.
+
+3. How We Use Your Information
+
+Since we do not collect personal data, there is no usage of personal information for marketing, analytics, or advertising. All actions are executed locally within your browser session.
+
+4. Data Sharing
+
+We do not sell, trade, or share any information with third parties.
+
+5. Security
+
+TokMaster operates entirely in your browser. No external servers are involved, which means your TikTok usage and downloaded content remain private on your device.
+
+6. Third-Party Services
+
+TokMaster interacts with TikTok’s website to provide its features. Please note that your use of TikTok is subject to TikTok’s own Terms of Service and Privacy Policy.
+
+7. Changes to This Policy
+
+We may update this Privacy Policy from time to time. Any updates will be posted on this page with the revised “Last Updated” date.
+
+8. Contact Us
+
+If you have any questions or concerns about this Privacy Policy or the extension, please contact us at:
+
+📧 hritikkumarkota@gmail.com
+
+🌐 https://rovelin.com
+
+          `}
   
   ];
 
