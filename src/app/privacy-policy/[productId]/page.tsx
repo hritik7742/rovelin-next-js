@@ -1545,7 +1545,7 @@ Website: https://rovelin.com
 
 
         `},
-        {id:'TokMaster' , name:'tokmaster' , policy:`
+        {id:'tokmaster' , name:'tokmaster' , policy:`
           
           Privacy Policy for TokMaster – TikTok Auto Follow Scroll, Like, Save
 
