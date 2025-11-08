@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Users, Star } from 'lucide-react';
+import StaticBlogSection from '@/components/StaticBlogSection';
 import '@/app/styles/stats.css';
 
 // Import images (we'll need to move these to public directory)
@@ -188,6 +189,8 @@ export default function Home() {
           </p>
           <Link href="/about" className="btn">READ MORE</Link>
         </div>
+
+        <StaticBlogSection />
 
         <Link href="/Our-products">View Our Products</Link>
       </main>

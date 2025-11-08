@@ -1,50 +1,6 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   images: {
-//     remotePatterns: [
-//       {
-//         protocol: 'https',
-//         hostname: 'images.ctfassets.net',
-//         port: '',
-//         pathname: '/**',
-//       },
-//     ],
-//   },
-//   webpack: (config) => {
-//     config.resolve.fallback = {
-//       ...config.resolve.fallback,
-//       fs: false,
-//       path: false,
-//       crypto: false,
-//     };
-//     return config;
-//   },
-//   // Add required headers for SharedArrayBuffer
-//   async headers() {
-//     return [
-//       {
-//         source: "/(.*)",
-//         headers: [
-//           {
-//             key: "Cross-Origin-Embedder-Policy",
-//             value: "require-corp",
-//           },
-//           {
-//             key: "Cross-Origin-Opener-Policy",
-//             value: "same-origin",
-//           },
-//         ],
-//       },
-//     ];
-//   },
-// };
-
-// module.exports = nextConfig; 
-
-
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
     remotePatterns: [
       {
@@ -55,16 +11,40 @@ const nextConfig = {
       },
     ],
   },
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
       path: false,
       crypto: false,
     };
+    
+    // Exclude the astro-blog directory from webpack processing
+    config.module.rules.push({
+      test: /astro-blog\/.*\.(ts|tsx|js|jsx|astro)$/,
+      use: 'ignore-loader',
+    });
+    
     return config;
   },
-  // Relax COEP/COOP headers so Adsterra scripts can load
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  outputFileTracingExcludes: {
+    '*': ['./astro-blog/**/*'],
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/blog-old',
+        destination: '/blog-old/index.html',
+      },
+      {
+        source: '/blog-old/:path*',
+        destination: '/blog-old/:path*',
+      },
+    ];
+  },
   async headers() {
     return [
       {

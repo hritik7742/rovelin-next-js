@@ -1,0 +1,364 @@
+---
+title: "Mastering TypeScript: From Basics to Advanced Patterns"
+description: "A comprehensive guide to TypeScript covering fundamental concepts, advanced types, generics, and real-world patterns for building type-safe applications."
+date: "2025-01-10"
+author: "Rovelin Team"
+tags: ["TypeScript", "JavaScript", "Programming", "Tutorial"]
+published: true
+---
+
+TypeScript has become an essential tool for modern JavaScript development. It adds static typing to JavaScript, helping you catch errors early and write more maintainable code.
+
+## Why TypeScript?
+
+TypeScript offers several compelling advantages:
+
+- **Type Safety**: Catch errors at compile time, not runtime
+- **Better IDE Support**: Enhanced autocomplete and refactoring
+- **Self-Documenting Code**: Types serve as inline documentation
+- **Easier Refactoring**: Confidently make changes across your codebase
+- **Modern JavaScript Features**: Use the latest ECMAScript features
+
+> **Note:** TypeScript is a superset of JavaScript, which means all valid JavaScript code is also valid TypeScript code!
+
+## Basic Types
+
+Let's start with the fundamental types in TypeScript:
+
+```typescript
+// Primitive types
+let name: string = "John";
+let age: number = 30;
+let isActive: boolean = true;
+
+// Arrays
+let numbers: number[] = [1, 2, 3, 4, 5];
+let names: Array<string> = ["Alice", "Bob", "Charlie"];
+
+// Tuples
+let person: [string, number] = ["John", 30];
+
+// Enums
+enum Color {
+  Red,
+  Green,
+  Blue
+}
+let favoriteColor: Color = Color.Blue;
+
+// Any (use sparingly!)
+let dynamic: any = "could be anything";
+
+// Unknown (safer than any)
+let uncertain: unknown = "something";
+```
+
+## Interfaces and Types
+
+Interfaces and type aliases are used to define object shapes:
+
+```typescript
+// Interface
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  age?: number; // Optional property
+  readonly createdAt: Date; // Read-only property
+}
+
+// Type alias
+type Product = {
+  id: string;
+  name: string;
+  price: number;
+  inStock: boolean;
+};
+
+// Using interfaces
+const user: User = {
+  id: 1,
+  name: "Alice",
+  email: "alice@example.com",
+  createdAt: new Date()
+};
+```
+
+> **Tip:** Use interfaces for object shapes and type aliases for unions, intersections, and primitives!
+
+## Functions in TypeScript
+
+TypeScript provides powerful type checking for functions:
+
+```typescript
+// Function with typed parameters and return type
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+// Arrow function
+const multiply = (a: number, b: number): number => a * b;
+
+// Optional parameters
+function greet(name: string, greeting?: string): string {
+  return `${greeting || "Hello"}, ${name}!`;
+}
+
+// Default parameters
+function createUser(name: string, role: string = "user"): User {
+  return {
+    id: Math.random(),
+    name,
+    email: `${name}@example.com`,
+    createdAt: new Date()
+  };
+}
+
+// Rest parameters
+function sum(...numbers: number[]): number {
+  return numbers.reduce((total, n) => total + n, 0);
+}
+```
+
+## Generics
+
+Generics allow you to write reusable, type-safe code:
+
+```typescript
+// Generic function
+function identity<T>(value: T): T {
+  return value;
+}
+
+const num = identity<number>(42);
+const str = identity<string>("hello");
+
+// Generic interface
+interface ApiResponse<T> {
+  data: T;
+  status: number;
+  message: string;
+}
+
+// Using the generic interface
+const userResponse: ApiResponse<User> = {
+  data: {
+    id: 1,
+    name: "John",
+    email: "john@example.com",
+    createdAt: new Date()
+  },
+  status: 200,
+  message: "Success"
+};
+
+// Generic constraints
+interface HasId {
+  id: number;
+}
+
+function findById<T extends HasId>(items: T[], id: number): T | undefined {
+  return items.find(item => item.id === id);
+}
+```
+
+> **Warning:** Don't overuse generics! Use them when you need to maintain type relationships, not just for the sake of using them.
+
+## Union and Intersection Types
+
+Combine types in powerful ways:
+
+```typescript
+// Union types
+type Status = "pending" | "approved" | "rejected";
+type ID = string | number;
+
+function processStatus(status: Status): void {
+  switch (status) {
+    case "pending":
+      console.log("Processing...");
+      break;
+    case "approved":
+      console.log("Approved!");
+      break;
+    case "rejected":
+      console.log("Rejected!");
+      break;
+  }
+}
+
+// Intersection types
+interface Timestamped {
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+interface Identifiable {
+  id: string;
+}
+
+type Entity = Timestamped & Identifiable;
+
+const entity: Entity = {
+  id: "123",
+  createdAt: new Date(),
+  updatedAt: new Date()
+};
+```
+
+## Advanced Patterns
+
+### Utility Types
+
+TypeScript provides built-in utility types:
+
+```typescript
+interface Todo {
+  title: string;
+  description: string;
+  completed: boolean;
+}
+
+// Partial - makes all properties optional
+type PartialTodo = Partial<Todo>;
+
+// Required - makes all properties required
+type RequiredTodo = Required<Todo>;
+
+// Pick - select specific properties
+type TodoPreview = Pick<Todo, "title" | "completed">;
+
+// Omit - exclude specific properties
+type TodoWithoutDescription = Omit<Todo, "description">;
+
+// Record - create an object type with specific keys
+type TodoRecord = Record<string, Todo>;
+```
+
+### Type Guards
+
+Type guards help narrow down types:
+
+```typescript
+function isString(value: unknown): value is string {
+  return typeof value === "string";
+}
+
+function processValue(value: string | number) {
+  if (isString(value)) {
+    // TypeScript knows value is a string here
+    console.log(value.toUpperCase());
+  } else {
+    // TypeScript knows value is a number here
+    console.log(value.toFixed(2));
+  }
+}
+```
+
+### Discriminated Unions
+
+Create type-safe state machines:
+
+```typescript
+type LoadingState = {
+  status: "loading";
+};
+
+type SuccessState<T> = {
+  status: "success";
+  data: T;
+};
+
+type ErrorState = {
+  status: "error";
+  error: string;
+};
+
+type AsyncState<T> = LoadingState | SuccessState<T> | ErrorState;
+
+function handleState<T>(state: AsyncState<T>) {
+  switch (state.status) {
+    case "loading":
+      console.log("Loading...");
+      break;
+    case "success":
+      console.log("Data:", state.data);
+      break;
+    case "error":
+      console.log("Error:", state.error);
+      break;
+  }
+}
+```
+
+## Best Practices
+
+Follow these best practices for better TypeScript code:
+
+1. **Enable Strict Mode**: Use `"strict": true` in tsconfig.json
+2. **Avoid `any`**: Use `unknown` or proper types instead
+3. **Use Type Inference**: Let TypeScript infer types when possible
+4. **Prefer Interfaces for Objects**: Use interfaces for object shapes
+5. **Use Enums Carefully**: Consider string literal unions instead
+6. **Document Complex Types**: Add JSDoc comments for clarity
+7. **Keep Types Simple**: Don't over-engineer your type system
+
+## Real-World Example
+
+Here's a practical example combining multiple concepts:
+
+```typescript
+interface BaseEntity {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+interface BlogPost extends BaseEntity {
+  title: string;
+  content: string;
+  author: User;
+  tags: string[];
+  published: boolean;
+}
+
+class BlogService {
+  private posts: BlogPost[] = [];
+
+  async create(data: Omit<BlogPost, keyof BaseEntity>): Promise<BlogPost> {
+    const post: BlogPost = {
+      ...data,
+      id: crypto.randomUUID(),
+      createdAt: new Date(),
+      updatedAt: new Date()
+    };
+    
+    this.posts.push(post);
+    return post;
+  }
+
+  async findById(id: string): Promise<BlogPost | undefined> {
+    return this.posts.find(post => post.id === id);
+  }
+
+  async update(
+    id: string,
+    data: Partial<Omit<BlogPost, keyof BaseEntity>>
+  ): Promise<BlogPost | undefined> {
+    const post = await this.findById(id);
+    
+    if (!post) return undefined;
+    
+    Object.assign(post, data, { updatedAt: new Date() });
+    return post;
+  }
+}
+```
+
+## Conclusion
+
+TypeScript is a powerful tool that can significantly improve your development experience and code quality. By mastering these concepts and patterns, you'll be well-equipped to build robust, type-safe applications.
+
+Remember: TypeScript is there to help you, not hinder you. Start simple, and gradually adopt more advanced features as you become comfortable with the basics.
+
+Happy typing! 💙
