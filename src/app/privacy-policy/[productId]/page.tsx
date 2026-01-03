@@ -1605,7 +1605,52 @@ If you have any questions or concerns about this Privacy Policy or the extension
 
 🌐 https://rovelin.com
 
-          `}
+          `},
+          {id:'ai-sidebar' , name:'ai-sidebar' , policy:`
+            Privacy Policy for Chat with Ai
+Last Updated: January 03, 2026
+
+1. Overview
+The Extension is designed to enhance your productivity by providing a unified sidebar interface for popular AI services, including OpenAI (ChatGPT), Anthropic (Claude), Google (Gemini), DeepSeek, and Grok. It allows you to summarize, explain, and improve text directly from any webpage.
+
+2. Data Collection and Usage
+We value your privacy. The Extension follows a "Privacy by Design" approach:
+
+No Personal Data Collection: The Extension does not collect or store your personal information (name, email, or browsing history) on any external servers.
+Local Storage: The Extension uses chrome.storage.local and chrome.storage.sync to store your preferences, settings, and daily usage counts locally on your device.
+Licensing Data: If you use a premium version, your license key is stored locally to verify your access. License verification may involve a request to gumroad.com to confirm validity.
+3. Permissions and Justification
+To provide its core features, the Extension requires the following permissions:
+
+<all_urls>: Necessary to allow you to select text on any website and send it to the AI sidebar for processing (e.g., "Summarize this page").
+storage: Used to save your settings, preferences, and local usage data.
+sidePanel: Used to display the AI interface in Chrome's side panel, allowing for a non-intrusive multitasking experience.
+contextMenus: Allows the Extension to add a "Summarize with AI" option to your right-click menu.
+tabs & scripting: Required to communicate between the Extension and the AI service pages (like ChatGPT) to automate prompt delivery.
+Microphone Access: If you use the "Voice Mode" feature, the Extension will request microphone access. Audio is processed directly by the respective AI service (e.g., OpenAI) and is not recorded or stored by the Extension.
+Tab Capture (Screenshot): Used only when you explicitly trigger the "Capture Screenshot" feature to share visual context with the AI. These images are sent directly to the AI provider and are not stored by us.
+4. Third-Party AI Services
+The Extension acts as a bridge between your browser and third-party AI providers. When you use the Extension to interact with an AI, your data is handled according to the privacy policies of those respective providers:
+
+OpenAI (ChatGPT): Privacy Policy
+Anthropic (Claude): Privacy Policy
+Google (Gemini): Privacy Policy
+DeepSeek: Privacy Policy
+X.ai (Grok): Privacy Policy
+Note: The Extension does not have access to your account credentials for these services. You must be logged into these services in your browser for the Extension to function.
+
+5. Data Transmission
+All communication with AI services happens directly from your browser to the service provider's domain. No intermediary servers are used to process your prompts or selected text, ensuring your data remains between you and the AI provider.
+
+6. Advertisements and Tracking
+The Extension does not contain any advertisements or hidden tracking scripts. We do not sell your data to third parties.
+
+7. Changes to This Policy
+We may update this Privacy Policy from time to time to reflect changes in our practices or browser requirements. Users are encouraged to check this page periodically for updates.
+
+8. Contact
+If you have any questions regarding this Privacy Policy, you can contact us at our official website:
+            `}
   
   ];
 
