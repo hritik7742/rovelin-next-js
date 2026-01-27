@@ -46,6 +46,16 @@ const products: Product[] = [
     src: 'https://chromewebstore.google.com/detail/deepseek-pro-custom-promp/noboaggalobomdpdggapfibgodeedkpl',
     featured: true
   },
+    {
+    name: 'Chat with Ai',
+    subtitle: 'Chatgpt | DeepSeek | Gemini | Claude | Grok',
+    description: 'Open ChatGPT, DeepSeek, Gemini, Claude, Grok in sidebar, for explain, summarize, & Fix Grammer.',
+    image: '/images/chatwithai.png',
+    category: 'EXTENSIONS',
+    features: ['Explain', 'Summarize', 'Fix Grammer','Translate'], 
+    src: 'https://chromewebstore.google.com/detail/chat-with-ai-gpt-grok-cla/fpbfpjeeglaaadigkppnnliomndbgiin?authuser=0&hl=en',
+    featured: true
+  },
   {
     name: 'Claude ToolKit',
     subtitle: 'Custom Prompts | Chat Export, Voice | Notes & Folders',
@@ -64,6 +74,15 @@ const products: Product[] = [
     category: 'EXTENSIONS',
     features: ['Multiple themes', 'PDF/DOCX export', 'Multiple AI platforms'],
     src: 'https://chromewebstore.google.com/detail/chatgpt-to-pdf-export-mul/dgkahgofldcancbehocmoiadgijedili'
+  },
+  {
+    name: 'Zoomflow',
+    subtitle: 'Auto Zoom Screen Recorder & Editor',
+    description: 'Record professional screen videos with auto zoom, cursor focus, webcam, and smooth animations. Perfect for demos & tutorials.',
+    image: '/images/cursor (1).png',
+    category: 'EXTENSIONS',
+    features: ['Screen Recorder', 'Cursor focus','Video Editor'],
+    src: 'https://chromewebstore.google.com/detail/zoomflow-%E2%80%93-auto-zoom-scre/kodamnchafhpofhdnnijkpbdcknhedmn?authuser=0&hl=en'
   },
   {
     name: 'Leadspry',
