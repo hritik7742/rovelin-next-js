@@ -1651,7 +1651,56 @@ We may update this Privacy Policy from time to time to reflect changes in our pr
 8. Contact
 If you have any questions regarding this Privacy Policy, you can contact us at our official website:
             `}
-  
+  ,
+  {    id: 'storyflow',
+    name: 'storyflow',
+    policy: `Privacy Policy for StoryFlow
+Last Updated: January 28, 2026
+
+Introduction
+StoryFlow ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how our Chrome Extension, Upload Instagram Stories & Download Reels, Posts, Stories - StoryFlow, collects, uses, and safeguards your information.
+
+By installing and using the StoryFlow extension, you agree to the collection and use of information in accordance with this policy. We prioritize your privacy and have designed our extension to operate with minimal data collection, keeping your personal information on your device whenever possible.
+
+Information We Collect
+1. Personal Information
+We do not collect, store, or transmit your personal identification information (such as your name, email address, or phone number) to our servers.
+
+2. Instagram Data (Cookies and Session)
+To function correctly, StoryFlow requires access to your active Instagram session.
+
+What we access: The extension accesses specific cookies (such as sessionid and csrftoken) and HTTP request headers from your browser.
+Why we need it: This allows the extension to perform actions on your behalf, such as uploading Stories or downloading Reels, solely within your browser.
+How it is stored: This sensitive authentication data is stored locally on your device and is used strictly for making direct API calls to Instagram. We never transmit your session cookies or credentials to any external analytics server or third party.
+3. Usage Data & Licensing
+If you purchase a Pro license, we verify your license key using the Gumroad API.
+
+Licensing: When you enter a license key, we send that key to Gumroad to verify its validity.
+Usage Counters: We verify daily usage limits (e.g., number of downloads) locally on your device.
+How We Use Your Information
+We use the information accessed solely to provide the functionality of the extension:
+
+To Upload Content: To facilitate the uploading of images and videos from your computer to your Instagram Story.
+To Download Content: To fetch high-quality media (Reels, Posts, Stories) from Instagram's servers to your local device.
+To Verify Access: To validate your Pro license status and unlock premium features.
+Third-Party Services
+We may interact with the following third-party services to provide the extension's core functionality:
+
+Instagram (Meta Platforms, Inc.): The extension interacts directly with Instagram's API to upload and download content. Your interactions are subject to Instagram's Privacy Policy and Terms of Service.
+Gumroad: We use Gumroad for handling payments and license verification. When you purchase a license or verify a key, your transaction data is processed by Gumroad in accordance with their Privacy Policy.
+Data Security
+We implement appropriate security measures to protect your data. Since the extension operates primarily on your local device ("client-side"), your sensitive session data remains in your control within your browser environment. We do not maintain a database of user sessions or credentials.
+
+Data Retention
+Session Data: We do not retain your session data on our servers. It exists on your device only as long as you are logged into Instagram.
+Local Storage: Preference settings (such as dark mode toggle) are stored in your browser's local storage and can be cleared by uninstalling the extension or clearing browser data.
+Changes to This Privacy Policy
+We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.
+
+Contact Us
+If you have any questions about this Privacy Policy, please contact us:
+
+By visiting our website: https://www.rovelin.com`  }
   ];
 
 export default function PrivacyPolicy() {
