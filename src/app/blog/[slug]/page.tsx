@@ -93,7 +93,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <article className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+      <article className="min-h-screen py-12" style={{ background: 'linear-gradient(135deg, #0f172a, #1e293b)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <BlogHeader

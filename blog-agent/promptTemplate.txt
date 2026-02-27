@@ -26,10 +26,10 @@ Requirements:
 - Include a short, compelling meta description (1–2 sentences)
 - Include 4–8 relevant tags
 - Include a short FAQ section (3–6 Q&A items) near the end
-- Include 3–6 internal linking suggestions as a simple bullet list of suggested anchor texts and target URL paths (e.g. "/tools/image-extract", "/blog/how-to-record-demo-videos")
 - Unique article: do NOT repeat any previous blog titles or topics for this product
 - The angle of this article must be clearly different from the previously used titles/topics listed above
 - When expressing comparisons (e.g. "< 20 minutes"), do NOT use raw "<" or ">" characters in normal text. Instead, write them out as words like "less than 20 minutes" or "greater than 20 minutes".
+- Do NOT include any "Internal Linking Suggestions" section. Do NOT add any section about internal links, anchor texts, or URL paths.
 
 Output format:
 - Return a single MDX document.
@@ -49,8 +49,7 @@ Body format:
 - Start with an H1 that matches the title.
 - Use H2 and H3 headings to structure the article.
 - Include a clearly labeled "FAQ" section near the end with H2/H3 headings.
-- Include a clearly labeled "Internal Linking Suggestions" section with a bullet list of internal links.
+- Do NOT include any Internal Linking Suggestions section.
 - Do NOT include any code fences or JSON.
 - Do NOT include any extra commentary or explanation.
 - The entire response MUST be valid MDX only.
-

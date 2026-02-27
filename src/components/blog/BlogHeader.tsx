@@ -38,46 +38,47 @@ export default function BlogHeader({
   }, []);
 
   return (
-    <header className="mb-12">
+    <header className="mb-12 pt-4">
       <Link
         href="/blog"
-        className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline mb-6"
+        className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors mb-8 text-sm"
       >
         <ArrowLeft className="w-4 h-4" />
         Back to Blog
       </Link>
 
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap gap-2 mb-5">
         {tags.map((tag) => (
           <Link
             key={tag}
             href={`/blog/tag/${tag}`}
-            className="px-3 py-1 text-sm font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+            className="px-3 py-1 text-xs font-medium rounded-full transition-all hover:opacity-80"
+            style={{ background: 'rgba(124, 58, 237, 0.2)', color: '#a78bfa' }}
           >
             {tag}
           </Link>
         ))}
       </div>
 
-      <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+      <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight">
         {title}
       </h1>
 
-      <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
+      <p className="text-lg text-gray-400 mb-6 leading-relaxed">
         {description}
       </p>
 
-      <div className="flex flex-wrap items-center gap-6 text-gray-600 dark:text-gray-400 mb-6">
+      <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-6">
         <div className="flex items-center gap-2">
-          <User className="w-5 h-5" />
+          <User className="w-4 h-4 text-purple-400" />
           <span>{author}</span>
         </div>
         <div className="flex items-center gap-2">
-          <Calendar className="w-5 h-5" />
+          <Calendar className="w-4 h-4 text-purple-400" />
           <time dateTime={date}>{formattedDate}</time>
         </div>
         <div className="flex items-center gap-2">
-          <Clock className="w-5 h-5" />
+          <Clock className="w-4 h-4 text-purple-400" />
           <span>{readingTime}</span>
         </div>
       </div>
@@ -85,7 +86,7 @@ export default function BlogHeader({
       <ShareButtons url={currentUrl} title={title} description={description} />
 
       {image && (
-        <div className="relative w-full h-96 mt-8 rounded-xl overflow-hidden">
+        <div className="relative w-full h-80 mt-8 rounded-xl overflow-hidden border border-purple-900/30">
           <Image
             src={image}
             alt={title}
@@ -96,6 +97,9 @@ export default function BlogHeader({
           />
         </div>
       )}
+
+      {/* Divider */}
+      <div className="mt-8 border-b border-purple-900/30" />
     </header>
   );
 }

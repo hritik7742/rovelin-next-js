@@ -5,15 +5,15 @@ export default function BlogPage() {
   const allPosts = getAllPosts();
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+    <div className="min-h-screen py-16" style={{ background: 'linear-gradient(135deg, #0f172a, #1e293b)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+        <header className="text-center mb-14">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Rovelin Blog
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Discover insights, tutorials, and stories about web development, design, and technology.
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Discover insights, tutorials, and stories about Chrome extensions, web apps, and productivity tools.
           </p>
         </header>
 
