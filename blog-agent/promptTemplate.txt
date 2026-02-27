@@ -1,0 +1,56 @@
+Write a detailed, SEO-focused blog article in natural, human-sounding English.
+
+Product:
+{{product}}
+
+Product Description (for context, do NOT repeat verbatim):
+{{productDescription}}
+
+Topic Style:
+{{topic}}
+
+Primary Keywords (weave these naturally into the article):
+{{keywords}}
+
+Previously used titles and topics for this product (DO NOT repeat or create close variants of these):
+{{previousTitles}}
+
+Requirements:
+- 1500 words minimum (aim for 1500–2000 words)
+- SEO optimized but natural (no keyword stuffing)
+- Human readable English that feels like a good blog writer, not an AI
+- No fluff, no generic filler sentences
+- Practical, real-world content with concrete examples
+- Clear structure with H1, H2, and H3 headings
+- Include bullet points and numbered lists where helpful
+- Include a short, compelling meta description (1–2 sentences)
+- Include 4–8 relevant tags
+- Include a short FAQ section (3–6 Q&A items) near the end
+- Include 3–6 internal linking suggestions as a simple bullet list of suggested anchor texts and target URL paths (e.g. "/tools/image-extract", "/blog/how-to-record-demo-videos")
+- Unique article: do NOT repeat any previous blog titles or topics for this product
+- The angle of this article must be clearly different from the previously used titles/topics listed above
+- When expressing comparisons (e.g. "< 20 minutes"), do NOT use raw "<" or ">" characters in normal text. Instead, write them out as words like "less than 20 minutes" or "greater than 20 minutes".
+
+Output format:
+- Return a single MDX document.
+- Start with YAML frontmatter exactly like this (no extra text before or after frontmatter):
+---
+title: "<SEO optimized blog title>"
+date: "{{date}}"
+description: "<short meta description>"
+tags: ["tag1","tag2","tag3"]
+slug: "{{slug}}"
+product: "{{product}}"
+topicStyle: "{{topic}}"
+---
+
+Body format:
+- After the frontmatter, include the full MDX content.
+- Start with an H1 that matches the title.
+- Use H2 and H3 headings to structure the article.
+- Include a clearly labeled "FAQ" section near the end with H2/H3 headings.
+- Include a clearly labeled "Internal Linking Suggestions" section with a bullet list of internal links.
+- Do NOT include any code fences or JSON.
+- Do NOT include any extra commentary or explanation.
+- The entire response MUST be valid MDX only.
+

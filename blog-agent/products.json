@@ -1,0 +1,53 @@
+[
+  {
+    "name": "ZoomFlow",
+    "description": "Chrome extension for recording polished product demo and walkthrough videos in seconds, ready to share with customers or teammates.",
+    "keywords": ["demo video recorder", "screen recorder extension", "product demo videos", "record chrome tab", "record product walk-throughs"]
+  },
+  {
+    "name": "Notepilot",
+    "description": "AI-powered note-taking assistant that records meetings, summarizes notes automatically, and keeps your action items organized.",
+    "keywords": ["note taking app", "ai note assistant", "meeting notes", "summarize notes", "productivity notes"]
+  },
+  {
+    "name": "Image Extract",
+    "description": "Lightweight OCR tool that lets you instantly extract and copy text from any image or screenshot in your browser.",
+    "keywords": ["extract text from images", "image OCR", "copy text from image", "convert image to text", "ocr chrome extension"]
+  },
+  {
+    "name": "Leadspry",
+    "description": "Lead-generation tool that helps you discover targeted B2B prospects, find emails, and power up outbound sales campaigns.",
+    "keywords": ["lead generation", "b2b leads", "email finder", "prospecting tool", "sales outreach"]
+  },
+  {
+    "name": "SEO CheckUp",
+    "description": "SEO audit assistant that scans your pages for technical and on-page issues and gives clear recommendations to improve rankings.",
+    "keywords": ["seo audit", "website seo checker", "on-page seo", "technical seo", "seo chrome extension"]
+  },
+  {
+    "name": "CSS Scanly",
+    "description": "Frontend helper that lets you inspect and copy CSS from any website so you can recreate layouts and styles quickly.",
+    "keywords": ["css inspector", "copy css from website", "css chrome extension", "frontend dev tools"]
+  },
+  {
+    "name": "MainTab",
+    "description": "Productivity-focused new tab dashboard that surfaces your key links, tasks, and focus tools whenever you open Chrome.",
+    "keywords": ["new tab productivity", "chrome start page", "productivity dashboard", "focus chrome extension"]
+  },
+  {
+    "name": "FullPageScreenshot",
+    "description": "Screenshot utility that captures full, scrolling webpages in one click for documentation, bug reports, or design reviews.",
+    "keywords": ["full page screenshot", "capture long page", "scrolling screenshot", "screenshot chrome extension"]
+  },
+  {
+    "name": "Filtered YouTube",
+    "description": "YouTube filtering extension that hides distracting feeds so you can stay focused on educational or work-related videos.",
+    "keywords": ["filter youtube", "block distractions", "focus on learning", "youtube productivity"]
+  },
+  {
+    "name": "WA Group Finder",
+    "description": "Discovery tool that helps you find and join targeted WhatsApp groups and communities for networking or marketing.",
+    "keywords": ["whatsapp groups", "find whatsapp groups", "join whatsapp communities", "whatsapp marketing"]
+  }
+]
+

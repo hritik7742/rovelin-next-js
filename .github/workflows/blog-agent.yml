@@ -1,0 +1,40 @@
+name: Daily Blog Agent
+
+on:
+  schedule:
+    - cron: "0 4 * * *"   # Runs daily at 4:00 AM UTC (9:30 AM IST)
+
+jobs:
+  generate-blogs:
+    runs-on: ubuntu-latest
+
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      TEST_MODE: "false"
+      BLOGS_PER_RUN: "3"    # Generate exactly 3 blogs per day
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate 3 blogs
+        run: node blog-agent/generateBlogs.js
+
+      - name: Configure git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push new blogs
+        run: |
+          git add content/posts blog-agent/usedTitles.json blog-agent/logs.txt
+          git commit -m "🤖 Auto-generated 3 blogs [skip ci]" || echo "No changes to commit"
+          git push

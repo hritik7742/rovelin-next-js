@@ -1,48 +1,20 @@
-'use client';
+// NO 'use client' here — this file is used by MDXRemote (RSC) so it must be server-safe.
+// Only CodeBlock is in a separate 'use client' file because it uses useState.
 
 import Image from 'next/image';
-import { useState } from 'react';
-import { Copy, Check, Info, AlertTriangle, CheckCircle } from 'lucide-react';
-
-// Custom Code Block with Copy Button
-interface CodeBlockProps extends React.HTMLAttributes<HTMLPreElement> {
-  children?: React.ReactNode;
-}
-
-export function CodeBlock({ children, className, ...props }: CodeBlockProps) {
-  const [copied, setCopied] = useState(false);
-  const code = typeof children === 'object' && children && 'props' in children 
-    ? (children as { props: { children: string } }).props.children 
-    : String(children || '');
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  return (
-    <div className="relative group my-6">
-      <button
-        onClick={handleCopy}
-        className="absolute right-2 top-2 p-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors opacity-0 group-hover:opacity-100"
-        aria-label="Copy code"
-      >
-        {copied ? (
-          <Check className="w-4 h-4 text-green-400" />
-        ) : (
-          <Copy className="w-4 h-4 text-gray-300" />
-        )}
-      </button>
-      <pre className={className} {...props}>
-        {children}
-      </pre>
-    </div>
-  );
-}
+import { Info, AlertTriangle, CheckCircle } from 'lucide-react';
+import { CodeBlock } from './CodeBlock';
 
 // Custom Image with Caption
-export function BlogImage({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
+export function BlogImage({
+  src,
+  alt,
+  caption,
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+}) {
   return (
     <figure className="my-8">
       <div className="relative w-full h-96 rounded-lg overflow-hidden">
@@ -63,7 +35,7 @@ export function BlogImage({ src, alt, caption }: { src: string; alt: string; cap
   );
 }
 
-// Callout Components
+// Callout Component
 interface CalloutProps {
   children: React.ReactNode;
   type?: 'info' | 'warning' | 'success';
@@ -104,7 +76,7 @@ export function YouTube({ id }: { id: string }) {
   );
 }
 
-// MDX Components Map
+// MDX Components Map — passed to next-mdx-remote/rsc MDXRemote
 export const mdxComponents = {
   pre: CodeBlock,
   img: BlogImage,
@@ -121,16 +93,25 @@ export const mdxComponents = {
     <h3 className="text-xl font-semibold mt-5 mb-2 text-gray-900 dark:text-white" {...props} />
   ),
   h4: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h4 className="text-lg font-semibold mt-4 mb-2 text-gray-800 dark:text-gray-100" {...props} />
+    <h4
+      className="text-lg font-semibold mt-4 mb-2 text-gray-800 dark:text-gray-100"
+      {...props}
+    />
   ),
   p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p className="my-4 text-base leading-7 text-gray-700 dark:text-gray-300" {...props} />
   ),
   ul: (props: React.HTMLAttributes<HTMLUListElement>) => (
-    <ul className="my-4 ml-6 list-disc space-y-2 text-base text-gray-700 dark:text-gray-300" {...props} />
+    <ul
+      className="my-4 ml-6 list-disc space-y-2 text-base text-gray-700 dark:text-gray-300"
+      {...props}
+    />
   ),
   ol: (props: React.HTMLAttributes<HTMLOListElement>) => (
-    <ol className="my-4 ml-6 list-decimal space-y-2 text-base text-gray-700 dark:text-gray-300" {...props} />
+    <ol
+      className="my-4 ml-6 list-decimal space-y-2 text-base text-gray-700 dark:text-gray-300"
+      {...props}
+    />
   ),
   li: (props: React.HTMLAttributes<HTMLLIElement>) => (
     <li className="leading-7" {...props} />
@@ -151,11 +132,22 @@ export const mdxComponents = {
   ),
   table: (props: React.TableHTMLAttributes<HTMLTableElement>) => (
     <div className="overflow-x-auto my-6">
-      <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700" {...props} />
+      <table
+        className="min-w-full divide-y divide-gray-200 dark:divide-gray-700"
+        {...props}
+      />
     </div>
   ),
   th: (props: React.ThHTMLAttributes<HTMLTableCellElement>) => (
-    <th className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-left font-semibold" {...props} />
+    <th
+      className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-left font-semibold"
+      {...props}
+    />
   ),
-  td: (props: React.TdHTMLAttributes<HTMLTableCellElement>) => <td className="px-4 py-2 border-t border-gray-200 dark:border-gray-700" {...props} />,
+  td: (props: React.TdHTMLAttributes<HTMLTableCellElement>) => (
+    <td
+      className="px-4 py-2 border-t border-gray-200 dark:border-gray-700"
+      {...props}
+    />
+  ),
 };

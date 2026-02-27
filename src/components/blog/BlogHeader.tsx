@@ -1,7 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import ShareButtons from './ShareButtons';
+import { useState, useEffect } from 'react';
 
 interface BlogHeaderProps {
   title: string;
@@ -28,7 +31,11 @@ export default function BlogHeader({
     day: 'numeric',
   });
 
-  const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const [currentUrl, setCurrentUrl] = useState('');
+
+  useEffect(() => {
+    setCurrentUrl(window.location.href);
+  }, []);
 
   return (
     <header className="mb-12">

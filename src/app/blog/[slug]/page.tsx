@@ -4,8 +4,7 @@ import BlogHeader from '@/components/blog/BlogHeader';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 import BlogCTA from '@/components/blog/BlogCTA';
 import type { Metadata } from 'next';
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import { mdxComponents } from '@/components/blog/MDXComponents';
+import BlogContent from '@/components/blog/BlogContent';
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -109,26 +108,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             {/* Main Content */}
             <div className="max-w-4xl mx-auto">
-              {/* <article className="blog-content prose prose-lg dark:prose-invert max-w-none bg-white dark:bg-gray-800 rounded-xl p-8 shadow-md">
-                <MDXRemote 
-                  source={post.content} 
-                  components={mdxComponents}
-                  options={{
-                    parseFrontmatter: false,
-                  }}
-                />
-              </article> */}
-              <article className="blog-content prose prose-lg dark:prose-invert max-w-none bg-transparent rounded-xl p-8 shadow-none">
-  <MDXRemote 
-    source={post.content} 
-    components={mdxComponents}
-    options={{
-      parseFrontmatter: false,
-    }}
-  />
-</article>
-
-
+              <BlogContent source={post.content} />
               {/* Call to Action */}
               <BlogCTA />
 

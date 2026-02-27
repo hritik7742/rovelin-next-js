@@ -1,0 +1,38 @@
+name: Blog Agent Test Run (1 Blog)
+
+on:
+  workflow_dispatch:    # Manual trigger only — use this to test before daily run
+
+jobs:
+  generate-test-blog:
+    runs-on: ubuntu-latest
+
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      TEST_MODE: "true"   # Generates exactly 1 blog for testing
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate 1 test blog
+        run: node blog-agent/generateBlogs.js
+
+      - name: Configure git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push test blog
+        run: |
+          git add content/posts blog-agent/usedTitles.json blog-agent/logs.txt
+          git commit -m "🧪 Test blog generated [skip ci]" || echo "No changes to commit"
+          git push
