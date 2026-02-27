@@ -3,6 +3,10 @@ name: Blog Agent Test Run (1 Blog)
 on:
   workflow_dispatch:    # Manual trigger only — use this to test before daily run
 
+# Grant write permission so the bot can push generated blogs
+permissions:
+  contents: write
+
 jobs:
   generate-test-blog:
     runs-on: ubuntu-latest

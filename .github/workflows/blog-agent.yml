@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: "0 4 * * *"   # Runs daily at 4:00 AM UTC (9:30 AM IST)
 
+# Grant write permission so the bot can push generated blogs
+permissions:
+  contents: write
+
 jobs:
   generate-blogs:
     runs-on: ubuntu-latest
