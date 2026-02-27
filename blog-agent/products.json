@@ -1,53 +1,867 @@
 [
   {
-    "name": "ZoomFlow",
-    "description": "Chrome extension for recording polished product demo and walkthrough videos in seconds, ready to share with customers or teammates.",
-    "keywords": ["demo video recorder", "screen recorder extension", "product demo videos", "record chrome tab", "record product walk-throughs"]
+    "name": "Claude ToolKit - Custom Prompts | Chat Export, Voice | Notes & Folders",
+    "url": "https://chromewebstore.google.com/detail/opnabjgijpbfgloabfopcbmkaegcojeh",
+    "description": "Claude ToolKit is a productivity extension designed to enhance the Claude AI chat interface by adding advanced organization and productivity tools. The extension allows users to create and manage custom prompts so frequently used instructions can be reused quickly. It provides a chat export feature that lets users save conversations into formats such as text or documents for later reference. Users can organize their work using folders and notes, making it easier to manage multiple conversations or projects. The extension also includes voice input capabilities so users can dictate prompts directly instead of typing. It integrates directly into the Claude interface and works alongside the existing chat system without modifying core functionality.",
+    "keywords": [
+      "claude tools",
+      "custom prompts",
+      "chat export",
+      "notes",
+      "folders",
+      "voice input"
+    ]
   },
   {
-    "name": "Notepilot",
-    "description": "AI-powered note-taking assistant that records meetings, summarizes notes automatically, and keeps your action items organized.",
-    "keywords": ["note taking app", "ai note assistant", "meeting notes", "summarize notes", "productivity notes"]
+    "name": "DeepSeek Pro - Custom Prompts | Chat Export, Voice | Themes & Folders",
+    "url": "https://chromewebstore.google.com/detail/noboaggalobomdpdggapfibgodeedkpl",
+    "description": "DeepSeek Pro extends the DeepSeek AI interface with additional features that improve workflow and organization. The extension provides a system for creating reusable custom prompts so users can quickly run repeated instructions. Conversations can be exported and saved for documentation or offline use. The extension supports folder-based organization so chats can be grouped by topic or project. A theme system allows users to customize the visual appearance of the interface for improved readability and personalization. Voice input functionality allows prompts to be entered through speech instead of typing. The extension integrates into the DeepSeek chat interface and adds tools for managing conversations without requiring external software.",
+    "keywords": [
+      "deepseek tools",
+      "custom prompts",
+      "chat export",
+      "themes",
+      "folders",
+      "voice input"
+    ]
   },
   {
-    "name": "Image Extract",
-    "description": "Lightweight OCR tool that lets you instantly extract and copy text from any image or screenshot in your browser.",
-    "keywords": ["extract text from images", "image OCR", "copy text from image", "convert image to text", "ocr chrome extension"]
+    "name": "Gemini Prime: 165+ Custom AI Prompts | Chat Export | Notes & Folders",
+    "url": "https://chromewebstore.google.com/detail/fejdghiopnhlijknlolkceklimkeopoe",
+    "description": "Gemini Prime enhances the Gemini AI interface by providing a library of more than 165 predefined prompts designed for different tasks such as writing, coding, research, and productivity. Users can select prompts directly from the extension instead of manually typing instructions. The extension includes chat export functionality so conversations can be saved and reused later. Notes and folders allow users to organize prompts and conversations into structured collections. This makes it easier to manage multiple workflows or projects inside the Gemini interface. The extension integrates directly with Gemini and adds additional tools without changing the original AI system.",
+    "keywords": [
+      "gemini tools",
+      "ai prompts",
+      "chat export",
+      "notes",
+      "folders",
+      "prompt library"
+    ]
   },
   {
-    "name": "Leadspry",
-    "description": "Lead-generation tool that helps you discover targeted B2B prospects, find emails, and power up outbound sales campaigns.",
-    "keywords": ["lead generation", "b2b leads", "email finder", "prospecting tool", "sales outreach"]
+    "name": "Sora Video Downloader - Save with One Click",
+    "url": "https://chromewebstore.google.com/detail/cenhmfahbjmehnoognengokcdjgdbgka",
+    "description": "Sora Video Downloader allows users to download videos from supported platforms with a single click. The extension detects available video files on a page and provides a download button directly in the browser interface. Users can save videos locally for offline viewing without needing additional software. The extension focuses on simplicity and provides a minimal interface so downloads can be performed quickly. It works automatically when a supported video page is opened and provides download options based on detected media streams.",
+    "keywords": [
+      "video downloader",
+      "media download",
+      "offline video",
+      "save videos",
+      "video tools"
+    ]
   },
   {
-    "name": "SEO CheckUp",
-    "description": "SEO audit assistant that scans your pages for technical and on-page issues and gives clear recommendations to improve rankings.",
-    "keywords": ["seo audit", "website seo checker", "on-page seo", "technical seo", "seo chrome extension"]
+    "name": "AI Chat Exporter: Save ChatGPT, Claude, Gemini & Deepseek as PDF/TXT/WORD",
+    "url": "https://chromewebstore.google.com/detail/dgkahgofldcancbehocmoiadgijedili",
+    "description": "AI Chat Exporter allows users to save conversations from multiple AI platforms including ChatGPT, Claude, Gemini, and DeepSeek. The extension adds export controls directly into the chat interface so users can download conversations without copying manually. Supported formats include PDF, Word documents, and plain text files. The extension preserves conversation structure so messages remain readable after export. Users can create offline records of AI discussions for documentation, research, or sharing purposes. The extension works directly inside supported AI websites and automatically detects conversations available for export.",
+    "keywords": [
+      "chat export",
+      "pdf export",
+      "word export",
+      "text export",
+      "ai chats"
+    ]
   },
   {
-    "name": "CSS Scanly",
-    "description": "Frontend helper that lets you inspect and copy CSS from any website so you can recreate layouts and styles quickly.",
-    "keywords": ["css inspector", "copy css from website", "css chrome extension", "frontend dev tools"]
+    "name": "WA Group Finder - Find WhatsApp groups",
+    "url": "https://chromewebstore.google.com/detail/dnhlhdlclknabfhnchaldipcidafnodj",
+    "description": "WA Group Finder helps users discover public WhatsApp groups by searching for group links across different websites. The extension collects and displays available WhatsApp invite links so users can quickly find communities related to specific topics. Users can browse groups and open invite links directly from the extension interface. The tool is designed to simplify the process of locating WhatsApp groups without manually searching through multiple websites. It acts as a directory system that aggregates group links in one place.",
+    "keywords": [
+      "whatsapp groups",
+      "group finder",
+      "invite links",
+      "whatsapp tools"
+    ]
   },
   {
-    "name": "MainTab",
-    "description": "Productivity-focused new tab dashboard that surfaces your key links, tasks, and focus tools whenever you open Chrome.",
-    "keywords": ["new tab productivity", "chrome start page", "productivity dashboard", "focus chrome extension"]
+    "name": "Web2PDF - HTML to PDF Converter",
+    "url": "https://chromewebstore.google.com/detail/meocnokncfleecbkkihgenkgjgbbkhfg",
+    "description": "Web2PDF allows users to convert web pages into PDF documents directly from the browser. The extension captures the content of the current page and generates a PDF version that can be downloaded locally. Users can save articles, documentation, or online content for offline reading or sharing. The extension works on most websites and preserves page layout so the PDF resembles the original page. The conversion process is handled inside the browser and does not require external tools or services.",
+    "keywords": [
+      "html to pdf",
+      "web to pdf",
+      "pdf converter",
+      "page export"
+    ]
   },
   {
-    "name": "FullPageScreenshot",
-    "description": "Screenshot utility that captures full, scrolling webpages in one click for documentation, bug reports, or design reviews.",
-    "keywords": ["full page screenshot", "capture long page", "scrolling screenshot", "screenshot chrome extension"]
+    "name": "Mobile View Tester: Responsive Web Design Tool",
+    "url": "https://chromewebstore.google.com/detail/lkndpmbcjincdjeddabmkokchnlhgmbi",
+    "description": "Mobile View Tester is a browser extension that allows developers and designers to preview websites in multiple screen sizes without using external tools. The extension provides a set of predefined device dimensions so users can simulate how a website appears on mobile phones and tablets. Users can switch between different resolutions and orientations to evaluate responsive layouts. The extension loads the current webpage inside a resizable frame and allows quick comparison between desktop and mobile views. This helps developers test layout behavior, spacing, and responsiveness during development. The tool works directly inside the browser and eliminates the need to manually resize the window or open developer tools repeatedly.",
+    "keywords": [
+      "responsive testing",
+      "mobile view",
+      "screen sizes",
+      "web testing",
+      "device preview"
+    ]
   },
   {
-    "name": "Filtered YouTube",
-    "description": "YouTube filtering extension that hides distracting feeds so you can stay focused on educational or work-related videos.",
-    "keywords": ["filter youtube", "block distractions", "focus on learning", "youtube productivity"]
+    "name": "FullPageScreenshot - Custom Screenshots & Advanced Editor",
+    "url": "https://chromewebstore.google.com/detail/colimbbgbkkmcbkjnnmmpbbhmbcngdcj",
+    "description": "FullPageScreenshot allows users to capture screenshots of web pages either as full-page captures or selected areas. The extension scrolls automatically to capture the entire page including content outside the visible screen. Users can also capture custom regions by selecting a specific area. After capturing, the extension opens an editing interface where users can annotate screenshots with shapes, text, highlights, and drawings. Screenshots can be exported in multiple formats including PNG, JPEG, and PDF. The extension is designed to support documentation, tutorials, and bug reporting by providing both capture and editing tools in one workflow.",
+    "keywords": [
+      "screenshots",
+      "full page capture",
+      "custom capture",
+      "image editor",
+      "pdf export"
+    ]
   },
   {
-    "name": "WA Group Finder",
-    "description": "Discovery tool that helps you find and join targeted WhatsApp groups and communities for networking or marketing.",
-    "keywords": ["whatsapp groups", "find whatsapp groups", "join whatsapp communities", "whatsapp marketing"]
+    "name": "LeadSpry - b2b Lead Generation Tool",
+    "url": "https://chromewebstore.google.com/detail/blegkbedbdcoocieacjmpchfmcmdhfce",
+    "description": "LeadSpry is a lead generation extension designed to collect contact information from websites and online platforms. The extension scans web pages and extracts available data such as email addresses, phone numbers, and profile details. Users can gather business leads while browsing without manually copying information. The extension is intended for freelancers, marketers, and sales teams who need to collect potential client information. Extracted data can be organized and exported for further use. LeadSpry works across multiple types of websites and provides a simplified interface for collecting leads directly from browser sessions.",
+    "keywords": [
+      "lead generation",
+      "email extraction",
+      "phone extraction",
+      "contact finder",
+      "b2b leads"
+    ]
+  },
+  {
+    "name": "Web Highlighter Pro: Smart Folders, Notes & Research Assistant",
+    "url": "https://chromewebstore.google.com/detail/phgcbcconbpfhfkopjgoejjbhfgohenm",
+    "description": "Web Highlighter Pro allows users to highlight text on web pages and save those highlights for later reference. The extension stores highlighted content along with notes so users can organize research material while browsing. Highlights can be grouped into folders which makes it easier to manage information across multiple topics. Users can return to saved highlights and quickly reopen the original pages. The extension acts as a research assistant by helping users collect and organize information directly from websites without copying content into separate documents.",
+    "keywords": [
+      "text highlight",
+      "research notes",
+      "web notes",
+      "folders",
+      "annotations"
+    ]
+  },
+  {
+    "name": "YouTube Stats Viewer - Likes, Dislikes & Engagement",
+    "url": "https://chromewebstore.google.com/detail/ilclmifkafialgiepabobbgdnofbbgge",
+    "description": "YouTube Stats Viewer provides detailed metrics for YouTube videos by displaying engagement information directly on the video page. The extension calculates and shows values such as like ratio, total likes, dislikes, and engagement indicators. Users can quickly evaluate video performance without manually calculating statistics. The extension adds a visual panel near the video interface and updates metrics automatically when a new video is opened. It is useful for creators and analysts who want to understand audience interaction with videos.",
+    "keywords": [
+      "youtube stats",
+      "engagement metrics",
+      "likes dislikes",
+      "video analytics",
+      "youtube tools"
+    ]
+  },
+  {
+    "name": "ImageXtract - Copy Text from Image",
+    "url": "https://chromewebstore.google.com/detail/enafhefnjpdnhbmccghnphjjlflohpkg",
+    "description": "ImageXtract is an OCR extension that allows users to extract text from images directly inside the browser. Users can upload images or select areas of a webpage to capture screenshots for text extraction. The extension processes the image and converts detected text into editable content that can be copied to the clipboard. It supports extracting text from screenshots, photos, scanned documents, and online images. The extension includes cropping tools so users can select only the area containing text. The extracted text can be used in documents or other applications without manual typing. The tool works entirely within the browser and is designed for quick text extraction tasks.",
+    "keywords": [
+      "OCR",
+      "text extraction",
+      "image to text",
+      "screenshot OCR",
+      "copy text"
+    ]
+  },
+  {
+    "name": "Phone number Extractor & Email Finder",
+    "url": "https://chromewebstore.google.com/detail/nnniaiihdgpgonjiiabpondekclpegdc",
+    "description": "Phone Number Extractor and Email Finder scans web pages and automatically detects contact information such as phone numbers and email addresses. The extension identifies patterns commonly used for contact details and lists the results in a structured format. Users can collect contact data without manually searching through page content. Extracted information can be copied or saved for later use. The extension is useful for collecting publicly available contact information from websites and directories while browsing.",
+    "keywords": [
+      "phone extractor",
+      "email finder",
+      "contact extraction",
+      "data extraction",
+      "lead tools"
+    ]
+  },
+  {
+    "name": "OmniSearch Plus - ChatGPT, Claude, YouTube, Bing Search Bar",
+    "url": "https://chromewebstore.google.com/detail/ilknhdcodjcjoandfkkeffolkcdjklbk",
+    "description": "OmniSearch Plus provides a unified search bar that allows users to quickly search multiple platforms from a single interface. The extension adds a search input inside the browser where users can type a query and choose a target platform such as ChatGPT, Claude, YouTube, or Bing. Instead of opening each service manually, the extension redirects the search query directly to the selected platform. This reduces the time required to switch between different websites when performing research or looking for information. The tool is designed for users who frequently search across AI platforms and search engines. The extension works as a simple launcher that converts typed queries into platform-specific searches.",
+    "keywords": [
+      "multi search",
+      "search tools",
+      "ai search",
+      "quick search",
+      "search bar"
+    ]
+  },
+  {
+    "name": "Custom Screensaver - HD Videos & Images",
+    "url": "https://chromewebstore.google.com/detail/jkegjaomefbejnfmahjfjidfelncgpma",
+    "description": "Custom Screensaver allows users to display images or videos as a browser-based screensaver when the system is idle. The extension lets users select media content that will be shown automatically after a period of inactivity. Screensavers can include HD images or video files depending on user preferences. The extension runs inside the browser and activates when no activity is detected. Users can personalize their browsing environment by displaying visual content such as wallpapers or animations. The extension focuses on customization and allows users to control the type of media and the behavior of the screensaver.",
+    "keywords": [
+      "screensaver",
+      "custom media",
+      "idle screen",
+      "videos",
+      "images"
+    ]
+  },
+  {
+    "name": "SEO CheckUp: Improve Rankings with Detailed Audits",
+    "url": "https://chromewebstore.google.com/detail/dddhmflnmblohpbjoabidfpkcdcljljl",
+    "description": "SEO CheckUp analyzes web pages and provides a technical overview of search engine optimization factors. The extension scans the current page and evaluates elements such as titles, meta descriptions, headings, images, and links. It provides a structured report that helps users understand how well a page follows SEO best practices. Users can review issues such as missing tags, incorrect heading structures, and other technical problems. The extension helps developers and website owners inspect optimization details without using external SEO tools. The analysis is performed directly on the active page and results are shown in a simple report interface.",
+    "keywords": [
+      "seo audit",
+      "seo analysis",
+      "page analysis",
+      "seo tools",
+      "technical seo"
+    ]
+  },
+  {
+    "name": "MainTab - Save Memory & Manage Tabs",
+    "url": "https://chromewebstore.google.com/detail/ghdkngiknandibhgcfmadapmiapopdel",
+    "description": "MainTab is a tab management extension that allows users to organize and store browser tabs in groups. Users can save currently open tabs into named collections so they can be reopened later without keeping them active in memory. This helps reduce browser resource usage when many tabs are open. Saved tab groups can be restored at any time with a single click. Users can create multiple groups for different projects or tasks and rename them for easier identification. The extension also provides options to export saved tabs so they can be backed up or shared. MainTab helps users manage large numbers of tabs without losing important pages.",
+    "keywords": [
+      "tab manager",
+      "tab groups",
+      "save tabs",
+      "memory saver",
+      "tab organizer"
+    ]
+  },
+  {
+    "name": "CSS Scanly - Copy CSS | Tailwind & Bootstrap",
+    "url": "https://chromewebstore.google.com/detail/ilklniobjoigkehieijcncgnoemlljmk",
+    "description": "CSS Scanly is a developer tool that allows users to inspect and copy CSS properties from elements on any webpage. The extension activates a scanning mode where users can hover over elements to view applied styles in real time. It displays computed CSS values and identifies classes used by frameworks such as Tailwind CSS and Bootstrap. Users can copy CSS properties directly from the interface and use them in their own projects. The extension also supports editing styles temporarily so users can test design changes without modifying the original website. Multiple style panels can be pinned for comparison between elements. CSS Scanly helps developers analyze layouts and reuse styling information efficiently.",
+    "keywords": [
+      "css inspector",
+      "copy css",
+      "tailwind",
+      "bootstrap",
+      "style inspection"
+    ]
+  },
+  {
+    "name": "Filtered Youtube - Remove YouTube Recommended & Shorts",
+    "url": "https://chromewebstore.google.com/detail/bkdalkbneidlmnkafimplljdajddmogb",
+    "description": "Filtered YouTube modifies the YouTube interface to remove distracting elements and create a focused viewing environment. The extension can hide recommended videos, Shorts sections, comments, and other interface components that often lead to distraction. Users can customize which elements should be hidden based on their preferences. The extension works automatically when YouTube pages are opened and removes selected elements from the layout. This allows users to watch videos or study content without being influenced by recommendations or unnecessary sections. The extension is designed for users who want a simplified and distraction-free YouTube experience.",
+    "keywords": [
+      "youtube filter",
+      "remove recommendations",
+      "hide shorts",
+      "distraction free",
+      "youtube tools"
+    ]
+  },
+  {
+    "name": "Zoomflow – Auto Zoom Screen Recorder & Editor",
+    "url": "https://chromewebstore.google.com/detail/kodamnchafhpofhdnnijkpbdcknhedmn",
+    "description": "Zoomflow is a screen recording extension designed for creating demonstration and tutorial videos directly in the browser. The extension records screen activity and automatically applies zoom effects to highlight important areas during recording. This allows viewers to clearly see interactions without manual editing. After recording, users can review and export videos without needing external editing software. The extension is intended for creating product demos, tutorials, and instructional videos quickly. Zoomflow simplifies the process by combining recording and automatic visual enhancement into a single workflow.",
+    "keywords": [
+      "screen recorder",
+      "demo videos",
+      "auto zoom",
+      "video recording",
+      "tutorial recording"
+    ]
+  },
+  {
+    "name": "NotePilot-Substack Notes Scheduler, Bookmarks, Analytics",
+    "url": "https://chromewebstore.google.com/detail/fonkmilcjondalbgnamdldolaicmgjoa",
+    "description": "NotePilot is a productivity extension designed for managing and scheduling Substack Notes. The extension allows users to create notes and schedule them for automatic posting at selected times. Users can save and organize notes as bookmarks so they can be reused or edited later. The extension also provides analytics that help users track the performance of published notes. Users can manage multiple notes in one place instead of manually posting content. NotePilot integrates directly into the Substack interface and adds scheduling and management capabilities that are not available by default. The extension helps content creators plan posts and maintain consistent publishing without needing external scheduling tools.",
+    "keywords": [
+      "substack",
+      "notes scheduler",
+      "bookmarks",
+      "analytics",
+      "content tools"
+    ]
+  },
+  {
+    "name": "Upload Instagram Stories & Download Reels, Posts ,Stories - StoryFlow",
+    "url": "https://chromewebstore.google.com/detail/fenofcbigfihegijdcpoiabnjindlble",
+    "description": "StoryFlow provides tools for uploading Instagram stories from a desktop browser and downloading Instagram content for offline use. The extension allows users to upload images or videos as stories without using a mobile device. It also detects Instagram media and provides download options for reels, posts, and stories. Users can save content locally without needing additional software. The extension integrates with the Instagram website and adds controls for uploading and downloading content directly from the browser interface. It simplifies content management for users who prefer working on desktop instead of mobile devices.",
+    "keywords": [
+      "instagram upload",
+      "story upload",
+      "reels download",
+      "media download",
+      "instagram tools"
+    ]
+  },
+  {
+    "name": "Custom Labels & Colors for Calendar",
+    "url": "https://chromewebstore.google.com/detail/hgeiojfnhofmlnfnpckncinjkcciaaic",
+    "description": "Custom Labels and Colors for Calendar allows users to personalize calendar events by assigning custom labels and color categories. The extension enhances the calendar interface by adding visual identifiers that help distinguish different types of events. Users can assign colors and labels based on categories such as work, personal tasks, meetings, or reminders. This makes it easier to visually organize schedules and quickly identify event types. The extension works directly inside the calendar interface and adds additional customization options beyond the default calendar features.",
+    "keywords": [
+      "calendar labels",
+      "event colors",
+      "calendar tools",
+      "event organization",
+      "schedule tools"
+    ]
+  },
+  {
+    "name": "Chat with Ai (gpt ,grok ,claude,gemini)",
+    "url": "https://chromewebstore.google.com/detail/fpbfpjeeglaaadigkppnnliomndbgiin",
+    "description": "Chat with AI provides a simple interface for interacting with multiple AI models from a single extension. Users can send prompts to supported AI services such as GPT-based models, Grok, Claude, and Gemini without switching between different websites. The extension acts as a centralized chat interface where users can enter questions and receive responses from different AI providers. This reduces the need to open multiple tabs when working with AI tools. The extension focuses on providing a unified environment for interacting with different AI systems through a single interface.",
+    "keywords": [
+      "ai chat",
+      "multi ai",
+      "gpt",
+      "claude",
+      "gemini"
+    ]
+  },
+  {
+    "name": "Crypto Tracker – Bitcoin Price Tracker & Crypto Market",
+    "url": "https://chromewebstore.google.com/detail/gkpcjgecjgnliidfakfpmackhkklbdid",
+    "description": "Crypto Tracker provides real-time cryptocurrency price information directly inside the browser. The extension displays price updates for Bitcoin and other cryptocurrencies and allows users to monitor market movements without visiting trading websites. Users can quickly check price values and track market changes while browsing. The extension focuses on providing simple and accessible market information rather than advanced trading features. It serves as a lightweight tool for monitoring cryptocurrency prices from the browser interface.",
+    "keywords": [
+      "crypto prices",
+      "bitcoin tracker",
+      "market data",
+      "crypto tools",
+      "price tracking"
+    ]
+  },
+  {
+    "name": "TikTok Auto Follow Scroll, Like, Save – TokMaster",
+    "url": "https://chromewebstore.google.com/detail/gboboohoflpgphhihpofgbikmfngchlp",
+    "description": "TokMaster automates interactions on TikTok by performing actions such as scrolling videos, following accounts, liking content, and saving videos. The extension runs automated actions based on user settings and interacts with the TikTok interface automatically. Users can configure the automation to perform repetitive tasks without manual interaction. The extension works directly on the TikTok website and simulates user actions within the browser. It is designed to reduce manual effort when interacting with large amounts of content.",
+    "keywords": [
+      "tiktok automation",
+      "auto follow",
+      "auto like",
+      "auto scroll",
+      "automation tools"
+    ]
+  },
+  {
+    "name": "Blur Screen - Sensitive Data Protection",
+    "url": "https://chromewebstore.google.com/detail/ooapmkgdbkgbncodbfnfiembcbcejpmo",
+    "description": "Blur Screen allows users to hide sensitive information on web pages by applying blur effects to selected areas. The extension enables users to manually blur parts of the screen where confidential information is displayed. This helps protect private data when sharing screens, recording videos, or working in public environments. Users can apply and remove blur effects as needed. The extension works directly on web pages and allows flexible control over which areas are hidden. It is useful for protecting personal or confidential information during presentations or recordings.",
+    "keywords": [
+      "blur screen",
+      "privacy",
+      "sensitive data",
+      "screen protection",
+      "data hiding"
+    ]
+  },
+  {
+    "name": "Image Converter",
+    "url": "https://www.rovelin.com/tools/image-converter",
+    "description": "Image Converter allows users to convert images between different formats directly inside the browser. Users can upload images and select an output format such as JPG, PNG, WebP, or other supported formats. The conversion process happens in the browser so files are not uploaded to external servers. This tool helps users quickly change image formats for compatibility with websites, applications, or devices. Users can download converted images immediately after processing. The interface is simple and designed for fast conversion without requiring additional configuration. The tool works on desktop and mobile browsers and supports single image processing.",
+    "keywords": [
+      "image conversion",
+      "format converter",
+      "jpg png webp",
+      "image tools"
+    ]
+  },
+  {
+    "name": "JPG to PNG Converter",
+    "url": "https://www.rovelin.com/tools/jpg-to-png",
+    "description": "JPG to PNG Converter allows users to convert JPEG images into PNG format directly in the browser. Users can upload JPG images and convert them into PNG files without installing software. The conversion process preserves image quality and produces files that support transparency where applicable. The tool is useful when PNG format is required for design or development tasks. Processing is performed locally in the browser and images are not transmitted to external servers. Converted files can be downloaded immediately after conversion.",
+    "keywords": [
+      "jpg to png",
+      "image converter",
+      "format conversion",
+      "png conversion"
+    ]
+  },
+  {
+    "name": "PNG to JPG Converter",
+    "url": "https://www.rovelin.com/tools/png-to-jpg",
+    "description": "PNG to JPG Converter converts PNG images into JPEG format directly inside the browser. Users upload PNG images and receive JPG files optimized for smaller file size. The tool removes transparency when converting images and replaces transparent areas with a solid background. The conversion is performed locally without uploading images to servers. This tool is useful for reducing file size and improving compatibility with websites or applications that require JPG images. Converted files can be downloaded immediately after processing.",
+    "keywords": [
+      "png to jpg",
+      "image conversion",
+      "jpg converter",
+      "image tools"
+    ]
+  },
+  {
+    "name": "WebP to JPG Converter",
+    "url": "https://www.rovelin.com/tools/webp-to-jpg",
+    "description": "WebP to JPG Converter converts WebP images into JPG format for compatibility with applications that do not support WebP. Users upload WebP images and convert them into standard JPEG files directly in the browser. The tool processes images locally and does not upload files to external servers. Converted images can be downloaded immediately after processing. This tool is useful when working with software or platforms that require JPG images instead of WebP format.",
+    "keywords": [
+      "webp to jpg",
+      "image converter",
+      "format conversion",
+      "image tools"
+    ]
+  },
+  {
+    "name": "HEIC to JPG Converter",
+    "url": "https://www.rovelin.com/tools/heic-to-jpg",
+    "description": "HEIC to JPG Converter allows users to convert HEIC images into JPG format inside the browser. HEIC images created by mobile devices can be uploaded and converted into standard JPEG files. The conversion process runs locally and does not require uploading files to servers. Converted images are compatible with most software and devices. This tool helps users work with HEIC images on systems that do not support the format. Converted files can be downloaded immediately after processing.",
+    "keywords": [
+      "heic conversion",
+      "heic to jpg",
+      "image tools",
+      "format converter"
+    ]
+  },
+  {
+    "name": "SVG Converter",
+    "url": "https://www.rovelin.com/tools/svg-converter",
+    "description": "SVG Converter allows users to convert SVG vector graphics into raster image formats such as PNG or JPG. Users upload SVG files and choose an output format and resolution. The tool renders the vector graphic and produces an image file that can be used in documents or websites. The conversion process happens locally in the browser without uploading files. This tool is useful when vector graphics need to be converted into standard image formats for compatibility or sharing.",
+    "keywords": [
+      "svg converter",
+      "vector conversion",
+      "svg to png",
+      "svg to jpg"
+    ]
+  },
+  {
+    "name": "Image to PDF Converter",
+    "url": "https://www.rovelin.com/tools/image-to-pdf",
+    "description": "Image to PDF Converter allows users to combine one or more images into a PDF document. Users can upload images and arrange them before generating the PDF file. The tool converts images into pages within a single PDF document and preserves image quality. Processing is performed inside the browser and files are not uploaded to servers. The generated PDF can be downloaded immediately after creation. This tool is useful for creating documents from scanned images or photos.",
+    "keywords": [
+      "image to pdf",
+      "pdf converter",
+      "document creation",
+      "pdf tools"
+    ]
+  },
+  {
+    "name": "PDF to JPG Converter",
+    "url": "https://www.rovelin.com/tools/pdf-to-jpg",
+    "description": "PDF to JPG Converter converts PDF pages into JPG images directly in the browser. Users upload a PDF file and the tool extracts pages and converts them into image files. Each page can be downloaded as a separate image. Processing occurs locally and files are not uploaded to external servers. This tool is useful for extracting visual content from PDF documents and converting pages into images for sharing or editing.",
+    "keywords": [
+      "pdf to jpg",
+      "pdf converter",
+      "pdf extraction",
+      "image export"
+    ]
+  },
+  {
+    "name": "PDF to PNG Converter",
+    "url": "https://www.rovelin.com/tools/pdf-to-png",
+    "description": "PDF to PNG Converter converts PDF pages into PNG images directly inside the browser. Users upload PDF files and the tool renders each page into a PNG image. Processing happens locally without sending files to servers. PNG images preserve quality and are useful for design or documentation purposes. Converted images can be downloaded after processing. This tool helps users extract images from PDF files in a lossless format.",
+    "keywords": [
+      "pdf to png",
+      "pdf conversion",
+      "image extraction",
+      "png export"
+    ]
+  },
+  {
+    "name": "Image Resizer",
+    "url": "https://www.rovelin.com/tools/image-resizer",
+    "description": "Image Resizer allows users to change image dimensions directly inside the browser. Users can upload images and specify width and height values. The tool can maintain the original aspect ratio or allow custom resizing. The resizing process runs locally without uploading images to external servers. Resized images can be downloaded immediately after processing. This tool is useful for preparing images for websites, social media, or applications that require specific dimensions.",
+    "keywords": [
+      "image resize",
+      "dimensions",
+      "image tools",
+      "graphics"
+    ]
+  },
+  {
+    "name": "Image Cropper",
+    "url": "https://www.rovelin.com/tools/image-cropper",
+    "description": "Image Cropper allows users to select and extract specific areas from images directly inside the browser. Users can upload an image and manually adjust a cropping frame to isolate the desired portion. The tool supports precise cropping by dragging edges and corners of the selection area. Once the crop area is selected, the tool generates a new image containing only the chosen region. The cropping process runs locally in the browser without uploading files to servers. Cropped images can be downloaded immediately after processing. This tool is useful for removing unwanted parts of images and preparing visuals for documents, social media, or web content.",
+    "keywords": [
+      "image crop",
+      "image editing",
+      "crop tool",
+      "image tools"
+    ]
+  },
+  {
+    "name": "Image Compressor",
+    "url": "https://www.rovelin.com/tools/image-compressor",
+    "description": "Image Compressor reduces the file size of images while maintaining acceptable visual quality. Users can upload images and apply compression to produce smaller files suitable for websites or storage. The tool processes images locally in the browser so files are not uploaded to external servers. Compression helps reduce loading time and storage requirements while preserving the original appearance as much as possible. After processing, compressed images can be downloaded immediately. This tool is useful for optimizing images for faster web performance and efficient storage.",
+    "keywords": [
+      "image compression",
+      "file size reduction",
+      "image optimization",
+      "image tools"
+    ]
+  },
+  {
+    "name": "WebP Compressor",
+    "url": "https://www.rovelin.com/tools/webp-compressor",
+    "description": "WebP Compressor reduces the file size of WebP images directly inside the browser. Users upload WebP files and the tool applies compression to produce smaller image files. The compression process balances quality and file size and is performed locally without sending images to external servers. Compressed images can be downloaded immediately after processing. This tool helps users optimize WebP images for faster loading and reduced storage usage while maintaining visual quality.",
+    "keywords": [
+      "webp compression",
+      "image optimization",
+      "file reduction",
+      "image tools"
+    ]
+  },
+  {
+    "name": "PNG Compressor",
+    "url": "https://www.rovelin.com/tools/png-compressor",
+    "description": "PNG Compressor reduces the size of PNG image files by applying optimization techniques directly in the browser. Users upload PNG images and receive compressed versions that require less storage space. The compression process is performed locally and images are not uploaded to servers. The tool preserves image quality while minimizing file size. Compressed images can be downloaded after processing. This tool is useful for preparing images for websites or applications where smaller file sizes are important.",
+    "keywords": [
+      "png compression",
+      "image optimization",
+      "file reduction",
+      "image tools"
+    ]
+  },
+  {
+    "name": "JPEG Compressor",
+    "url": "https://www.rovelin.com/tools/jpeg-compressor",
+    "description": "JPEG Compressor reduces the file size of JPEG images by applying adjustable compression inside the browser. Users upload JPEG files and receive compressed images that are smaller in size. The compression process runs locally without transmitting files to external servers. The tool is useful for reducing storage usage and improving website loading speed. Compressed images can be downloaded immediately after processing. Users can optimize multiple images individually for better performance.",
+    "keywords": [
+      "jpeg compression",
+      "image optimization",
+      "file reduction",
+      "image tools"
+    ]
+  },
+  {
+    "name": "GIF Compressor",
+    "url": "https://www.rovelin.com/tools/gif-compressor",
+    "description": "GIF Compressor reduces the file size of animated GIF files directly inside the browser. Users upload GIF files and the tool applies compression to produce smaller files suitable for sharing or uploading. The compression process occurs locally without uploading files to external servers. Compressed GIF files maintain animation while reducing storage size. The tool helps users optimize animated images for websites or messaging platforms.",
+    "keywords": [
+      "gif compression",
+      "animation optimization",
+      "file reduction",
+      "image tools"
+    ]
+  },
+  {
+    "name": "Color Picker",
+    "url": "https://www.rovelin.com/tools/color-picker",
+    "description": "Color Picker allows users to select and identify colors directly from the screen or uploaded images. The tool displays color values in multiple formats such as HEX and RGB. Users can copy color values for use in design or development projects. The interface provides a visual color selection area and allows precise color identification. The tool works inside the browser and does not require external software. It is useful for designers and developers who need accurate color values.",
+    "keywords": [
+      "color picker",
+      "hex color",
+      "rgb color",
+      "design tools"
+    ]
+  },
+  {
+    "name": "Base64 Image Converter",
+    "url": "https://www.rovelin.com/tools/base64-image",
+    "description": "Base64 Image Converter converts image files into Base64 encoded strings directly in the browser. Users upload images and the tool generates encoded text that represents the image data. The encoded string can be copied and used in HTML or CSS files where embedded images are required. The conversion process happens locally without sending files to servers. This tool is useful for embedding images directly into web documents without separate image files.",
+    "keywords": [
+      "base64",
+      "image encoding",
+      "image converter",
+      "web tools"
+    ]
+  },
+  {
+    "name": "Video Compressor",
+    "url": "https://www.rovelin.com/tools/video-compressor",
+    "description": "Video Compressor reduces the size of video files by applying compression directly inside the browser. Users upload video files and receive compressed versions that require less storage space. The tool processes videos locally and does not upload files to external servers. Compressed videos can be downloaded immediately after processing. The tool is useful for reducing file sizes before uploading videos to websites or sharing them online.",
+    "keywords": [
+      "video compression",
+      "file reduction",
+      "video optimization",
+      "media tools"
+    ]
+  },
+  {
+    "name": "Emoji Generator",
+    "url": "https://www.rovelin.com/tools/emoji-generator",
+    "description": "Emoji Generator allows users to create emoji-style graphics using customizable options. Users can generate emoji images by selecting shapes, colors, and expressions. Generated emojis can be downloaded and used in messages, documents, or designs. The tool works entirely in the browser and does not require external software. It provides a simple interface for generating graphical emoji content quickly.",
+    "keywords": [
+      "emoji generator",
+      "graphics",
+      "emoji creation",
+      "design tools"
+    ]
+  },
+  {
+    "name": "Gradient Generator",
+    "url": "https://www.rovelin.com/tools/gradient-generator",
+    "description": "Gradient Generator allows users to create CSS gradient backgrounds using a visual interface inside the browser. Users can select multiple colors and adjust gradient direction to generate linear gradients. The tool displays a live preview so users can see the gradient result while adjusting settings. It automatically generates CSS code that can be copied and used in websites or applications. The tool simplifies the process of designing gradients without manually writing CSS. All operations happen inside the browser and no data is uploaded to servers. Generated gradients can be immediately used in design and development projects.",
+    "keywords": [
+      "gradient generator",
+      "css gradients",
+      "design tools",
+      "color gradients"
+    ]
+  },
+  {
+    "name": "Video to Audio Converter",
+    "url": "https://www.rovelin.com/tools/video-to-audio",
+    "description": "Video to Audio Converter extracts audio tracks from video files directly inside the browser. Users upload video files and the tool processes the media to generate an audio-only file. The conversion process runs locally without uploading files to servers. Users can download the extracted audio after processing. The tool is useful for extracting music, podcasts, or spoken content from video recordings. It provides a simple interface that allows quick conversion without installing software.",
+    "keywords": [
+      "video to audio",
+      "audio extraction",
+      "media conversion",
+      "audio tools"
+    ]
+  },
+  {
+    "name": "Image to Text (OCR)",
+    "url": "https://www.rovelin.com/tools/image-to-text",
+    "description": "Image to Text is an OCR-based tool that extracts text from images directly inside the browser. Users upload images or screenshots and the tool analyzes the content to detect readable text. The extracted text is converted into editable format that can be copied or saved. The OCR process supports multiple languages and runs locally in the browser without sending images to external servers. This tool is useful for digitizing printed documents, extracting text from screenshots, and converting scanned images into editable text. The interface includes options for uploading images and copying results after processing.",
+    "keywords": [
+      "OCR",
+      "text extraction",
+      "image processing",
+      "text recognition"
+    ]
+  },
+  {
+    "name": "QR Code Generator",
+    "url": "https://www.rovelin.com/tools/qr-generator",
+    "description": "QR Code Generator allows users to create QR codes from text, links, or other input data directly inside the browser. Users enter content such as URLs or messages and the tool generates a QR code image representing the data. Generated QR codes can be downloaded and shared. The tool works entirely inside the browser without sending information to external servers. It is useful for creating QR codes for websites, contact details, or printed materials.",
+    "keywords": [
+      "qr generator",
+      "qr code",
+      "code generator",
+      "encoding tools"
+    ]
+  },
+  {
+    "name": "Base64 Converter",
+    "url": "https://www.rovelin.com/tools/base64-converter",
+    "description": "Base64 Converter allows users to encode text into Base64 format and decode Base64 strings back into readable text. Users can paste input text and perform encoding or decoding instantly. The conversion process runs entirely inside the browser and does not transmit data to servers. This tool is useful for developers working with encoded data in web applications. The interface provides quick conversion between plain text and Base64 format.",
+    "keywords": [
+      "base64",
+      "encoding",
+      "decoding",
+      "text conversion"
+    ]
+  },
+  {
+    "name": "CSS Minifier",
+    "url": "https://www.rovelin.com/tools/css-minifier",
+    "description": "CSS Minifier compresses CSS code by removing unnecessary characters such as spaces and line breaks. Users can paste CSS code and receive a minimized version that is smaller in size. The tool helps improve website performance by reducing stylesheet file size. Processing occurs locally in the browser and code is not transmitted to servers. Minified CSS can be copied and used directly in projects.",
+    "keywords": [
+      "css minify",
+      "code compression",
+      "css tools",
+      "web development"
+    ]
+  },
+  {
+    "name": "URL Encoder Decoder",
+    "url": "https://www.rovelin.com/tools/url-encoder-decoder",
+    "description": "URL Encoder Decoder converts text into URL-safe encoded format and decodes encoded strings back into normal text. Users can paste input values and perform encoding or decoding instantly. The tool works entirely inside the browser and does not send data to external servers. It is useful for preparing URLs that contain special characters and for decoding encoded parameters.",
+    "keywords": [
+      "url encoding",
+      "url decoding",
+      "text conversion",
+      "web tools"
+    ]
+  },
+  {
+    "name": "Password Generator",
+    "url": "https://www.rovelin.com/tools/password-generator",
+    "description": "Password Generator creates random passwords with customizable length and character types. Users can generate passwords containing letters, numbers, and symbols. The generated passwords can be copied and used for secure accounts. The tool runs entirely in the browser and does not transmit generated passwords to servers. It provides a quick way to create strong passwords without manual effort.",
+    "keywords": [
+      "password generator",
+      "random passwords",
+      "security tools",
+      "password creation"
+    ]
+  },
+  {
+    "name": "Text Diff Checker",
+    "url": "https://www.rovelin.com/tools/text-diff",
+    "description": "Text Diff Checker compares two blocks of text and highlights differences between them. Users paste original and modified text into separate fields and the tool identifies added, removed, or changed content. The comparison process runs locally in the browser without sending text to servers. This tool is useful for reviewing document changes and identifying modifications between versions.",
+    "keywords": [
+      "text comparison",
+      "diff tool",
+      "text analysis",
+      "comparison tools"
+    ]
+  },
+  {
+    "name": "Phone Number Generator",
+    "url": "https://www.rovelin.com/tools/phone-generator",
+    "description": "Phone Number Generator creates random phone numbers based on selected formats or regions. Users can generate multiple numbers at once and copy them for testing or demonstration purposes. Generated numbers follow typical phone number patterns but are not assigned to real users. The tool works entirely in the browser and does not require external services. It is useful for software testing and form validation.",
+    "keywords": [
+      "phone generator",
+      "random numbers",
+      "testing tools",
+      "data generation"
+    ]
+  },
+  {
+    "name": "Lorem Ipsum Generator",
+    "url": "https://www.rovelin.com/tools/lorem-ipsum",
+    "description": "Lorem Ipsum Generator creates placeholder text for design and layout purposes. Users can generate paragraphs or sentences of dummy text and copy them into projects. The generated text helps designers and developers fill content areas while building layouts. The tool runs entirely inside the browser and produces text instantly.",
+    "keywords": [
+      "lorem ipsum",
+      "dummy text",
+      "placeholder text",
+      "text generator"
+    ]
+  },
+  {
+    "name": "Comma Separator",
+    "url": "https://www.rovelin.com/tools/comma-separator",
+    "description": "Comma Separator formats lists of values by adding or removing commas between items. Users can paste text containing multiple values and convert it into a comma-separated format. The tool processes text locally in the browser and does not transmit data to servers. It is useful for formatting lists for spreadsheets or programming tasks.",
+    "keywords": [
+      "comma separated",
+      "text formatting",
+      "data formatting",
+      "text tools"
+    ]
+  },
+  {
+    "name": "Random Name Generator",
+    "url": "https://www.rovelin.com/tools/random-name",
+    "description": "Random Name Generator produces randomly generated names for testing or creative purposes. Users can generate multiple names instantly and copy them for use in projects or examples. The tool runs locally in the browser and does not require external data sources. It is useful for generating sample user data.",
+    "keywords": [
+      "name generator",
+      "random names",
+      "data generation",
+      "testing tools"
+    ]
+  },
+  {
+    "name": "Markdown to HTML",
+    "url": "https://www.rovelin.com/tools/markdown-to-html",
+    "description": "Markdown to HTML converts Markdown formatted text into HTML code directly inside the browser. Users paste Markdown content and the tool generates equivalent HTML output. The conversion runs locally without sending data to external servers. Generated HTML can be copied and used in web projects. The tool simplifies the process of converting formatted text into web-ready code.",
+    "keywords": [
+      "markdown",
+      "html conversion",
+      "text conversion",
+      "web tools"
+    ]
+  },
+  {
+    "name": "Word Counter",
+    "url": "https://www.rovelin.com/tools/word-counter",
+    "description": "Word Counter analyzes text and provides counts of words and characters. Users paste or type text into the tool and statistics update automatically. The tool works locally inside the browser and does not transmit text to servers. It is useful for measuring text length and preparing content with specific limits.",
+    "keywords": [
+      "word count",
+      "text analysis",
+      "character count",
+      "text tools"
+    ]
+  },
+  {
+    "name": "Credit Card Generator",
+    "url": "https://www.rovelin.com/tools/credit-card-generator",
+    "description": "Credit Card Generator produces random credit card numbers for testing and development purposes. Users can generate numbers that follow standard card formatting and checksum rules without being linked to real financial accounts. The generated values are useful for software testing, form validation, and demonstration environments where realistic data is required. The generation process runs locally inside the browser and no data is transmitted to external servers. Users can generate multiple card numbers at once and copy them for use in development or testing scenarios.",
+    "keywords": [
+      "credit card generator",
+      "testing data",
+      "random data",
+      "development tools"
+    ]
+  },
+  {
+    "name": "JavaScript Minifier",
+    "url": "https://www.rovelin.com/tools/javascript-minifier",
+    "description": "JavaScript Minifier compresses JavaScript code by removing unnecessary spaces, comments, and formatting characters. Users can paste JavaScript code and receive a minimized version that reduces file size while preserving functionality. The minification process is performed entirely inside the browser without transmitting code to external servers. The tool helps developers optimize scripts for faster loading and reduced bandwidth usage. Minified code can be copied and used directly in web applications.",
+    "keywords": [
+      "javascript minify",
+      "code compression",
+      "web development",
+      "js tools"
+    ]
+  },
+  {
+    "name": "Word to PDF Converter",
+    "url": "https://www.rovelin.com/tools/word-to-pdf",
+    "description": "Word to PDF Converter allows users to convert Word documents into PDF format directly inside the browser. Users upload Word files and the tool generates a PDF version that preserves document layout and formatting. The conversion process is performed locally without uploading files to external servers. Generated PDF files can be downloaded immediately after processing. This tool is useful for sharing documents in a format that is widely supported across devices.",
+    "keywords": [
+      "word to pdf",
+      "document conversion",
+      "pdf tools",
+      "file conversion"
+    ]
+  },
+  {
+    "name": "Unit Converter",
+    "url": "https://www.rovelin.com/tools/unit-converter",
+    "description": "Unit Converter converts values between different measurement units such as length, weight, temperature, and volume. Users enter a numeric value and select source and target units to perform conversion instantly. The conversion process runs locally inside the browser and does not require external services. This tool provides a simple interface for performing measurement conversions quickly without manual calculations.",
+    "keywords": [
+      "unit conversion",
+      "measurement tools",
+      "conversion tools",
+      "calculator tools"
+    ]
+  },
+  {
+    "name": "Name Wheel Spinner",
+    "url": "https://www.rovelin.com/tools/name-wheel",
+    "description": "Name Wheel Spinner allows users to enter a list of names and select one randomly using a spinning wheel interface. Users add names to the list and start the spinner to randomly choose a result. The tool runs entirely inside the browser and does not store or transmit data. It is useful for random selection in games, decision making, or group activities.",
+    "keywords": [
+      "random picker",
+      "name spinner",
+      "random selection",
+      "generator tools"
+    ]
+  },
+  {
+    "name": "Archive Converter",
+    "url": "https://www.rovelin.com/tools/archive-converter",
+    "description": "Archive Converter allows users to convert compressed archive files between supported formats. Users upload archive files and select an output format for conversion. The tool processes files inside the browser environment and generates converted archives for download. This tool is useful when working with archive formats that are not supported by certain applications or systems.",
+    "keywords": [
+      "archive conversion",
+      "file converter",
+      "zip tools",
+      "file tools"
+    ]
+  },
+  {
+    "name": "PDF to Word Converter",
+    "url": "https://www.rovelin.com/tools/pdf-to-word",
+    "description": "PDF to Word Converter converts PDF documents into editable Word files directly inside the browser. Users upload PDF files and receive Word documents that preserve text structure. The conversion process runs locally without uploading files to external servers. Converted files can be downloaded after processing. This tool helps users edit content originally stored in PDF format.",
+    "keywords": [
+      "pdf to word",
+      "document conversion",
+      "pdf tools",
+      "file conversion"
+    ]
+  },
+  {
+    "name": "Email Extractor",
+    "url": "https://www.rovelin.com/tools/email-extractor",
+    "description": "Email Extractor scans input text and identifies email addresses automatically. Users paste text into the tool and it extracts valid email patterns into a structured list. The extraction process runs locally inside the browser and does not transmit data to servers. Extracted email addresses can be copied for further use. This tool is useful for collecting contact information from large text blocks or documents.",
+    "keywords": [
+      "email extraction",
+      "text processing",
+      "contact extraction",
+      "data tools"
+    ]
+  },
+  {
+    "name": "Phone Number Extractor",
+    "url": "https://www.rovelin.com/tools/phone-extractor",
+    "description": "Phone Number Extractor scans text input and detects phone numbers automatically. Users paste content and the tool identifies number patterns commonly used for phone contacts. Extracted numbers are displayed in a structured list that can be copied. Processing happens locally in the browser without sending text to servers. This tool helps users collect phone numbers from documents or text sources efficiently.",
+    "keywords": [
+      "phone extraction",
+      "text processing",
+      "data extraction",
+      "contact tools"
+    ]
+  },
+  {
+    "name": "Digital Signature Generator",
+    "url": "https://www.rovelin.com/tools/signature-generator",
+    "description": "Digital Signature Generator allows users to create handwritten-style signatures using drawing tools inside the browser. Users can draw signatures using a mouse or touchscreen and download the result as an image file. The tool runs entirely in the browser and does not upload signatures to servers. Generated signatures can be used in documents or forms where a digital signature image is required.",
+    "keywords": [
+      "digital signature",
+      "signature drawing",
+      "signature tools",
+      "graphics"
+    ]
+  },
+  {
+    "name": "JSON Formatter",
+    "url": "https://www.rovelin.com/tools/json-formatter",
+    "description": "JSON Formatter formats JSON data into a readable structure with indentation and line breaks. Users paste JSON text and the tool organizes the data for easier reading and debugging. The formatting process runs locally in the browser and does not transmit data to external servers. The tool helps developers inspect and understand JSON structures quickly.",
+    "keywords": [
+      "json formatter",
+      "json tools",
+      "data formatting",
+      "developer tools"
+    ]
+  },
+  {
+    "name": "HTML Formatter",
+    "url": "https://www.rovelin.com/tools/html-formatter",
+    "description": "HTML Formatter organizes HTML code into a readable format by applying indentation and structured layout. Users paste HTML code and receive a formatted version that is easier to read and edit. The formatting process occurs locally inside the browser without transmitting code to servers. This tool helps developers clean and organize HTML markup for easier maintenance.",
+    "keywords": [
+      "html formatter",
+      "code formatting",
+      "web development",
+      "developer tools"
+    ]
+  },
+  {
+    "name": "Text Paragraph Splitter",
+    "url": "https://www.rovelin.com/tools/paragraph-splitter",
+    "description": "Text Paragraph Splitter divides long blocks of text into separate paragraphs automatically. Users paste text and the tool inserts paragraph breaks based on spacing or line structure. The processing runs locally in the browser and no data is transmitted to servers. This tool is useful for reorganizing large text blocks into readable paragraphs.",
+    "keywords": [
+      "text formatting",
+      "paragraph splitter",
+      "text tools",
+      "text processing"
+    ]
   }
 ]
-

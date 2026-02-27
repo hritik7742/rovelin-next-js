@@ -221,6 +221,7 @@ async function generateSingleBlog({
 
   const filledPrompt = promptTemplate
     .replace(/{{product}}/g, product.name)
+    .replace(/{{productUrl}}/g, product.url || '')
     .replace(/{{productDescription}}/g, productDescription)
     .replace(/{{topic}}/g, topic)
     .replace(/{{keywords}}/g, product.keywords.join(", "))

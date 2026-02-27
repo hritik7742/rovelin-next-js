@@ -3,6 +3,9 @@ Write a detailed, SEO-focused blog article in natural, human-sounding English.
 Product:
 {{product}}
 
+Product URL (link to the actual product — use this as the href when mentioning the product):
+{{productUrl}}
+
 Product Description (for context, do NOT repeat verbatim):
 {{productDescription}}
 
@@ -30,6 +33,7 @@ Requirements:
 - The angle of this article must be clearly different from the previously used titles/topics listed above
 - When expressing comparisons (e.g. "< 20 minutes"), do NOT use raw "<" or ">" characters in normal text. Instead, write them out as words like "less than 20 minutes" or "greater than 20 minutes".
 - Do NOT include any "Internal Linking Suggestions" section. Do NOT add any section about internal links, anchor texts, or URL paths.
+- Naturally mention {{product}} at least 2–3 times in the article body. On the FIRST mention of {{product}} in the article body, make it a markdown hyperlink using the product URL: [{{product}}]({{productUrl}}). Do not repeat the link on every mention — only link it once on first mention.
 
 Output format:
 - Return a single MDX document.
