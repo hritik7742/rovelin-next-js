@@ -76,7 +76,7 @@ export function YouTube({ id }: { id: string }) {
   );
 }
 
-// MDX Components Map — passed to next-mdx-remote/rsc MDXRemote
+// MDX Components Map — used by BlogContent with react-markdown
 export const mdxComponents = {
   pre: CodeBlock,
   img: BlogImage,
