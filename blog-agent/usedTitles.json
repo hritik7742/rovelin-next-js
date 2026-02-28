@@ -77,5 +77,26 @@
     "product": "FullPageScreenshot",
     "topicStyle": "comparison blogs",
     "date": "2026-02-27"
+  },
+  {
+    "title": "Mastering GIF Compression: Top Tips for Smaller File Sizes Without Losing Quality",
+    "slug": "gif-compressor-best-practices-2026-02-28",
+    "product": "GIF Compressor",
+    "topicStyle": "best practices",
+    "date": "2026-02-28"
+  },
+  {
+    "title": "How to Copy and Analyze CSS Styles Like a Pro with CSS Scanly for Tailwind & Bootstrap",
+    "slug": "css-scanly-copy-css-or-tailwind-and-bootstrap-beginner-guides-2026-02-28",
+    "product": "CSS Scanly - Copy CSS | Tailwind & Bootstrap",
+    "topicStyle": "beginner guides",
+    "date": "2026-02-28"
+  },
+  {
+    "title": "Boost Productivity: 7 Ways to Use PDF to PNG Conversion in Your Workflow",
+    "slug": "pdf-to-png-converter-productivity-tips-2026-02-28",
+    "product": "PDF to PNG Converter",
+    "topicStyle": "productivity tips",
+    "date": "2026-02-28"
   }
 ]
