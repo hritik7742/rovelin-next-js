@@ -20,8 +20,11 @@ const GROQ_MAX_TOKENS = 4000;
 
 function sanitizeMdxContent(raw) {
   if (!raw) return "";
-  // Remove leading <think>...</think> blocks that some reasoning models emit
-  return raw.replace(/^<think>[\s\S]*?<\/think>\s*/i, "");
+  // 1. Remove leading <think>...</think> blocks that some reasoning models emit
+  let cleaned = raw.replace(/^<think>[\s\S]*?<\/think>\s*/i, "");
+  // 2. Remove wrapping markdown code fences if the AI enclosed the whole response
+  cleaned = cleaned.replace(/^```[a-z]*\s*\n?/i, "").replace(/\n?```\s*$/i, "");
+  return cleaned.trim();
 }
 
 function ensureDirExists(dirPath) {
