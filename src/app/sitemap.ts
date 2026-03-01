@@ -81,11 +81,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7
   }))
 
-  // Blog posts
+  // Blog posts — safeDate guards against "Invalid time value" crashes
+  const safeDate = (dateStr: string): Date => {
+    const d = new Date(dateStr);
+    return isNaN(d.getTime()) ? new Date() : d;
+  };
+
   const posts = getAllPosts()
   const blogRoutes = posts.map(post => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: safeDate(post.date),
     changeFrequency: 'weekly' as const,
     priority: 0.8
   }))

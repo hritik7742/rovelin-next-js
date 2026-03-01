@@ -14,7 +14,7 @@ export interface BlogPost {
 export interface BlogFrontmatter {
   title: string;
   description: string;
-  date: string;
+  date: string | Date;  // gray-matter auto-parses YAML dates into JS Date objects
   author: string;
   tags: string[];
   image?: string;

@@ -21,7 +21,7 @@ export function getAllPosts(): BlogPost[] {
         return getPostBySlug(slug);
       })
       .filter((post): post is BlogPost => post !== null && post.published)
-      .sort((a, b) => (new Date(b.date).getTime() - new Date(a.date).getTime()));
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     return allPosts;
   } catch (error) {
@@ -33,7 +33,7 @@ export function getAllPosts(): BlogPost[] {
 export function getPostBySlug(slug: string): BlogPost | null {
   try {
     const fullPath = path.join(postsDirectory, `${slug}.mdx`);
-    
+
     if (!fs.existsSync(fullPath)) {
       return null;
     }
@@ -44,11 +44,19 @@ export function getPostBySlug(slug: string): BlogPost | null {
 
     const stats = readingTime(content);
 
+    // gray-matter auto-parses YAML dates into JS Date objects — normalize to 'yyyy-mm-dd' string
+    const rawDate = frontmatter.date;
+    const parsedDate = rawDate instanceof Date
+      ? rawDate.toISOString().slice(0, 10)
+      : (typeof rawDate === 'string' && rawDate.trim()
+        ? rawDate.trim()
+        : new Date().toISOString().slice(0, 10));
+
     return {
       slug,
       title: frontmatter.title,
       description: frontmatter.description,
-      date: frontmatter.date,
+      date: parsedDate,
       author: frontmatter.author,
       tags: frontmatter.tags || [],
       image: frontmatter.image,
@@ -64,7 +72,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
 
 export function getRelatedPosts(currentSlug: string, tags: string[], limit = 3): BlogPost[] {
   const allPosts = getAllPosts();
-  
+
   const relatedPosts = allPosts
     .filter((post) => post.slug !== currentSlug)
     .map((post) => {
@@ -87,7 +95,7 @@ export function getPostsByTag(tag: string): BlogPost[] {
 export function getAllTags(): string[] {
   const allPosts = getAllPosts();
   const tags = new Set<string>();
-  
+
   allPosts.forEach((post) => {
     post.tags.forEach((tag) => tags.add(tag));
   });
