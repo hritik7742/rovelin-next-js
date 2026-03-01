@@ -98,5 +98,26 @@
     "product": "PDF to PNG Converter",
     "topicStyle": "productivity tips",
     "date": "2026-02-28"
+  },
+  {
+    "title": "Mastering OCR: 8 Best Practices for Accurate Image-to-Text Extraction in 2026",
+    "slug": "image-to-text-ocr-best-practices-2026-03-01",
+    "product": "Image to Text (OCR)",
+    "topicStyle": "best practices",
+    "date": "2026-03-01"
+  },
+  {
+    "title": "5 Common Mistakes to Avoid When Using Claude ToolKit to Boost Your Workflow",
+    "slug": "5-common-mistakes-to-avoid-when-using-claude-toolkit-to-boost-your-workflow",
+    "product": "Claude ToolKit - Custom Prompts | Chat Export, Voice | Notes & Folders",
+    "topicStyle": "mistakes to avoid",
+    "date": "2026-03-01"
+  },
+  {
+    "title": "Effortless GIF Compression: A Step-by-Step Guide to Optimize Animated Images for Web and Messaging",
+    "slug": "effortless-gif-compression-a-step-by-step-guide-to-optimize-animated-images-for-web-and-messaging",
+    "product": "GIF Compressor",
+    "topicStyle": "how to tutorials",
+    "date": "2026-03-01"
   }
 ]
