@@ -126,5 +126,26 @@
     "product": "Image Resizer",
     "topicStyle": "comparison blogs",
     "date": "2026-03-01"
+  },
+  {
+    "title": "Mastering PDF to PNG Conversion: 7 Best Practices for Flawless Image Extraction",
+    "slug": "pdf-to-png-converter-best-practices-2026-03-02",
+    "product": "PDF to PNG Converter",
+    "topicStyle": "best practices",
+    "date": "2026-03-02"
+  },
+  {
+    "title": "How to Convert Word to PDF: A Beginner’s Guide to Effortless Document Conversion",
+    "slug": "word-to-pdf-converter-beginner-guides-2026-03-02",
+    "product": "Word to PDF Converter",
+    "topicStyle": "beginner guides",
+    "date": "2026-03-02"
+  },
+  {
+    "title": "Beginner's Guide to Archive Conversion: Simplify File Management with Archive Converter",
+    "slug": "archive-converter-beginner-guides-2026-03-02",
+    "product": "Archive Converter",
+    "topicStyle": "beginner guides",
+    "date": "2026-03-02"
   }
 ]
