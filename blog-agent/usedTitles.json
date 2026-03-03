@@ -147,5 +147,19 @@
     "product": "Archive Converter",
     "topicStyle": "beginner guides",
     "date": "2026-03-02"
+  },
+  {
+    "title": "How to Protect Sensitive Data with Blur Screen: Real-World Use Cases for Privacy and Security",
+    "slug": "blur-screen-sensitive-data-protection-use-cases-2026-03-03",
+    "product": "Blur Screen - Sensitive Data Protection",
+    "topicStyle": "use cases",
+    "date": "2026-03-03"
+  },
+  {
+    "title": "Maximizing Contact Data Collection: 7 Use Cases for Phone Number Extractors and Email Finders",
+    "slug": "phone-number-extractor-and-email-finder-use-cases-2026-03-03",
+    "product": "Phone number Extractor & Email Finder",
+    "topicStyle": "use cases",
+    "date": "2026-03-03"
   }
 ]
