@@ -315,5 +315,26 @@
     "product": "CSS Minifier",
     "topicStyle": "mistakes to avoid",
     "date": "2026-03-12"
+  },
+  {
+    "title": "Advanced Claude ToolKit Strategies: Custom Prompts, Chat Export, and Voice Integration for Power Users",
+    "slug": "claude-toolkit-advanced-workflow-optimization-2026-03-13",
+    "product": "Claude ToolKit - Custom Prompts | Chat Export, Voice | Notes & Folders",
+    "topicStyle": "advanced guides",
+    "date": "2026-03-13"
+  },
+  {
+    "title": "Balancing Quality and Size: Proven GIF Compression Strategies for Web and Social Media",
+    "slug": "gif-compressor-best-practices-2026-03-13",
+    "product": "GIF Compressor",
+    "topicStyle": "best practices",
+    "date": "2026-03-13"
+  },
+  {
+    "title": "Master Base64 Encoding and Decoding: A Step-by-Step Guide with Real Examples",
+    "slug": "base64-converter-how-to-tutorials-2026-03-13",
+    "product": "Base64 Converter",
+    "topicStyle": "how to tutorials",
+    "date": "2026-03-13"
   }
 ]
