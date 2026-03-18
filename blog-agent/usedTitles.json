@@ -406,5 +406,26 @@
     "product": "WA Group Finder - Find WhatsApp groups",
     "topicStyle": "tools lists",
     "date": "2026-03-17"
+  },
+  {
+    "title": "5 Practical Use Cases for Base64 Image Encoding in 2026",
+    "slug": "base64-image-converter-use-cases-2026-03-18",
+    "product": "Base64 Image Converter",
+    "topicStyle": "use cases",
+    "date": "2026-03-18"
+  },
+  {
+    "title": "PNG Compressor vs. Other Image Optimization Tools: Which Reduces File Size Best?",
+    "slug": "png-compressor-comparison-blogs-2026-03-18",
+    "product": "PNG Compressor",
+    "topicStyle": "comparison blogs",
+    "date": "2026-03-18"
+  },
+  {
+    "title": "Boost Your Web Development Productivity with JavaScript Minify Techniques",
+    "slug": "javascript-minifier-productivity-tips-2026-03-18",
+    "product": "JavaScript Minifier",
+    "topicStyle": "productivity tips",
+    "date": "2026-03-18"
   }
 ]
