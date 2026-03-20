@@ -448,5 +448,26 @@
     "product": "JPEG Compressor",
     "topicStyle": "best practices",
     "date": "2026-03-19"
+  },
+  {
+    "title": "Mastering Secure Development: Best Practices for Using a Credit Card Generator in Testing Environments",
+    "slug": "credit-card-generator-best-practices-2026-03-20",
+    "product": "Credit Card Generator",
+    "topicStyle": "best practices",
+    "date": "2026-03-20"
+  },
+  {
+    "title": "Mastering Color Selection: Advanced Techniques with the Color Picker Tool",
+    "slug": "color-picker-advanced-guides-2026-03-20",
+    "product": "Color Picker",
+    "topicStyle": "advanced guides",
+    "date": "2026-03-20"
+  },
+  {
+    "title": "8 Critical Mistakes to Avoid When Using a QR Code Generator",
+    "slug": "qr-code-generator-mistakes-to-avoid-2026-03-20",
+    "product": "QR Code Generator",
+    "topicStyle": "mistakes to avoid",
+    "date": "2026-03-20"
   }
 ]
