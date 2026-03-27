@@ -574,5 +574,19 @@
     "product": "Claude ToolKit - Custom Prompts | Chat Export, Voice | Notes & Folders",
     "topicStyle": "mistakes to avoid",
     "date": "2026-03-26"
+  },
+  {
+    "title": "From Cooking to Construction: 10 Everyday Uses for Unit Conversion Tools",
+    "slug": "unit-converter-tools-lists-2026-03-27",
+    "product": "Unit Converter",
+    "topicStyle": "tools lists",
+    "date": "2026-03-27"
+  },
+  {
+    "title": "How to Extract Text from Images: A Step-by-Step Beginner's Guide to OCR",
+    "slug": "image-to-text-ocr-beginner-guides-2026-03-27",
+    "product": "Image to Text (OCR)",
+    "topicStyle": "beginner guides",
+    "date": "2026-03-27"
   }
 ]
