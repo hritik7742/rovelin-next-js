@@ -1700,8 +1700,68 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 Contact Us
 If you have any questions about this Privacy Policy, please contact us:
 
-By visiting our website: https://www.rovelin.com`  }
+By visiting our website: https://www.rovelin.com` 
+
+},
+{id: 'substack-post-downloader', name: 'Substack Post Downloader', policy: `
+  
+  Privacy Policy
+Substack to PDF, Markdown, Text & JSON
+
+Effective Date: 2026-04-10
+
+Overview
+This extension lets you download Substack posts in PDF, Markdown, TXT, or JSON. It works entirely on your device. It does not sell or share your data for advertising.
+
+Data We Collect
+We only collect and store the minimum data needed for the extension to function:
+- Download history (post title, URL, date/time, format) stored locally for daily limits and history view.
+- License status and license key for Pro activation stored locally.
+- Settings and preferences (format, filename options, batch settings, theme) stored locally.
+
+We do not collect:
+- Browsing history beyond the current Substack page being exported.
+- Keystrokes, form inputs, or other user activity.
+- Location data.
+- Health or financial data.
+
+How We Use Data
+- To generate downloads for the Substack post you choose.
+- To enforce the free daily limit and show usage.
+- To validate a Gumroad license key if you enter one.
+
+Third-Party Services
+Gumroad is used only for license verification when you enter a license key. The key is sent to Gumroad’s API to validate your purchase.
+
+Data Storage
+All settings, history, and license status are stored locally in your browser storage. No personal data is sent to any server other than Gumroad for license verification.
+
+Data Sharing
+We do not sell, rent, or share your data with third parties. We do not use your data for advertising or analytics.
+
+Permissions
+- storage: saves settings, history, and license status locally.
+- downloads: saves exported files to your device.
+- tabs: checks the active tab URL and opens help/contact pages.
+- debugger: creates PDFs locally using Chrome’s PDF engine.
+- alarms and notifications: revalidate license status periodically and notify on invalid licenses.
+- host permissions: only for Substack pages and Gumroad license verification.
+
+Your Choices
+You can delete extension data at any time by clearing the extension’s storage in Chrome.
+
+Contact
+If you have any questions, contact us at:
+https://www.rovelin.com/contact
+
+  `
+
+
+}
   ];
+
+  
+ 
 
 export default function PrivacyPolicy() {
   const params = useParams();
