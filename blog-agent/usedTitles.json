@@ -749,5 +749,12 @@
     "product": "Web2PDF - HTML to PDF Converter",
     "topicStyle": "beginner guides",
     "date": "2026-04-14"
+  },
+  {
+    "title": "Mastering JavaScript Minification: Advanced Techniques for Web Developers",
+    "slug": "javascript-minifier-advanced-guides-2026-04-15",
+    "product": "JavaScript Minifier",
+    "topicStyle": "advanced guides",
+    "date": "2026-04-15"
   }
 ]
