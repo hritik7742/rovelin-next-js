@@ -819,5 +819,12 @@
     "product": "WebP Compressor",
     "topicStyle": "tools lists",
     "date": "2026-04-24"
+  },
+  {
+    "title": "JavaScript Minification in Action: 10 Essential Use Cases for Web Developers",
+    "slug": "javascript-minifier-use-cases-2026-04-25",
+    "product": "JavaScript Minifier",
+    "topicStyle": "use cases",
+    "date": "2026-04-25"
   }
 ]
