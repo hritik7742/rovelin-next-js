@@ -716,6 +716,369 @@ const products: Product[] = [
   7. Contact
      For privacy concerns, contact:
      hritikkumarkota@gmail.com
+              {id:'sobrii' , name:'sobrii' , policy:`
+                PRIVACY POLICY FOR SOBRII
+
+  Last Updated: May 14, 2026
+
+  INTRODUCTION
+
+  Welcome to Sobrii ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application Sobrii (the "App").
+
+  By using the App, you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree with our policies and practices, please do not use the App.
+
+  1. INFORMATION WE COLLECT
+
+  1.1 Personal Information You Provide
+
+  When you use Sobrii, you may provide us with the following information:
+
+  • Profile Information: Your name, which you can optionally provide to personalize your experience
+  • Sobriety Journey Data: Your sobriety start date, daily check-ins, mood tracking, and personal notes
+  • Reasons for Sobriety: Personal reasons and motivations you choose to record
+  • Health Metrics: Health data you voluntarily track (sleep, weight, blood pressure, mood, cravings)
+  • Journal Entries: Personal reflections and notes you create within the App
+  • Exercise Activity: Records of mindfulness exercises and coping activities you complete
+
+  1.2 Automatically Collected Information
+
+  When you use the App, we automatically collect:
+
+  • Device Information: Device type, operating system version, unique device identifiers
+  • Usage Data: Features you use, time spent in the App, interaction patterns
+  • App Performance Data: Crash reports, error logs, and diagnostic information
+  • Notification Preferences: Your choices regarding push notifications
+
+  1.3 Information from Third-Party Services
+
+  • Payment Information: We use RevenueCat to process subscription payments. RevenueCat collects payment information necessary to process your subscription. We do not directly store your payment card details.
+  • Analytics: We may use analytics services to understand how users interact with our App to improve functionality and user experience.
+
+  2. HOW WE USE YOUR INFORMATION
+
+  We use the information we collect to:
+
+  2.1 Provide and Maintain the App
+  • Enable core features like streak tracking, check-ins, and journaling
+  • Store your personal data locally on your device
+  • Sync your data across your devices (if you choose to enable this feature)
+  • Provide personalized content and recommendations
+
+  2.2 Improve User Experience
+  • Analyze usage patterns to improve App features
+  • Develop new features based on user needs
+  • Fix bugs and technical issues
+  • Optimize App performance
+
+  2.3 Send Notifications
+  • Daily check-in reminders (if enabled)
+  • Motivational quotes (if enabled)
+  • Milestone celebrations (if enabled)
+  • Important updates about the App
+
+  2.4 Process Payments
+  • Manage your subscription through RevenueCat
+  • Process payments and renewals
+  • Handle refunds and billing inquiries
+  • Prevent fraud and unauthorized transactions
+
+  2.5 Communicate With You
+  • Respond to your support requests
+  • Send important updates about the App or our policies
+  • Provide customer service
+
+  2.6 Legal Compliance
+  • Comply with applicable laws and regulations
+  • Enforce our Terms of Service
+  • Protect our rights and the rights of our users
+
+  3. DATA STORAGE AND SECURITY
+
+  3.1 Local Storage
+  • Most of your personal data is stored locally on your device
+  • Your sobriety data, journal entries, and health metrics remain on your device
+  • You have full control over your data and can delete it at any time
+
+  3.2 Cloud Storage (Optional)
+  • If you enable cloud sync, your data may be stored on secure cloud servers
+  • Cloud data is encrypted in transit and at rest
+  • You can disable cloud sync at any time
+
+  3.3 Security Measures
+  We implement industry-standard security measures to protect your information:
+  • Encryption of data in transit using SSL/TLS
+  • Encryption of sensitive data at rest
+  • Regular security audits and updates
+  • Access controls and authentication
+  • Secure coding practices
+
+  However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
+
+  4. DATA SHARING AND DISCLOSURE
+
+  4.1 We Do NOT Sell Your Data
+  We do not sell, rent, or trade your personal information to third parties for marketing purposes.
+
+  4.2 Service Providers
+  We may share your information with trusted third-party service providers who assist us in operating the App:
+
+  • RevenueCat: For subscription management and payment processing
+  • Cloud Storage Providers: For optional data backup and sync (if enabled)
+  • Analytics Services: For understanding App usage and improving features
+  • Notification Services: For delivering push notifications (Apple Push Notification Service)
+
+  These service providers are contractually obligated to protect your information and use it only for the purposes we specify.
+
+  4.3 Legal Requirements
+  We may disclose your information if required to do so by law or in response to:
+  • Valid legal processes (subpoenas, court orders)
+  • Requests from law enforcement or government agencies
+  • Protection of our rights, property, or safety
+  • Prevention of fraud or illegal activities
+  • Emergency situations involving danger to persons
+
+  4.4 Business Transfers
+  If Sobrii is involved in a merger, acquisition, or sale of assets, your information may be transferred. We will notify you before your information becomes subject to a different privacy policy.
+
+  5. YOUR PRIVACY RIGHTS AND CHOICES
+
+  5.1 Access and Control Your Data
+  You have the right to:
+  • Access your personal information stored in the App
+  • Update or correct your information at any time
+  • Delete your account and all associated data
+  • Export your data in a portable format
+  • Opt-out of optional data collection
+
+  5.2 Notification Preferences
+  You can control notifications through:
+  • App Settings: Enable or disable specific notification types
+  • Device Settings: Manage system-level notification permissions
+
+  5.3 Marketing Communications
+  • We do not send marketing emails unless you explicitly opt-in
+  • You can unsubscribe from marketing communications at any time
+
+  5.4 Data Deletion
+  To delete your data:
+  • Go to Profile → Settings → Data & Storage → Reset App Data
+  • This will permanently delete all your local data
+  • If you use cloud sync, contact us to delete cloud data
+
+  5.5 California Privacy Rights (CCPA)
+  If you are a California resident, you have additional rights:
+  • Right to know what personal information we collect
+  • Right to delete your personal information
+  • Right to opt-out of the sale of personal information (we don't sell data)
+  • Right to non-discrimination for exercising your rights
+
+  5.6 European Privacy Rights (GDPR)
+  If you are in the European Economic Area, you have rights under GDPR:
+  • Right to access your personal data
+  • Right to rectification of inaccurate data
+  • Right to erasure ("right to be forgotten")
+  • Right to restrict processing
+  • Right to data portability
+  • Right to object to processing
+  • Right to withdraw consent
+
+  To exercise these rights, contact us at [your-email@example.com]
+
+  6. CHILDREN'S PRIVACY
+
+  Sobrii is not intended for use by children under the age of 13 (or 16 in the European Economic Area). We do not knowingly collect personal information from children under these ages.
+
+  If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. We will take steps to delete such information from our systems.
+
+  7. HEALTH INFORMATION
+
+  7.1 Sensitive Health Data
+  Sobrii allows you to track health-related information such as:
+  • Sobriety status and relapse information
+  • Mood and emotional state
+  • Sleep patterns and physical health metrics
+  • Substance use cravings
+
+  This information is considered sensitive health data and is treated with the highest level of privacy and security.
+
+  7.2 HIPAA Compliance
+  Sobrii is a wellness app and is not a covered entity under HIPAA (Health Insurance Portability and Accountability Act). The App is not intended to diagnose, treat, cure, or prevent any disease. Always consult with qualified healthcare professionals for medical advice.
+
+  7.3 Health Data Storage
+  • Health data is stored locally on your device by default
+  • You control whether to enable cloud backup
+  • Health data is never shared with third parties without your explicit consent
+  • You can delete your health data at any time
+
+  8. INTERNATIONAL DATA TRANSFERS
+
+  If you are located outside the United States, please be aware that information we collect may be transferred to, stored, and processed in the United States or other countries where our service providers operate.
+
+  By using the App, you consent to the transfer of your information to countries outside your country of residence, which may have different data protection laws.
+
+  For users in the European Economic Area, we ensure appropriate safeguards are in place for international data transfers, such as Standard Contractual Clauses.
+
+  9. DATA RETENTION
+
+  9.1 How Long We Keep Your Data
+  • Active Account Data: We retain your data for as long as your account is active
+  • Deleted Account Data: When you delete your account, we delete your personal data within 30 days
+  • Legal Requirements: We may retain certain information if required by law
+  • Aggregated Data: We may retain anonymized, aggregated data indefinitely for analytics
+
+  9.2 Automatic Deletion
+  • Temporary data (logs, cache) is automatically deleted after 90 days
+  • Notification data is deleted after delivery
+  • Crash reports are retained for 1 year for debugging purposes
+
+  10. THIRD-PARTY LINKS AND SERVICES
+
+  The App may contain links to third-party websites, services, or resources. This Privacy Policy does not apply to those third-party services.
+
+  We are not responsible for the privacy practices of third parties. We encourage you to read the privacy policies of any third-party services you access through the App.
+
+  Third-party services we use:
+  • RevenueCat: https://www.revenuecat.com/privacy
+  • Apple App Store: https://www.apple.com/legal/privacy/
+  • Expo: https://expo.dev/privacy
+
+  11. COOKIES AND TRACKING TECHNOLOGIES
+
+  11.1 What We Use
+  The App may use:
+  • Local Storage: To save your preferences and app data on your device
+  • Session Data: To maintain your login state and app functionality
+  • Analytics Identifiers: To understand app usage patterns
+
+  11.2 What We Don't Use
+  • We do not use cookies for advertising
+  • We do not track you across other apps or websites
+  • We do not create detailed user profiles for marketing
+
+  12. CHANGES TO THIS PRIVACY POLICY
+
+  We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons.
+
+  When we make changes:
+  • We will update the "Last Updated" date at the top of this policy
+  • We will notify you through the App or via email for significant changes
+  • Continued use of the App after changes constitutes acceptance of the updated policy
+
+  We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.
+
+  13. YOUR CONSENT
+
+  By using Sobrii, you consent to:
+  • The collection and use of information as described in this Privacy Policy
+  • The processing of your data in accordance with applicable laws
+  • The transfer of your data as described in this policy
+
+  You can withdraw your consent at any time by:
+  • Deleting your account
+  • Uninstalling the App
+  • Contacting us to request data deletion
+
+  14. CONTACT US
+
+  If you have questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:
+
+  Email: hritikkumarkota@gmail.com
+
+
+
+  For privacy-related inquiries, we will respond within 30 days.
+
+  For urgent matters or data deletion requests, please mark your email as "URGENT - Privacy Request."
+
+  15. DISPUTE RESOLUTION
+
+  15.1 Informal Resolution
+  If you have a complaint about our privacy practices, please contact us first. We will investigate and attempt to resolve complaints and disputes in good faith.
+
+  15.2 Arbitration
+  Any disputes arising from this Privacy Policy will be resolved through binding arbitration in accordance with our Terms of Service, except where prohibited by law.
+
+  15.3 Governing Law
+  This Privacy Policy is governed by the laws of [Your State/Country], without regard to its conflict of law provisions.
+
+  16. ADDITIONAL INFORMATION FOR SPECIFIC REGIONS
+
+  16.1 California Residents (CCPA/CPRA)
+  California residents have specific rights under the California Consumer Privacy Act:
+
+  Categories of Personal Information We Collect:
+  • Identifiers (name, device ID)
+  • Personal information (sobriety data, health metrics)
+  • Internet activity (app usage data)
+  • Geolocation data (if you enable location services)
+
+  How We Use Personal Information:
+  • To provide and improve the App
+  • To process payments
+  • To send notifications
+  • For analytics and research
+
+  Your California Rights:
+  • Right to know what personal information we collect
+  • Right to delete personal information
+  • Right to opt-out of sale (we don't sell data)
+  • Right to non-discrimination
+
+  To exercise your rights, email us at [your-email@example.com] with "California Privacy Rights" in the subject line.
+
+  16.2 European Economic Area Residents (GDPR)
+  If you are in the EEA, our legal basis for processing your data includes:
+  • Consent: You have given clear consent for processing
+  • Contract: Processing is necessary to fulfill our contract with you
+  • Legal Obligation: Processing is required by law
+  • Legitimate Interests: Processing is in our legitimate business interests
+
+  Your GDPR Rights:
+  • Right to access your data
+  • Right to rectification
+  • Right to erasure
+  • Right to restrict processing
+  • Right to data portability
+  • Right to object
+  • Right to withdraw consent
+  • Right to lodge a complaint with a supervisory authority
+
+  Data Protection Officer: [DPO-email@example.com]
+
+  16.3 Nevada Residents
+  Nevada residents have the right to opt-out of the sale of their personal information. We do not sell personal information as defined under Nevada law.
+
+  16.4 Other Jurisdictions
+  We comply with applicable privacy laws in all jurisdictions where we operate. If you have questions about your rights under local law, please contact us.
+
+  17. ACCESSIBILITY
+
+  We are committed to making our Privacy Policy accessible to everyone. If you have difficulty accessing this policy or need it in an alternative format, please contact us.
+
+  18. ACKNOWLEDGMENT
+
+  BY USING SOBRII, YOU ACKNOWLEDGE THAT YOU HAVE READ AND UNDERSTOOD THIS PRIVACY POLICY AND AGREE TO BE BOUND BY ITS TERMS.
+
+  ---
+
+  SUMMARY OF KEY POINTS
+
+  • We collect information you provide and usage data to operate the App
+  • Most data is stored locally on your device
+  • We do not sell your personal information
+  • You can delete your data at any time
+  • We use industry-standard security measures
+  • You have rights to access, correct, and delete your data
+  • We comply with GDPR, CCPA, and other privacy laws
+  • Contact us with any privacy questions or concerns
+
+  ---
+
+  This Privacy Policy is effective as of the date stated at the top and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.
+
+  Thank you for trusting Sobrii with your sobriety journey. Your privacy and security are our top priorities.
+
+                `},
   
   8. Compliance
      This extension complies with:
@@ -1651,117 +2014,8 @@ We may update this Privacy Policy from time to time to reflect changes in our pr
 8. Contact
 If you have any questions regarding this Privacy Policy, you can contact us at our official website:
             `}
-  ,
-  {    id: 'storyflow',
-    name: 'storyflow',
-    policy: `Privacy Policy for StoryFlow
-Last Updated: January 28, 2026
-
-Introduction
-StoryFlow ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how our Chrome Extension, Upload Instagram Stories & Download Reels, Posts, Stories - StoryFlow, collects, uses, and safeguards your information.
-
-By installing and using the StoryFlow extension, you agree to the collection and use of information in accordance with this policy. We prioritize your privacy and have designed our extension to operate with minimal data collection, keeping your personal information on your device whenever possible.
-
-Information We Collect
-1. Personal Information
-We do not collect, store, or transmit your personal identification information (such as your name, email address, or phone number) to our servers.
-
-2. Instagram Data (Cookies and Session)
-To function correctly, StoryFlow requires access to your active Instagram session.
-
-What we access: The extension accesses specific cookies (such as sessionid and csrftoken) and HTTP request headers from your browser.
-Why we need it: This allows the extension to perform actions on your behalf, such as uploading Stories or downloading Reels, solely within your browser.
-How it is stored: This sensitive authentication data is stored locally on your device and is used strictly for making direct API calls to Instagram. We never transmit your session cookies or credentials to any external analytics server or third party.
-3. Usage Data & Licensing
-If you purchase a Pro license, we verify your license key using the Gumroad API.
-
-Licensing: When you enter a license key, we send that key to Gumroad to verify its validity.
-Usage Counters: We verify daily usage limits (e.g., number of downloads) locally on your device.
-How We Use Your Information
-We use the information accessed solely to provide the functionality of the extension:
-
-To Upload Content: To facilitate the uploading of images and videos from your computer to your Instagram Story.
-To Download Content: To fetch high-quality media (Reels, Posts, Stories) from Instagram's servers to your local device.
-To Verify Access: To validate your Pro license status and unlock premium features.
-Third-Party Services
-We may interact with the following third-party services to provide the extension's core functionality:
-
-Instagram (Meta Platforms, Inc.): The extension interacts directly with Instagram's API to upload and download content. Your interactions are subject to Instagram's Privacy Policy and Terms of Service.
-Gumroad: We use Gumroad for handling payments and license verification. When you purchase a license or verify a key, your transaction data is processed by Gumroad in accordance with their Privacy Policy.
-Data Security
-We implement appropriate security measures to protect your data. Since the extension operates primarily on your local device ("client-side"), your sensitive session data remains in your control within your browser environment. We do not maintain a database of user sessions or credentials.
-
-Data Retention
-Session Data: We do not retain your session data on our servers. It exists on your device only as long as you are logged into Instagram.
-Local Storage: Preference settings (such as dark mode toggle) are stored in your browser's local storage and can be cleared by uninstalling the extension or clearing browser data.
-Changes to This Privacy Policy
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.
-
-Contact Us
-If you have any questions about this Privacy Policy, please contact us:
-
-By visiting our website: https://www.rovelin.com` 
-
-},
-{id: 'substack-post-downloader', name: 'Substack Post Downloader', policy: `
   
-  Privacy Policy
-Substack to PDF, Markdown, Text & JSON
-
-Effective Date: 2026-04-10
-
-Overview
-This extension lets you download Substack posts in PDF, Markdown, TXT, or JSON. It works entirely on your device. It does not sell or share your data for advertising.
-
-Data We Collect
-We only collect and store the minimum data needed for the extension to function:
-- Download history (post title, URL, date/time, format) stored locally for daily limits and history view.
-- License status and license key for Pro activation stored locally.
-- Settings and preferences (format, filename options, batch settings, theme) stored locally.
-
-We do not collect:
-- Browsing history beyond the current Substack page being exported.
-- Keystrokes, form inputs, or other user activity.
-- Location data.
-- Health or financial data.
-
-How We Use Data
-- To generate downloads for the Substack post you choose.
-- To enforce the free daily limit and show usage.
-- To validate a Gumroad license key if you enter one.
-
-Third-Party Services
-Gumroad is used only for license verification when you enter a license key. The key is sent to Gumroad’s API to validate your purchase.
-
-Data Storage
-All settings, history, and license status are stored locally in your browser storage. No personal data is sent to any server other than Gumroad for license verification.
-
-Data Sharing
-We do not sell, rent, or share your data with third parties. We do not use your data for advertising or analytics.
-
-Permissions
-- storage: saves settings, history, and license status locally.
-- downloads: saves exported files to your device.
-- tabs: checks the active tab URL and opens help/contact pages.
-- debugger: creates PDFs locally using Chrome’s PDF engine.
-- alarms and notifications: revalidate license status periodically and notify on invalid licenses.
-- host permissions: only for Substack pages and Gumroad license verification.
-
-Your Choices
-You can delete extension data at any time by clearing the extension’s storage in Chrome.
-
-Contact
-If you have any questions, contact us at:
-https://www.rovelin.com/contact
-
-  `
-
-
-}
   ];
-
-  
- 
 
 export default function PrivacyPolicy() {
   const params = useParams();
