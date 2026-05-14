@@ -716,7 +716,14 @@ const products: Product[] = [
   7. Contact
      For privacy concerns, contact:
      hritikkumarkota@gmail.com
-              {id:'sobrii' , name:'sobrii' , policy:`
+  
+    8. Compliance
+      This extension complies with:
+      - Chrome Web Store Developer Program Policies
+      - General Data Protection Regulation (GDPR)
+      - California Consumer Privacy Act (CCPA)`
+    },
+    {id:'sobrii' , name:'sobrii' , policy:`
                 PRIVACY POLICY FOR SOBRII
 
   Last Updated: May 14, 2026
@@ -1079,13 +1086,6 @@ const products: Product[] = [
   Thank you for trusting Sobrii with your sobriety journey. Your privacy and security are our top priorities.
 
                 `},
-  
-  8. Compliance
-     This extension complies with:
-     - Chrome Web Store Developer Program Policies
-     - General Data Protection Regulation (GDPR)
-     - California Consumer Privacy Act (CCPA)`
-  },
   {
     id: 'web-highlighter-pro',
     name: 'Web Highlighter Pro',
