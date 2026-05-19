@@ -304,6 +304,16 @@ const Products: React.FC = () => {
         <span className="hero-badge">New releases every month</span>
         <h1>Our Products</h1>
         <p>Tools to help you work faster and more efficiently.</p>
+        <div className="donation-cta">
+          <a
+            href="https://hritikkumarkota.gumroad.com/l/donations"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="donation-button"
+          >
+            Support our work
+          </a>
+        </div>
         <div className="user-count-badge">
           <Users size={14} className="icon" />
           <span>Trusted by <span className="count">15,000+</span> users</span>

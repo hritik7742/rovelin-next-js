@@ -85,6 +85,7 @@ const Navbar = () => {
           </div>
           <Link href="/blog">Blog</Link>
           <Link href="/pricing">Pricing</Link>
+          <Link href="/donation" className="nav-donation">Donate</Link>
           <Link href="/founder">Our Founder</Link>
           <Link href="/contact" className="nav-cta">Contact Us</Link>
         </div>
@@ -99,6 +100,9 @@ const Navbar = () => {
               <Link href="/tools" onClick={() => setIsOpen(false)}>Free Tools</Link>
               <Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
               <Link href="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
+              <Link href="/donation" onClick={() => setIsOpen(false)} className="nav-donation">
+                Donate
+              </Link>
               <Link href="/founder" onClick={() => setIsOpen(false)}>Our Founder</Link>
               <Link href="/contact" onClick={() => setIsOpen(false)} className="nav-cta">
                 Contact Us

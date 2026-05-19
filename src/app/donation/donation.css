@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;600;700&display=swap');
+
+.donation-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  color: #eef2ff;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+}
+
+.donation-hero {
+  position: relative;
+  border-radius: 28px;
+  padding: 3rem;
+  background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.25), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.25), transparent 50%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(17, 24, 39, 0.95));
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  overflow: hidden;
+}
+
+.donation-hero::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.25), transparent 70%);
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+.donation-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.donation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  font-size: 0.85rem;
+  color: #bbf7d0;
+}
+
+.donation-hero h1 {
+  margin: 1rem 0 0.75rem;
+  font-family: "Fraunces", "Georgia", serif;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  color: #f8fafc;
+}
+
+.donation-hero p {
+  max-width: 640px;
+  color: #cbd5f5;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.donation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.donation-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #0f172a;
+  font-weight: 700;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(34, 197, 94, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.donation-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(34, 197, 94, 0.3);
+  filter: brightness(1.04);
+}
+
+.donation-cta.large {
+  width: fit-content;
+  padding: 0.85rem 2.1rem;
+  font-size: 1.05rem;
+}
+
+.donation-secondary {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(147, 197, 253, 0.4);
+}
+
+.donation-secondary:hover {
+  color: #bfdbfe;
+}
+
+.donation-proof {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.proof-card {
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.proof-label {
+  display: block;
+  color: #86efac;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.donation-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.donation-panel {
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.donation-panel h2 {
+  font-family: "Fraunces", "Georgia", serif;
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+.donation-panel ul {
+  padding-left: 1.2rem;
+  line-height: 1.8;
+  color: #cbd5f5;
+}
+
+.donation-panel.accent {
+  background: linear-gradient(145deg, rgba(34, 197, 94, 0.16), rgba(15, 23, 42, 0.85));
+}
+
+.donation-panel.accent p {
+  color: #dbeafe;
+}
+
+@media (max-width: 720px) {
+  .donation-hero {
+    padding: 2.2rem 1.6rem;
+  }
+
+  .donation-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
