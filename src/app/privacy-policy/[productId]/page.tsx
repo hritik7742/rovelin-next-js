@@ -2013,7 +2013,425 @@ We may update this Privacy Policy from time to time to reflect changes in our pr
 
 8. Contact
 If you have any questions regarding this Privacy Policy, you can contact us at our official website:
-            `}
+            `},
+            
+      {id:'risevibe' , name:'risevibe' , policy:`
+       
+PRIVACY POLICY FOR RISEVIBE
+
+Last Updated: May 31, 2026
+
+INTRODUCTION
+
+Welcome to RiseVibe ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application RiseVibe (the "App").
+
+By using the App, you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree with our policies and practices, please do not use the App.
+
+1. INFORMATION WE COLLECT
+
+1.1 Personal Information You Provide
+
+When you use RiseVibe, you may provide us with the following information:
+
+• Profile Information: Your name and email address, which you can optionally provide to personalize your experience
+• Affirmation Preferences: Your favorite affirmations and preferred categories
+• Journal Entries: Personal reflections, gratitude notes, and mood tracking you create within the App
+• Widget Customization: Your preferences for widget appearance, themes, and backgrounds
+• Notification Preferences: Your choices regarding daily affirmation notifications and reminder times
+
+1.2 Automatically Collected Information
+
+When you use the App, we automatically collect:
+
+• Device Information: Device type, operating system version, unique device identifiers
+• Usage Data: Features you use, time spent in the App, affirmations viewed, interaction patterns
+• App Performance Data: Crash reports, error logs, and diagnostic information
+• Notification Preferences: Your choices regarding push notifications and notification times
+• Widget Usage: How you interact with home screen widgets
+
+1.3 Information from Third-Party Services
+
+• Payment Information: We use RevenueCat to process subscription payments. RevenueCat collects payment information necessary to process your subscription. We do not directly store your payment card details.
+• Analytics: We may use analytics services to understand how users interact with our App to improve functionality and user experience.
+
+2. HOW WE USE YOUR INFORMATION
+
+We use the information we collect to:
+
+2.1 Provide and Maintain the App
+• Deliver daily affirmations and motivational content
+• Enable journaling and mood tracking features
+• Store your personal data locally on your device
+• Sync your data across your devices (if you choose to enable this feature)
+• Provide personalized affirmation recommendations
+• Update home screen widgets with your daily affirmations
+
+2.2 Improve User Experience
+• Analyze usage patterns to improve App features
+• Develop new affirmation categories and content
+• Fix bugs and technical issues
+• Optimize App performance
+• Curate relevant affirmations based on your preferences
+
+2.3 Send Notifications
+• Daily affirmation notifications (if enabled)
+• Reminder notifications at your chosen time
+• Milestone celebrations (streak achievements)
+• Important updates about the App
+
+2.4 Process Payments
+• Manage your subscription through RevenueCat
+• Process payments and renewals
+• Handle refunds and billing inquiries
+• Prevent fraud and unauthorized transactions
+• Provide access to premium features
+
+2.5 Communicate With You
+• Respond to your support requests
+• Send important updates about the App or our policies
+• Provide customer service
+• Share new features and content updates
+
+2.6 Legal Compliance
+• Comply with applicable laws and regulations
+• Enforce our Terms of Service
+• Protect our rights and the rights of our users
+
+3. DATA STORAGE AND SECURITY
+
+3.1 Local Storage
+• Most of your personal data is stored locally on your device
+• Your journal entries, favorite affirmations, and preferences remain on your device
+• You have full control over your data and can delete it at any time
+
+3.2 Cloud Storage (Optional)
+• If you enable cloud sync, your data may be stored on secure cloud servers
+• Cloud data is encrypted in transit and at rest
+• You can disable cloud sync at any time
+
+3.3 Security Measures
+We implement industry-standard security measures to protect your information:
+• Encryption of data in transit using SSL/TLS
+• Encryption of sensitive data at rest
+• Regular security audits and updates
+• Access controls and authentication
+• Secure coding practices
+
+However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
+
+4. DATA SHARING AND DISCLOSURE
+
+4.1 We Do NOT Sell Your Data
+We do not sell, rent, or trade your personal information to third parties for marketing purposes.
+
+4.2 Service Providers
+We may share your information with trusted third-party service providers who assist us in operating the App:
+
+• RevenueCat: For subscription management and payment processing
+• Cloud Storage Providers: For optional data backup and sync (if enabled)
+• Analytics Services: For understanding App usage and improving features
+• Notification Services: For delivering push notifications (Apple Push Notification Service)
+• Content Delivery: For delivering affirmation content and images
+
+These service providers are contractually obligated to protect your information and use it only for the purposes we specify.
+
+4.3 Legal Requirements
+We may disclose your information if required to do so by law or in response to:
+• Valid legal processes (subpoenas, court orders)
+• Requests from law enforcement or government agencies
+• Protection of our rights, property, or safety
+• Prevention of fraud or illegal activities
+• Emergency situations involving danger to persons
+
+4.4 Business Transfers
+If RiseVibe is involved in a merger, acquisition, or sale of assets, your information may be transferred. We will notify you before your information becomes subject to a different privacy policy.
+
+5. YOUR PRIVACY RIGHTS AND CHOICES
+
+5.1 Access and Control Your Data
+You have the right to:
+• Access your personal information stored in the App
+• Update or correct your information at any time
+• Delete your account and all associated data
+• Export your data in a portable format
+• Opt-out of optional data collection
+
+5.2 Notification Preferences
+You can control notifications through:
+• App Settings: Enable or disable daily affirmation notifications
+• App Settings: Choose your preferred notification time
+• Device Settings: Manage system-level notification permissions
+
+5.3 Widget Customization
+You can control widget appearance:
+• Choose between gradient or image backgrounds
+• Select from premium abstract backgrounds
+• Customize widget themes and colors
+• Disable widgets at any time
+
+5.4 Marketing Communications
+• We do not send marketing emails unless you explicitly opt-in
+• You can unsubscribe from marketing communications at any time
+
+5.5 Data Deletion
+To delete your data:
+• Go to Profile → Settings → Reset App Data
+• This will permanently delete all your local data
+• If you use cloud sync, contact us to delete cloud data
+
+5.6 California Privacy Rights (CCPA)
+If you are a California resident, you have additional rights:
+• Right to know what personal information we collect
+• Right to delete your personal information
+• Right to opt-out of the sale of personal information (we don't sell data)
+• Right to non-discrimination for exercising your rights
+
+5.7 European Privacy Rights (GDPR)
+If you are in the European Economic Area, you have rights under GDPR:
+• Right to access your personal data
+• Right to rectification of inaccurate data
+• Right to erasure ("right to be forgotten")
+• Right to restrict processing
+• Right to data portability
+• Right to object to processing
+• Right to withdraw consent
+
+To exercise these rights, contact us at support@rovelin.com
+
+6. CHILDREN'S PRIVACY
+
+RiseVibe is not intended for use by children under the age of 13 (or 16 in the European Economic Area). We do not knowingly collect personal information from children under these ages.
+
+If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. We will take steps to delete such information from our systems.
+
+7. WELLNESS AND MENTAL HEALTH INFORMATION
+
+7.1 Wellness Data
+RiseVibe allows you to track wellness-related information such as:
+• Daily mood and emotional state
+• Gratitude and positive reflections
+• Personal affirmations and intentions
+• Journal entries about mental well-being
+
+This information is considered personal wellness data and is treated with privacy and security.
+
+7.2 Not Medical Advice
+RiseVibe is a wellness and mindfulness app and is not intended to diagnose, treat, cure, or prevent any disease or medical condition. The App does not provide medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals for medical advice.
+
+7.3 Wellness Data Storage
+• Wellness data is stored locally on your device by default
+• You control whether to enable cloud backup
+• Wellness data is never shared with third parties without your explicit consent
+• You can delete your wellness data at any time
+
+8. INTERNATIONAL DATA TRANSFERS
+
+If you are located outside the United States, please be aware that information we collect may be transferred to, stored, and processed in the United States or other countries where our service providers operate.
+
+By using the App, you consent to the transfer of your information to countries outside your country of residence, which may have different data protection laws.
+
+For users in the European Economic Area, we ensure appropriate safeguards are in place for international data transfers, such as Standard Contractual Clauses.
+
+9. DATA RETENTION
+
+9.1 How Long We Keep Your Data
+• Active Account Data: We retain your data for as long as your account is active
+• Deleted Account Data: When you delete your account, we delete your personal data within 30 days
+• Legal Requirements: We may retain certain information if required by law
+• Aggregated Data: We may retain anonymized, aggregated data indefinitely for analytics
+
+9.2 Automatic Deletion
+• Temporary data (logs, cache) is automatically deleted after 90 days
+• Notification data is deleted after delivery
+• Crash reports are retained for 1 year for debugging purposes
+
+10. THIRD-PARTY LINKS AND SERVICES
+
+The App may contain links to third-party websites, services, or resources. This Privacy Policy does not apply to those third-party services.
+
+We are not responsible for the privacy practices of third parties. We encourage you to read the privacy policies of any third-party services you access through the App.
+
+Third-party services we use:
+• RevenueCat: https://www.revenuecat.com/privacy
+• Apple App Store: https://www.apple.com/legal/privacy/
+• Expo: https://expo.dev/privacy
+
+11. COOKIES AND TRACKING TECHNOLOGIES
+
+11.1 What We Use
+The App may use:
+• Local Storage: To save your preferences and app data on your device
+• Session Data: To maintain your app state and functionality
+• Analytics Identifiers: To understand app usage patterns
+
+11.2 What We Don't Use
+• We do not use cookies for advertising
+• We do not track you across other apps or websites
+• We do not create detailed user profiles for marketing
+• We do not share your data with advertising networks
+
+12. CHANGES TO THIS PRIVACY POLICY
+
+We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons.
+
+When we make changes:
+• We will update the "Last Updated" date at the top of this policy
+• We will notify you through the App or via email for significant changes
+• Continued use of the App after changes constitutes acceptance of the updated policy
+
+We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.
+
+13. YOUR CONSENT
+
+By using RiseVibe, you consent to:
+• The collection and use of information as described in this Privacy Policy
+• The processing of your data in accordance with applicable laws
+• The transfer of your data as described in this policy
+
+You can withdraw your consent at any time by:
+• Deleting your account
+• Uninstalling the App
+• Contacting us to request data deletion
+
+14. CONTACT US
+
+If you have questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:
+
+Email: hritikkumarkota@gmail.com
+Website: https://www.rovelin.com
+Privacy Page: https://www.rovelin.com/privacy-policy/risevibe
+
+For privacy-related inquiries, we will respond within 30 days.
+
+For urgent matters or data deletion requests, please mark your email as "URGENT - Privacy Request."
+
+15. DISPUTE RESOLUTION
+
+15.1 Informal Resolution
+If you have a complaint about our privacy practices, please contact us first. We will investigate and attempt to resolve complaints and disputes in good faith.
+
+15.2 Arbitration
+Any disputes arising from this Privacy Policy will be resolved through binding arbitration in accordance with our Terms of Service, except where prohibited by law.
+
+15.3 Governing Law
+This Privacy Policy is governed by the laws of the United States and the State of California, without regard to its conflict of law provisions.
+
+16. ADDITIONAL INFORMATION FOR SPECIFIC REGIONS
+
+16.1 California Residents (CCPA/CPRA)
+California residents have specific rights under the California Consumer Privacy Act:
+
+Categories of Personal Information We Collect:
+• Identifiers (name, email, device ID)
+• Personal information (journal entries, mood data, affirmation preferences)
+• Internet activity (app usage data, feature interactions)
+• Geolocation data (if you enable location services)
+
+How We Use Personal Information:
+• To provide and improve the App
+• To deliver personalized affirmations
+• To process payments
+• To send notifications
+• For analytics and research
+
+Your California Rights:
+• Right to know what personal information we collect
+• Right to delete personal information
+• Right to opt-out of sale (we don't sell data)
+• Right to non-discrimination
+
+To exercise your rights, email us at support@rovelin.com with "California Privacy Rights" in the subject line.
+
+16.2 European Economic Area Residents (GDPR)
+If you are in the EEA, our legal basis for processing your data includes:
+• Consent: You have given clear consent for processing
+• Contract: Processing is necessary to fulfill our contract with you
+• Legal Obligation: Processing is required by law
+• Legitimate Interests: Processing is in our legitimate business interests
+
+Your GDPR Rights:
+• Right to access your data
+• Right to rectification
+• Right to erasure
+• Right to restrict processing
+• Right to data portability
+• Right to object
+• Right to withdraw consent
+• Right to lodge a complaint with a supervisory authority
+
+Data Protection Contact: privacy@rovelin.com
+
+16.3 Nevada Residents
+Nevada residents have the right to opt-out of the sale of their personal information. We do not sell personal information as defined under Nevada law.
+
+16.4 Other Jurisdictions
+We comply with applicable privacy laws in all jurisdictions where we operate. If you have questions about your rights under local law, please contact us.
+
+17. ACCESSIBILITY
+
+We are committed to making our Privacy Policy accessible to everyone. If you have difficulty accessing this policy or need it in an alternative format, please contact us at support@rovelin.com.
+
+18. ACKNOWLEDGMENT
+
+BY USING RISEVIBE, YOU ACKNOWLEDGE THAT YOU HAVE READ AND UNDERSTOOD THIS PRIVACY POLICY AND AGREE TO BE BOUND BY ITS TERMS.
+
+---
+
+SUMMARY OF KEY POINTS
+
+• We collect information you provide and usage data to operate the App
+• Most data is stored locally on your device
+• We do not sell your personal information
+• You can delete your data at any time
+• We use industry-standard security measures
+• You have rights to access, correct, and delete your data
+• We comply with GDPR, CCPA, and other privacy laws
+• Contact us with any privacy questions or concerns
+
+---
+
+SPECIFIC FEATURES AND PRIVACY
+
+Affirmations:
+• Affirmations are delivered locally on your device
+• Your favorite affirmations are stored locally
+• We do not track which specific affirmations you view for advertising purposes
+• Affirmation preferences help us recommend relevant content
+
+Journal:
+• All journal entries are stored locally on your device
+• Journal data is encrypted at rest
+• We never read or access your journal entries
+• You can export or delete your journal at any time
+
+Widgets:
+• Widget content is generated locally on your device
+• Widget preferences are stored locally
+• We do not track widget interactions for advertising
+• Widget images are delivered from our content servers
+
+Notifications:
+• Notification content is generated locally
+• We use Apple Push Notification Service for delivery
+• You control notification timing and frequency
+• Notifications can be disabled at any time
+
+Subscriptions:
+• Payment processing is handled by RevenueCat and Apple
+• We do not store your payment card information
+• Subscription status is synced with Apple App Store
+• You can manage subscriptions through App Store settings
+
+---
+
+This Privacy Policy is effective as of the date stated at the top and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.
+
+Thank you for trusting RiseVibe with your mindfulness journey. Your privacy and security are our top priorities.
+
+---
+
+© 2026 Rovelon. All rights reserved.
+              `}
   
   ];
 
