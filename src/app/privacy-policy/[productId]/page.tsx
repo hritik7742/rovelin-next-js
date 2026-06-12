@@ -2431,7 +2431,186 @@ Thank you for trusting RiseVibe with your mindfulness journey. Your privacy and 
 ---
 
 © 2026 Rovelon. All rights reserved.
-              `}
+              `},{id:'plyvid',name:'plyvid' , policy:`
+                
+Privacy Policy for Plyvid
+
+Effective Date: June 13, 2026
+Last Updated: June 13, 2026
+
+Rovelin ("we", "our", or "us") operates the Plyvid mobile application ("App"). We are committed to protecting your privacy and explaining how information is handled when you use our App.
+
+By downloading, installing, or using Plyvid, you agree to this Privacy Policy.
+
+1. Our Privacy-First Approach
+
+Plyvid is designed as a local, offline-first media player. Your media files remain on your device and are never uploaded to our servers.
+
+No Server Uploads
+
+All audio files, video files, playlists, playback history, and related metadata are processed and stored exclusively on your device. We do not upload, store, transmit, or share your media content with any third party.
+
+No Playback Tracking
+
+We do not monitor or collect information about:
+
+* Songs or videos you play
+* Playback history
+* Skipped tracks
+* Visualizer usage
+* Playlist activity
+* Media preferences
+
+Your media activity remains private and local to your device.
+
+2. Permissions We Request
+
+To provide core functionality, Plyvid may request access to certain device resources.
+
+Media Library / Apple Music Access
+
+Why We Request It
+
+Plyvid requires access to your Apple Music or iTunes library so that you can browse and play music stored on your device.
+
+How We Use It
+
+* Read and display available audio tracks
+* Enable music playback inside the App
+* Organize media for local playback
+
+This access is used solely on-device and is never transmitted to our servers.
+
+Photo Library Access
+
+Why We Request It
+
+Plyvid requires access to your Photos library so that you can browse and play videos stored on your device.
+
+How We Use It
+
+* Display video files from your photo library
+* Generate local thumbnails
+* Enable video playback
+
+All processing occurs locally on your device. No photos or videos are uploaded or shared.
+
+File and Document Access
+
+Why We Request It
+
+Plyvid allows users to import media files from the Files app or other supported storage locations.
+
+How We Use It
+
+* Import media files selected by the user
+* Store imported files within the App's local storage
+* Enable offline playback
+
+Imported files remain stored locally on your device.
+
+3. Subscriptions and In-App Purchases
+
+Plyvid offers optional premium features through subscriptions.
+
+Premium features may include:
+
+* Premium visualizer themes
+* Advanced playback capabilities
+* Custom playlist features
+* Ad-free experience
+* Additional media format support
+
+Payment Processing
+
+All payments are processed directly by Apple through the App Store and StoreKit framework.
+
+Financial Information
+
+We do not collect, process, store, or have access to:
+
+* Credit card numbers
+* Bank account information
+* Billing addresses
+* Payment credentials
+
+Subscription Verification
+
+The App may access anonymous transaction identifiers and subscription status information provided by Apple solely for the purpose of unlocking premium features.
+
+4. Analytics, Tracking, and Third-Party Services
+
+No Advertising SDKs
+
+Plyvid does not include:
+
+* Advertising networks
+* Marketing SDKs
+* Behavioral tracking tools
+* User profiling systems
+
+No Third-Party Analytics
+
+We do not use third-party analytics platforms to track user activity inside the App.
+
+Crash Diagnostics
+
+If you choose to share diagnostics with Apple, we may receive anonymous crash reports through App Store Connect.
+
+These reports:
+
+* Do not contain personally identifiable information
+* Are used solely to identify bugs and improve stability
+* Cannot be used to identify individual users
+
+5. Data Storage and Security
+
+Plyvid stores user-generated information locally on the device.
+
+This may include:
+
+* Playlists
+* Favorites
+* Playback positions
+* Play counts
+* App preferences
+
+All data is stored within the App's sandboxed storage environment and protected by the security mechanisms provided by iOS.
+
+App Deletion
+
+If you uninstall Plyvid, all locally stored application data, including playlists, thumbnails, imported media files, and settings, may be permanently removed from your device.
+
+6. Children's Privacy
+
+Plyvid does not knowingly collect, request, store, or share personal information from children under the age of 13.
+
+Because the App does not collect personal data, it is suitable for users of all ages.
+
+7. Changes to This Privacy Policy
+
+We may update this Privacy Policy periodically to reflect improvements, legal requirements, or operational changes.
+
+Any updates will be posted on this page, and the Last Updated date will be revised accordingly.
+
+We encourage users to review this Privacy Policy periodically.
+
+8. Contact Us
+
+If you have any questions, concerns, or suggestions regarding this Privacy Policy or Plyvid's privacy practices, please contact us.
+
+Company: Rovelin
+Website: https://www.rovelin.com
+Contact Page: https://www.rovelin.com/contact
+Email: [hritikkumarkota@gmail.com](mailto:hritikkumarkota@gmail.com)
+
+By using Plyvid, you acknowledge that you have read and understood this Privacy Policy.
+
+                
+        
+                
+                
+                `}
   
   ];
 
