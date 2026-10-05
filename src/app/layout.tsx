@@ -1,11 +1,9 @@
 import { Metadata } from 'next';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import './globals.css';
-import SocialBanner from '@/components/SocialBanner';
 import { Cedarville_Cursive } from 'next/font/google';
 import { GoogleAnalytics } from '@/lib/analytics';
 import Script from 'next/script';
+import SiteChrome from '@/components/SiteChrome';
 
 // import AdSense from '@/components/adsense';
 // Initialize fonts
@@ -105,10 +103,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <SocialBanner />
-        <Navbar />
-        {children}
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
         <GoogleAnalytics />
       </body>
     </html>
