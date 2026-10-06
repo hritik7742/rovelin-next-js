@@ -32,7 +32,6 @@ const assertServerEnv = () => {
 
 const supabaseHeaders = {
   apikey: SUPABASE_SERVICE_ROLE_KEY || '',
-  Authorization: `Bearer ${SUPABASE_SERVICE_ROLE_KEY || ''}`,
 };
 
 export const sponsorCategories = [

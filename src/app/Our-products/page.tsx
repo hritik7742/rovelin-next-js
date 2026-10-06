@@ -250,6 +250,8 @@ const categories = [
 ];
 
 const FEATURED_DESCRIPTION_LIMIT = 92;
+const MIN_FEATURED_SPONSOR_CARDS = 5;
+const MIN_FEED_SPONSOR_CARDS = 5;
 const SPONSOR_FORM_URL = '/sponsor';
 const FEATURED_SPONSOR_FORM_URL = `${SPONSOR_FORM_URL}?plan=featured`;
 const DIRECTORY_SPONSOR_FORM_URL = `${SPONSOR_FORM_URL}?plan=directory`;
@@ -371,11 +373,15 @@ const featuredSponsorSlots: EmptySponsorSlot[] = [
   { id: 'featured-ad-1', title: 'Ad Sponsor', copy: 'Reserve this sponsor slot and promote your product here.' },
   { id: 'featured-ad-2', title: 'Ad Sponsor', copy: 'Reserve this sponsor slot and promote your product here.' },
   { id: 'featured-ad-3', title: 'Ad Sponsor', copy: 'Reserve this sponsor slot and promote your product here.' },
+  { id: 'featured-ad-4', title: 'Ad Sponsor', copy: 'Reserve this sponsor slot and promote your product here.' },
+  { id: 'featured-ad-5', title: 'Ad Sponsor', copy: 'Reserve this sponsor slot and promote your product here.' },
 ];
 const feedSponsorSlots: EmptySponsorSlot[] = [
   { id: 'feed-ad-1', title: 'Ad Sponsor', copy: 'Reserve this sponsor slot.' },
   { id: 'feed-ad-2', title: 'Ad Sponsor', copy: 'Reserve this sponsor slot.' },
   { id: 'feed-ad-3', title: 'Ad Sponsor', copy: 'Reserve this sponsor slot.' },
+  { id: 'feed-ad-4', title: 'Ad Sponsor', copy: 'Reserve this sponsor slot.' },
+  { id: 'feed-ad-5', title: 'Ad Sponsor', copy: 'Reserve this sponsor slot.' },
 ];
 
 const stats = [
@@ -480,16 +486,8 @@ const Products: React.FC = () => {
   const paidDirectorySponsors = paidSponsors
     .filter((sponsor) => sponsor.plan_type === 'directory')
     .map(sponsorToProduct);
-  const featuredFallbackCount = Math.max(0, 5 - Math.max(paidFeaturedSponsors.length, 3));
-  const feedFallbackCount = Math.max(0, 5 - Math.max(paidDirectorySponsors.length, 3));
-  const featuredSponsors = [
-    ...products.slice(0, featuredFallbackCount),
-    ...paidFeaturedSponsors,
-  ].slice(0, 5);
-  const sponsoredFeed = [
-    ...products.slice(2, 2 + feedFallbackCount),
-    ...paidDirectorySponsors,
-  ].slice(0, 5);
+  const featuredSponsors = paidFeaturedSponsors;
+  const sponsoredFeed = paidDirectorySponsors;
   const sponsoredProductNames = new Set([
     ...featuredSponsors.map((product) => product.name),
     ...sponsoredFeed.map((product) => product.name),
@@ -498,8 +496,8 @@ const Products: React.FC = () => {
   const normalizedSearch = searchTerm.trim().toLowerCase();
   const visibleFeaturedSponsors = featuredSponsors.filter((product) => matchesProductSearch(product, normalizedSearch));
   const visibleSponsoredFeed = sponsoredFeed.filter((product) => matchesProductSearch(product, normalizedSearch));
-  const featuredEmptySlots = normalizedSearch ? [] : featuredSponsorSlots.slice(0, Math.max(0, 5 - featuredSponsors.length));
-  const feedEmptySlots = normalizedSearch ? [] : feedSponsorSlots.slice(0, Math.max(0, 5 - sponsoredFeed.length));
+  const featuredEmptySlots = normalizedSearch ? [] : featuredSponsorSlots.slice(0, Math.max(0, MIN_FEATURED_SPONSOR_CARDS - featuredSponsors.length));
+  const feedEmptySlots = normalizedSearch ? [] : feedSponsorSlots.slice(0, Math.max(0, MIN_FEED_SPONSOR_CARDS - sponsoredFeed.length));
 
   const filteredRecommended = recommendedProducts.filter((product) => {
     const matchesCategory = (() => {
