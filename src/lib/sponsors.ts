@@ -116,6 +116,23 @@ export const createSponsorListing = async (
   return rows[0];
 };
 
+export const fetchSponsorListing = async (id: string) => {
+  assertServerEnv();
+
+  const response = await fetch(`${SUPABASE_URL}/rest/v1/sponsor_listings?select=*&id=eq.${encodeURIComponent(id)}&limit=1`, {
+    headers: supabaseHeaders,
+    cache: 'no-store',
+  });
+
+  if (!response.ok) {
+    const details = await response.text();
+    throw new Error(`Sponsor listing fetch failed: ${details}`);
+  }
+
+  const rows = await response.json() as SponsorListing[];
+  return rows[0] || null;
+};
+
 export const updateSponsorListing = async (
   id: string,
   updates: Partial<SponsorListing> & { raw_checkout?: unknown; raw_webhook?: unknown },

@@ -17,6 +17,32 @@ export interface DodoWebhookPayload {
   [key: string]: unknown;
 }
 
+export interface DodoCheckoutSessionStatus {
+  id: string;
+  created_at?: string;
+  customer_email?: string | null;
+  customer_name?: string | null;
+  payment_id?: string | null;
+  payment_status?: string | null;
+}
+
+export interface DodoPaymentDetails {
+  payment_id: string;
+  status?: string | null;
+  subscription_id?: string | null;
+  subscription_ids?: string[] | null;
+  checkout_session_id?: string | null;
+  metadata?: Record<string, unknown> | null;
+  [key: string]: unknown;
+}
+
+export interface DodoSubscriptionDetails {
+  subscription_id: string;
+  status?: string | null;
+  next_billing_date?: string | null;
+  [key: string]: unknown;
+}
+
 const getDodoBaseUrl = () => {
   const environment = (process.env.DODO_PAYMENTS_ENVIRONMENT || 'test_mode') as DodoEnvironment;
   return environment === 'live_mode' ? 'https://live.dodopayments.com' : 'https://test.dodopayments.com';
@@ -25,6 +51,33 @@ const getDodoBaseUrl = () => {
 const getSiteUrl = () => {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   return siteUrl.replace(/\/$/, '');
+};
+
+const getDodoApiKey = () => {
+  const apiKey = process.env.DODO_PAYMENTS_API_KEY;
+
+  if (!apiKey) {
+    throw new Error('Missing Dodo Payments API key.');
+  }
+
+  return apiKey;
+};
+
+const dodoRequest = async <T>(path: string) => {
+  const response = await fetch(`${getDodoBaseUrl()}/${path}`, {
+    headers: {
+      Authorization: `Bearer ${getDodoApiKey()}`,
+      'Content-Type': 'application/json',
+    },
+    cache: 'no-store',
+  });
+
+  if (!response.ok) {
+    const details = await response.text();
+    throw new Error(`Dodo request failed: ${details}`);
+  }
+
+  return response.json() as Promise<T>;
 };
 
 export const createDodoCheckout = async ({
@@ -38,17 +91,11 @@ export const createDodoCheckout = async ({
   email: string;
   sponsorName: string;
 }) => {
-  const apiKey = process.env.DODO_PAYMENTS_API_KEY;
-
-  if (!apiKey) {
-    throw new Error('Missing Dodo Payments API key.');
-  }
-
   const siteUrl = getSiteUrl();
   const response = await fetch(`${getDodoBaseUrl()}/checkouts`, {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${apiKey}`,
+      Authorization: `Bearer ${getDodoApiKey()}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -80,6 +127,18 @@ export const createDodoCheckout = async ({
 
   return response.json() as Promise<DodoCheckoutResponse>;
 };
+
+export const getDodoCheckoutSessionStatus = (sessionId: string) => (
+  dodoRequest<DodoCheckoutSessionStatus>(`checkouts/${encodeURIComponent(sessionId)}`)
+);
+
+export const getDodoPayment = (paymentId: string) => (
+  dodoRequest<DodoPaymentDetails>(`payments/${encodeURIComponent(paymentId)}`)
+);
+
+export const getDodoSubscription = (subscriptionId: string) => (
+  dodoRequest<DodoSubscriptionDetails>(`subscriptions/${encodeURIComponent(subscriptionId)}`)
+);
 
 const normalizeWebhookSecret = (secret: string) => {
   const rawSecret = secret.startsWith('whsec_') ? secret.slice('whsec_'.length) : secret;
