@@ -250,7 +250,9 @@ const categories = [
 ];
 
 const FEATURED_DESCRIPTION_LIMIT = 92;
-const SPONSOR_EARLY_ACCESS_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScEQK4Mh5_6kZ0gInxQmfRfUWoM58adQHHcjcnrz1VdIZ9iyg/viewform?usp=publish-editor';
+const SPONSOR_FORM_URL = '/sponsor';
+const FEATURED_SPONSOR_FORM_URL = `${SPONSOR_FORM_URL}?plan=featured`;
+const DIRECTORY_SPONSOR_FORM_URL = `${SPONSOR_FORM_URL}?plan=directory`;
 
 const chartTabs: Array<{ label: string; value: TrafficChartRange }> = [
   { label: '7 Days', value: '7d' },
@@ -540,7 +542,7 @@ const Products: React.FC = () => {
               onChange={(event) => setSearchTerm(event.target.value)}
             />
           </label>
-          <a href={SPONSOR_EARLY_ACCESS_URL} target="_blank" rel="noopener noreferrer" className="signin-button">Ad Sponsor</a>
+          <a href={SPONSOR_FORM_URL} className="signin-button">Ad Sponsor</a>
         </div>
       </header>
 
@@ -656,7 +658,7 @@ const Products: React.FC = () => {
             <h2>Featured Sponsors</h2>
             <p>Support innovative products from our sponsors. Get your product in front of thousands of visitors.</p>
           </div>
-          <a href={SPONSOR_EARLY_ACCESS_URL} target="_blank" rel="noopener noreferrer">Ad Sponsor <ArrowRight size={15} /></a>
+          <a href={FEATURED_SPONSOR_FORM_URL}>Ad Sponsor <ArrowRight size={15} /></a>
         </div>
         <div className="featured-grid">
           {visibleFeaturedSponsors.map((product, index) => (
@@ -679,7 +681,7 @@ const Products: React.FC = () => {
             </article>
           ))}
           {featuredEmptySlots.map((slot) => (
-            <a key={slot.id} href={SPONSOR_EARLY_ACCESS_URL} target="_blank" rel="noopener noreferrer" className="featured-card empty-sponsor-card">
+            <a key={slot.id} href={FEATURED_SPONSOR_FORM_URL} className="featured-card empty-sponsor-card">
               <span className="empty-sponsor-icon"><Megaphone size={31} /></span>
               <span className="empty-sponsor-label">Ad Sponsor</span>
               <h3>{slot.title}</h3>
@@ -696,7 +698,7 @@ const Products: React.FC = () => {
             <h2>Sponsored Feed</h2>
             <p>More great products from our sponsors.</p>
           </div>
-          <a href={SPONSOR_EARLY_ACCESS_URL} target="_blank" rel="noopener noreferrer">Ad Sponsor <ArrowRight size={15} /></a>
+          <a href={DIRECTORY_SPONSOR_FORM_URL}>Ad Sponsor <ArrowRight size={15} /></a>
         </div>
         <div className="feed-grid">
           {visibleSponsoredFeed.map((product, index) => (
@@ -714,7 +716,7 @@ const Products: React.FC = () => {
             </a>
           ))}
           {feedEmptySlots.map((slot) => (
-            <a key={slot.id} href={SPONSOR_EARLY_ACCESS_URL} target="_blank" rel="noopener noreferrer" className="feed-card empty-feed-card">
+            <a key={slot.id} href={DIRECTORY_SPONSOR_FORM_URL} className="feed-card empty-feed-card">
               <span className="empty-feed-icon"><Megaphone size={22} /></span>
               <span className="empty-feed-label">Ad Sponsor</span>
               <h3>{slot.title}</h3>
@@ -772,8 +774,8 @@ const Products: React.FC = () => {
           <h2>Build something great? Put it in front of our audience.</h2>
           <p>Reach thousands of developers, creators and businesses who are actively looking for useful tools.</p>
           <div>
-            <a href={SPONSOR_EARLY_ACCESS_URL} target="_blank" rel="noopener noreferrer" className="primary-hero-button">Ad Sponsor</a>
-            <a href={SPONSOR_EARLY_ACCESS_URL} target="_blank" rel="noopener noreferrer" className="secondary-hero-button">Become a Sponsor</a>
+            <a href={SPONSOR_FORM_URL} className="primary-hero-button">Ad Sponsor</a>
+            <a href={SPONSOR_FORM_URL} className="secondary-hero-button">Become a Sponsor</a>
           </div>
         </div>
         <div className="plans">
@@ -790,7 +792,7 @@ const Products: React.FC = () => {
                 <h4>{title}</h4>
                 <p>{copy}</p>
                 <strong>{price}<span> / week</span></strong>
-                <a href={SPONSOR_EARLY_ACCESS_URL} target="_blank" rel="noopener noreferrer">
+                <a href={plan === 'featured' ? FEATURED_SPONSOR_FORM_URL : DIRECTORY_SPONSOR_FORM_URL}>
                   Get Started <ArrowRight size={14} />
                 </a>
               </article>

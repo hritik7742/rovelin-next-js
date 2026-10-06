@@ -27,8 +27,42 @@ const getNestedString = (data: Record<string, unknown>, paths: string[][]) => {
   return null;
 };
 
-const statusForEvent = (eventType: string): SponsorStatus | null => {
-  if (['payment.succeeded', 'subscription.active', 'subscription.renewed', 'subscription.updated'].includes(eventType)) {
+const statusFromDodoStatus = (status: string | null): SponsorStatus | null => {
+  if (!status) return null;
+
+  const normalizedStatus = status.toLowerCase();
+
+  if (['active', 'succeeded', 'success', 'paid'].includes(normalizedStatus)) {
+    return 'live';
+  }
+
+  if (['cancelled', 'canceled'].includes(normalizedStatus)) {
+    return 'cancelled';
+  }
+
+  if (normalizedStatus === 'expired') {
+    return 'expired';
+  }
+
+  if (normalizedStatus === 'past_due') {
+    return 'past_due';
+  }
+
+  if (['failed', 'failure'].includes(normalizedStatus)) {
+    return 'failed';
+  }
+
+  return null;
+};
+
+const statusForEvent = (eventType: string, dodoStatus: string | null): SponsorStatus | null => {
+  const eventDataStatus = statusFromDodoStatus(dodoStatus);
+
+  if (eventDataStatus) {
+    return eventDataStatus;
+  }
+
+  if (['payment.succeeded', 'subscription.active', 'subscription.renewed'].includes(eventType)) {
     return 'live';
   }
 
@@ -46,6 +80,10 @@ const statusForEvent = (eventType: string): SponsorStatus | null => {
 
   if (['payment.failed', 'subscription.failed'].includes(eventType)) {
     return 'failed';
+  }
+
+  if (eventType === 'subscription.updated') {
+    return null;
   }
 
   if (eventType === 'refund.succeeded') {
@@ -77,13 +115,13 @@ export async function POST(request: Request) {
   }
 
   const eventType = payload.type;
-  const status = statusForEvent(eventType);
+  const data = (payload.data || {}) as Record<string, unknown>;
+  const status = statusForEvent(eventType, getString(data.status));
 
   if (!status) {
     return NextResponse.json({ ok: true, ignored: true });
   }
 
-  const data = (payload.data || {}) as Record<string, unknown>;
   const listingId = getNestedString(data, [
     ['metadata', 'sponsor_listing_id'],
     ['payment_metadata', 'sponsor_listing_id'],
