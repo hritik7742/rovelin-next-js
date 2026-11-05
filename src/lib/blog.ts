@@ -11,7 +11,14 @@ if (!fs.existsSync(postsDirectory)) {
   fs.mkdirSync(postsDirectory, { recursive: true });
 }
 
+let cachedPosts: BlogPost[] | null = null;
+const postCache = new Map<string, BlogPost | null>();
+
 export function getAllPosts(): BlogPost[] {
+  if (cachedPosts) {
+    return cachedPosts;
+  }
+
   try {
     const fileNames = fs.readdirSync(postsDirectory);
     const allPosts = fileNames
@@ -23,6 +30,7 @@ export function getAllPosts(): BlogPost[] {
       .filter((post): post is BlogPost => post !== null && post.published)
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
+    cachedPosts = allPosts;
     return allPosts;
   } catch (error) {
     console.error('Error reading posts:', error);
@@ -31,10 +39,15 @@ export function getAllPosts(): BlogPost[] {
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {
+  if (postCache.has(slug)) {
+    return postCache.get(slug) ?? null;
+  }
+
   try {
     const fullPath = path.join(postsDirectory, `${slug}.mdx`);
 
     if (!fs.existsSync(fullPath)) {
+      postCache.set(slug, null);
       return null;
     }
 
@@ -52,7 +65,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
         ? rawDate.trim()
         : new Date().toISOString().slice(0, 10));
 
-    return {
+    const post: BlogPost = {
       slug,
       title: frontmatter.title,
       description: frontmatter.description,
@@ -64,8 +77,12 @@ export function getPostBySlug(slug: string): BlogPost | null {
       content,
       readingTime: stats.text,
     };
+
+    postCache.set(slug, post);
+    return post;
   } catch (error) {
     console.error(`Error reading post ${slug}:`, error);
+    postCache.set(slug, null);
     return null;
   }
 }
@@ -120,17 +137,4 @@ export function generateTableOfContents(content: string): { id: string; text: st
   }
 
   return toc;
-}
-
-export function searchPosts(query: string): BlogPost[] {
-  const allPosts = getAllPosts();
-  const lowerQuery = query.toLowerCase();
-
-  return allPosts.filter((post) => {
-    return (
-      post.title.toLowerCase().includes(lowerQuery) ||
-      post.description.toLowerCase().includes(lowerQuery) ||
-      post.tags.some((tag) => tag.toLowerCase().includes(lowerQuery))
-    );
-  });
 }
