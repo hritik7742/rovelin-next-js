@@ -118,6 +118,15 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     "keywords": "gif compressor, online gif compressor, free gif compressor"
   },
   {
+    "slug": "gradient-generator",
+    "name": "Gradient Generator",
+    "category": "Image Tools",
+    "applicationCategory": "PhotoEditor",
+    "title": "Free CSS Gradient Generator | Create Beautiful Gradients Online",
+    "description": "Create beautiful CSS linear and radial gradients online. Features 150+ color presets, angle controls, and instant CSS code export.",
+    "keywords": "gradient generator, css gradient generator, linear gradient, radial gradient, css gradient maker, background gradient"
+  },
+  {
     "slug": "heic-to-jpg",
     "name": "HEIC To JPG",
     "category": "Image Tools",
@@ -280,6 +289,24 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     "keywords": "pdf to png, online pdf to png, free pdf to png"
   },
   {
+    "slug": "pdf-to-word",
+    "name": "PDF To Word",
+    "category": "PDF Tools",
+    "applicationCategory": "UtilitiesApplication",
+    "title": "Free PDF to Word Converter | Convert PDF to Editable Text Online",
+    "description": "Convert PDF files into editable Word documents and text online for free. Extract text with 100% privacy directly in your browser.",
+    "keywords": "pdf to word, convert pdf to word, pdf to docx, pdf to text, extract text from pdf, free pdf to word converter"
+  },
+  {
+    "slug": "pdf-tools",
+    "name": "PDF Tools",
+    "category": "PDF Tools",
+    "applicationCategory": "UtilitiesApplication",
+    "title": "Free PDF Tools Online | Convert, Compress & Edit PDF Files",
+    "description": "Complete suite of free online PDF tools. Convert PDF to JPG, PDF to PNG, Images to PDF, Word to PDF, and edit PDF documents directly in your browser.",
+    "keywords": "pdf tools, free pdf tools, convert pdf, pdf to jpg, pdf to png, pdf converter online, pdf suite"
+  },
+  {
     "slug": "phone-generator",
     "name": "Phone Generator",
     "category": "Generator Tools",
@@ -422,6 +449,15 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     "title": "Free Word Counter | Count Words, Characters, Sentences & Paragraphs",
     "description": "Free online word counter tool. Count words, characters, sentences, and paragraphs. Perfect for essays, articles, and content writing. Includes reading time estimation.",
     "keywords": "word counter, character count, sentence counter, paragraph counter, text analyzer, reading time calculator, word count tool"
+  },
+  {
+    "slug": "word-to-pdf",
+    "name": "Word To PDF",
+    "category": "PDF Tools",
+    "applicationCategory": "UtilitiesApplication",
+    "title": "Free Word to PDF Converter | Convert Documents to PDF Online",
+    "description": "Convert Word documents (.docx, .doc, .txt) to PDF format online for free. Instant preview and secure browser processing.",
+    "keywords": "word to pdf, convert word to pdf, docx to pdf, doc to pdf, word document converter online"
   }
 ];
 

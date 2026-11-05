@@ -752,6 +752,38 @@ export function getDictionary(langCode: string) {
 
 // Handcrafted & Nuqti-researched primary keywords and names for tools
 export const TOOL_LOCAL_TERMS: Record<string, Record<string, { name: string; kw: string }>> = {
+  'gradient-generator': {
+    es: { name: 'Generador de Degradados CSS', kw: 'generador de degradados, gradientes css, degradados css online, css gradient generator' },
+    fr: { name: 'Générateur de Dégradé CSS', kw: 'generateur de degrade css, gradient css en ligne, fond degrade css' },
+    de: { name: 'CSS Farbverlauf Generator', kw: 'css farbverlauf generator, farbverlauf erstellen online, css gradient generator' },
+    ar: { name: 'صانع تدرجات الألوان CSS', kw: 'صانع تدرجات الالوان, تدرج الوان css, صانع التدرجات اون لاين' },
+    ja: { name: 'CSS グラデーション 作成', kw: 'css グラデーション 作成, グラデーション ジェネレーター, css 背景 グラデーション' },
+    hi: { name: 'CSS ग्रेडिएंट जनरेटर', kw: 'सीएसएस ग्रेडिएंट, ऑनलाइन कलर ग्रेडिएंट, सीएसएस बैकग्राउंड ग्रेडिएंट' },
+  },
+  'pdf-to-word': {
+    es: { name: 'Convertidor de PDF a Word', kw: 'convertir pdf a word, pasar pdf a docx gratis, transformar pdf en word online' },
+    fr: { name: 'Convertisseur PDF en Word', kw: 'convertir pdf en word, transformer pdf en docx gratuit, convertir pdf en texte' },
+    de: { name: 'PDF in Word Umwandeln', kw: 'pdf in word umwandeln, pdf zu word konvertieren kostenlos, pdf als docx speichern' },
+    ar: { name: 'تحويل PDF إلى Word', kw: 'تحويل pdf الى word, تحويل بي دي اف الى وورد مجانا, تعديل ملف pdf' },
+    ja: { name: 'PDF Word 変換', kw: 'pdf word 変換, pdf を ワード に 変換 無料, pdf docx 変換' },
+    hi: { name: 'PDF से Word कनवर्टर', kw: 'pdf को word में कैसे बदलें, pdf to word converter online, pdf से docx' },
+  },
+  'word-to-pdf': {
+    es: { name: 'Convertidor de Word a PDF', kw: 'convertir word a pdf, pasar docx a pdf gratis, transformar word en pdf' },
+    fr: { name: 'Convertisseur Word en PDF', kw: 'convertir word en pdf, transformer docx en pdf gratuit, enregistrer sous pdf' },
+    de: { name: 'Word in PDF Umwandeln', kw: 'word in pdf umwandeln, docx in pdf konvertieren kostenlos, word als pdf' },
+    ar: { name: 'تحويل Word إلى PDF', kw: 'تحويل word الى pdf, تحويل وورد الى بي دي اف مجانا, وورد الى pdf اون لاين' },
+    ja: { name: 'Word PDF 変換', kw: 'word pdf 変換, ワード を pdf に 変換 無料, docx pdf 変換' },
+    hi: { name: 'Word से PDF कनवर्टर', kw: 'word को pdf कैसे बनाएं, word to pdf converter online, वर्ड से पीडीएफ' },
+  },
+  'pdf-tools': {
+    es: { name: 'Herramientas PDF Online', kw: 'herramientas pdf online, editar pdf gratis, convertir pdf online' },
+    fr: { name: 'Outils PDF Gratuits', kw: 'outils pdf en ligne, modifier pdf gratuit, convertir pdf en ligne' },
+    de: { name: 'Kostenlose PDF-Werkzeuge', kw: 'pdf werkzeuge online, pdf bearbeiten kostenlos, pdf tools' },
+    ar: { name: 'أدوات PDF المجانية أونلاين', kw: 'ادوات pdf اون لاين, تعديل ملفات بي دي اف, ادوات بي دي اف مجانية' },
+    ja: { name: '無料 PDF ツール', kw: 'pdf ツール オンライン, pdf 編集 無料, pdf まとめる' },
+    hi: { name: 'मुफ़्त पीडीएफ टूल्स', kw: 'पीडीएफ टूल्स ऑनलाइन, पीडीएफ कन्वर्टर, फ्री पीडीएफ टूल' },
+  },
   'image-compressor': {
     es: { name: 'Compresor de Imágenes', kw: 'compresor de imagenes, reducir tamano foto, optimizar imagenes online, comprimir png gratis, comprimir jpg' },
     fr: { name: "Compresseur d'Images", kw: 'compresser image, reduire taille photo en ligne, compresseur jpg gratuit, optimiser image png' },

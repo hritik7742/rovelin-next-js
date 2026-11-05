@@ -22,6 +22,7 @@ export const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'email-extractor': dynamic(() => import('@/app/tools/email-extractor/page'), { loading: () => <LoadingFallback />, ssr: false }),
   'emoji-generator': dynamic(() => import('@/app/tools/emoji-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
   'gif-compressor': dynamic(() => import('@/app/tools/gif-compressor/page'), { loading: () => <LoadingFallback />, ssr: false }),
+  'gradient-generator': dynamic(() => import('@/app/tools/gradient-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
   'heic-to-jpg': dynamic(() => import('@/app/tools/heic-to-jpg/page'), { loading: () => <LoadingFallback />, ssr: false }),
   'html-formatter': dynamic(() => import('@/app/tools/html-formatter/page'), { loading: () => <LoadingFallback />, ssr: false }),
   'image-compressor': dynamic(() => import('@/app/tools/image-compressor/page'), { loading: () => <LoadingFallback />, ssr: false }),
@@ -40,6 +41,8 @@ export const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'password-generator': dynamic(() => import('@/app/tools/password-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
   'pdf-to-jpg': dynamic(() => import('@/app/tools/pdf-to-jpg/page'), { loading: () => <LoadingFallback />, ssr: false }),
   'pdf-to-png': dynamic(() => import('@/app/tools/pdf-to-png/page'), { loading: () => <LoadingFallback />, ssr: false }),
+  'pdf-to-word': dynamic(() => import('@/app/tools/pdf-to-word/page'), { loading: () => <LoadingFallback />, ssr: false }),
+  'pdf-tools': dynamic(() => import('@/app/tools/pdf-tools/page'), { loading: () => <LoadingFallback />, ssr: false }),
   'phone-generator': dynamic(() => import('@/app/tools/phone-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
   'phone-number-extractor': dynamic(() => import('@/app/tools/phone-number-extractor/page'), { loading: () => <LoadingFallback />, ssr: false }),
   'png-compressor': dynamic(() => import('@/app/tools/png-compressor/page'), { loading: () => <LoadingFallback />, ssr: false }),
@@ -56,6 +59,7 @@ export const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'webp-compressor': dynamic(() => import('@/app/tools/webp-compressor/page'), { loading: () => <LoadingFallback />, ssr: false }),
   'webp-to-jpg': dynamic(() => import('@/app/tools/webp-to-jpg/page'), { loading: () => <LoadingFallback />, ssr: false }),
   'word-counter': dynamic(() => import('@/app/tools/word-counter/page'), { loading: () => <LoadingFallback />, ssr: false }),
+  'word-to-pdf': dynamic(() => import('@/app/tools/word-to-pdf/page'), { loading: () => <LoadingFallback />, ssr: false }),
 };
 
 export function getToolComponent(slug: string): React.ComponentType<any> | undefined {
