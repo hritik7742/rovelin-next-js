@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Mail } from 'lucide-react';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Footer() {
   const handleEmailClick = (e: React.MouseEvent) => {
@@ -57,8 +58,12 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="footer-bottom">
+        <div className="footer-bottom flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="copyright">© {new Date().getFullYear()} Rovelin Studio. All Rights Reserved.</p>
+          <div className="footer-language-switcher flex items-center gap-2">
+            <span className="text-xs text-gray-400">Language:</span>
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </footer>
