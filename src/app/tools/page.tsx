@@ -3,6 +3,7 @@
 import React from 'react';
 import { useState, ReactElement } from 'react';
 import Link from 'next/link';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 import './tools.css';
 import {
   FileText,
@@ -433,6 +434,9 @@ export default function ToolsPage() {
   return (
     <div className="tools-page">
       <div className="tools-header">
+        <div className="flex items-center justify-center gap-3 mb-2">
+          <LanguageSwitcher currentLocale="en" />
+        </div>
         <h1>Free Online Tools</h1>
         <p>A collection of {totalTools} free tools to help with your daily tasks</p>
 

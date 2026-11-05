@@ -1,62 +1,12 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
+import { LOCALIZED_LANGUAGES } from '@/lib/i18n/languages'
+import { TOOLS_REGISTRY } from '@/lib/i18n/tools-registry'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.rovelin.com'
 
-  // All tool pages
-  const toolPages = [
-    'archive-converter',
-    'base64-converter',
-    'base64-image',
-    'color-picker',
-    'comma-separator',
-    'credit-card-generator',
-    'css-minifier',
-    'digital-signature',
-    'email-extractor',
-    'emoji-generator',
-    'gif-compressor',
-    'gradient-generator',
-    'heic-to-jpg',
-    'html-formatter',
-    'image-compressor',
-    'image-converter',
-    'image-cropper',
-    'image-resizer',
-    'image-to-pdf',
-    'image-to-text',
-    'jpeg-compressor',
-    'jpg-to-png',
-    'js-minifier',
-    'json-formatter',
-    'lorem-generator',
-    'markdown-to-html',
-    'name-wheel',
-    'password-generator',
-    'pdf-to-jpg',
-    'pdf-to-png',
-    'pdf-to-word',
-    'phone-generator',
-    'phone-number-extractor',
-    'png-compressor',
-    'png-to-jpg',
-    'qr-generator',
-    'random-name-generator',
-    'svg-converter',
-    'text-diff',
-    'text-paragraph-splitter',
-    'unit-converter',
-    'url-encoder-decoder',
-    'video-compressor',
-    'video-to-audio',
-    'webp-compressor',
-    'webp-to-jpg',
-    'word-counter',
-
-  ]
-
-  // Core pages
+  // Core English pages
   const corePages = [
     '',
     'about',
@@ -73,13 +23,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === '' ? 1 : 0.8
   }))
 
-  // Tool pages
-  const toolRoutes = toolPages.map(tool => ({
-    url: `${baseUrl}/tools/${tool}`,
+  // English Tool pages (Preserving existing rankings and canonical URLs)
+  const englishToolRoutes = TOOLS_REGISTRY.map(tool => ({
+    url: `${baseUrl}/tools/${tool.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8
+  }))
+
+  // Localized Tools Index pages (50 languages)
+  const localizedIndexRoutes = LOCALIZED_LANGUAGES.map(lang => ({
+    url: `${baseUrl}/${lang.code}/tools`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7
   }))
+
+  // Localized Programmatic SEO Tool pages (50 languages * 46 tools = 2,300 pages)
+  const localizedToolRoutes: MetadataRoute.Sitemap = []
+  for (const lang of LOCALIZED_LANGUAGES) {
+    for (const tool of TOOLS_REGISTRY) {
+      localizedToolRoutes.push({
+        url: `${baseUrl}/${lang.code}/tools/${tool.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7
+      })
+    }
+  }
 
   // Blog posts — safeDate guards against "Invalid time value" crashes
   const safeDate = (dateStr: string): Date => {
@@ -95,5 +66,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8
   }))
 
-  return [...corePages, ...toolRoutes, ...blogRoutes]
-} 
+  return [
+    ...corePages,
+    ...englishToolRoutes,
+    ...localizedIndexRoutes,
+    ...localizedToolRoutes,
+    ...blogRoutes
+  ]
+}
