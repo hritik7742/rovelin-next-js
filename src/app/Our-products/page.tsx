@@ -7,6 +7,7 @@ import './products.css';
 import { trackEvent } from '@/lib/analytics';
 import type { SponsorListing } from '@/lib/sponsors';
 import type { TrafficAnalytics, TrafficChartRange, TrafficPoint } from '@/lib/google-analytics-data';
+import { initialTrafficData } from '@/lib/traffic-data';
 import {
   ArrowRight,
   AtSign,
@@ -263,58 +264,7 @@ const chartTabs: Array<{ label: string; value: TrafficChartRange }> = [
   { label: 'All Time', value: 'all' },
 ];
 
-const defaultTrafficAnalytics: TrafficAnalytics = {
-  realtimeUsers: 43,
-  source: 'fallback',
-  metrics: [
-    { value: '1,284', label: 'visitors today', change: '+12%' },
-    { value: '64,400', label: 'visitors - Last 30 Days', change: '+34%' },
-    { value: '214,800', label: 'visitors - All Time', change: '+42%' },
-  ],
-  charts: {
-    '7d': [
-      { label: 'Mon', value: 820 },
-      { label: 'Tue', value: 980 },
-      { label: 'Wed', value: 910 },
-      { label: 'Thu', value: 1150 },
-      { label: 'Fri', value: 1260 },
-      { label: 'Sat', value: 1040 },
-      { label: 'Sun', value: 1380 },
-    ],
-    '30d': [
-      { label: 'Sep 6', value: 4400 },
-      { label: 'Sep 11', value: 5200 },
-      { label: 'Sep 16', value: 4900 },
-      { label: 'Sep 21', value: 6100 },
-      { label: 'Sep 26', value: 6800 },
-      { label: 'Oct 1', value: 7400 },
-    ],
-    '100d': [
-      { label: 'Jun 28', value: 15400 },
-      { label: 'Jul 14', value: 17200 },
-      { label: 'Jul 30', value: 18900 },
-      { label: 'Aug 15', value: 21400 },
-      { label: 'Aug 31', value: 23200 },
-      { label: 'Sep 16', value: 24800 },
-      { label: 'Oct 2', value: 28400 },
-    ],
-    all: [
-      { label: 'Jan 2026', value: 38000 },
-      { label: 'Mar 2026', value: 52000 },
-      { label: 'May 2026', value: 71000 },
-      { label: 'Jul 2026', value: 96000 },
-      { label: 'Sep 2026', value: 128000 },
-    ],
-  },
-  countries: [
-    { countryCode: 'US', country: 'United States', percent: 38 },
-    { countryCode: 'IN', country: 'India', percent: 12 },
-    { countryCode: 'GB', country: 'United Kingdom', percent: 8 },
-    { countryCode: 'DE', country: 'Germany', percent: 6 },
-    { countryCode: 'CA', country: 'Canada', percent: 5 },
-    { countryCode: '', country: 'Others', percent: 31 },
-  ],
-};
+const defaultTrafficAnalytics: TrafficAnalytics = initialTrafficData;
 
 const chartPlot = {
   left: 42,
@@ -450,7 +400,6 @@ const Products: React.FC = () => {
 
   React.useEffect(() => {
     let cancelled = false;
-    let refreshTimer: ReturnType<typeof setInterval>;
 
     const loadTrafficAnalytics = () => {
       fetch('/api/analytics/traffic')
@@ -468,11 +417,9 @@ const Products: React.FC = () => {
     };
 
     loadTrafficAnalytics();
-    refreshTimer = setInterval(loadTrafficAnalytics, 60000);
 
     return () => {
       cancelled = true;
-      clearInterval(refreshTimer);
     };
   }, []);
 
