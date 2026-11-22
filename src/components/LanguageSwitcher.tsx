@@ -52,11 +52,43 @@ export default function LanguageSwitcher({
   }, [search]);
 
   // Build target URL for a given language code
-  const getTargetUrl = (code: string) => {
+  const getTargetUrl = (targetLocale: string) => {
+    // 1. If explicit tool slug is provided
     if (currentToolSlug) {
-      return code === 'en' ? `/tools/${currentToolSlug}` : `/${code}/tools/${currentToolSlug}`;
+      return targetLocale === 'en'
+        ? `/tools/${currentToolSlug}`
+        : `/${targetLocale}/tools/${currentToolSlug}`;
     }
-    return code === 'en' ? '/tools' : `/${code}/tools`;
+
+    // 2. Parse current pathname dynamically
+    if (pathname) {
+      const segments = pathname.split('/').filter(Boolean);
+      const hasLocalePrefix = segments.length > 0 && (
+        segments[0].length === 2 || 
+        segments[0] === 'zh-cn' || 
+        segments[0] === 'zh-tw' || 
+        segments[0] === 'fil'
+      );
+
+      const cleanSegments = hasLocalePrefix ? segments.slice(1) : segments;
+
+      // Inside a specific tool (e.g. /tools/color-picker or /es/tools/color-picker)
+      if (cleanSegments[0] === 'tools' && cleanSegments[1]) {
+        const slug = cleanSegments[1];
+        return targetLocale === 'en'
+          ? `/tools/${slug}`
+          : `/${targetLocale}/tools/${slug}`;
+      }
+
+      // On main tools page
+      if (cleanSegments[0] === 'tools') {
+        return targetLocale === 'en'
+          ? '/tools'
+          : `/${targetLocale}/tools`;
+      }
+    }
+
+    return targetLocale === 'en' ? '/tools' : `/${targetLocale}/tools`;
   };
 
   return (

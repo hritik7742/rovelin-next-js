@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { 
   FileText, 
   Image, 
@@ -283,6 +284,10 @@ export default function RelatedTools({ currentTool, category, maxSuggestions = 6
     ];
   };
 
+  const pathname = usePathname();
+  const localeMatch = pathname?.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
+  const localePrefix = localeMatch ? `/${localeMatch[1]}` : '';
+
   const relatedTools = getRelatedTools();
 
   if (relatedTools.length === 0) return null;
@@ -297,7 +302,7 @@ export default function RelatedTools({ currentTool, category, maxSuggestions = 6
       <div className="related-tools-grid">
         {relatedTools.map((tool) => (
           <Link 
-            href={tool.path} 
+            href={`${localePrefix}${tool.path}`} 
             key={tool.path} 
             className="related-tool-card"
           >
@@ -315,7 +320,7 @@ export default function RelatedTools({ currentTool, category, maxSuggestions = 6
       </div>
       
       <div className="related-tools-footer">
-        <Link href="/tools" className="view-all-tools-btn">
+        <Link href={`${localePrefix}/tools`} className="view-all-tools-btn">
           <Search className="w-4 h-4" />
           View All Tools
         </Link>

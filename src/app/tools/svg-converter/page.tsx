@@ -1,3 +1,5 @@
+"use client";
+
 import ImageConverter from '../image-converter/converter';
 import RelatedTools from '../shared/RelatedTools';
 

@@ -396,6 +396,13 @@ const tools: Tool[] = [
     path: '/tools/text-paragraph-splitter',
     icon: <FileText className="w-6 h-6" aria-hidden="true" />,
     category: 'Text Tools'
+  },
+  {
+    name: 'Blog Generator',
+    description: 'Generate creative blog topics, outlines, and structured content',
+    path: '/tools/blog-generator',
+    icon: <PenSquare className="w-6 h-6" aria-hidden="true" />,
+    category: 'Text Tools'
   }
 ];
 

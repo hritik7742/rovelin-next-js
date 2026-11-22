@@ -1,3 +1,5 @@
+"use client";
+
 import SpecificCompressor from '../image-compressor/SpecificCompressor';
 import RelatedTools from '../shared/RelatedTools';
 

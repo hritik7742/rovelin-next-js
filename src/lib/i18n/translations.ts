@@ -1,5 +1,6 @@
 import { SUPPORTED_LANGUAGES, getLanguage, Language } from './languages';
 import { TOOLS_MAP, ToolDefinition, TOOLS_REGISTRY } from './tools-registry';
+import { getLocalizedToolItem, getToolsPageHeaderAndInfo } from './tools-catalog';
 
 export interface LocalizedBenefit {
   title: string;
@@ -859,13 +860,12 @@ export function getToolName(slug: string, langCode: string): string {
   if (TOOL_LOCAL_TERMS[slug]?.[code]) {
     return TOOL_LOCAL_TERMS[slug][code].name;
   }
+  const catalogEntry = getLocalizedToolItem(slug, code);
+  if (catalogEntry && catalogEntry.name) {
+    return catalogEntry.name;
+  }
   const tool = TOOLS_MAP.get(slug);
-  const englishName = tool?.name || slug;
-  if (code === 'en') return englishName;
-
-  const dict = getDictionary(code);
-  // Auto-compose localized name if not explicitly registered
-  return `${englishName} (${dict.free} & ${dict.online})`;
+  return tool?.name || slug;
 }
 
 export function getToolKeywords(slug: string, langCode: string): string {
@@ -935,14 +935,15 @@ export function getToolsIndexTranslation(langCode: string): LocalizedToolsIndex 
   const dict = getDictionary(langCode);
   const lang = getLanguage(langCode);
   const nativeName = lang?.nativeName || 'All Languages';
+  const pageCopy = getToolsPageHeaderAndInfo(langCode);
 
   return {
-    title: `${dict.free} ${dict.online} ${dict.tools} | Rovelin Studio`,
-    metaDescription: `Browse free online tools for images, PDF, text, developers, and generators. 100% private in your browser in ${nativeName}.`,
+    title: `${pageCopy.h1} | Rovelin Studio`,
+    metaDescription: `Browse 50 free online tools for images, PDF, text, developers, and generators. 100% private in your browser in ${nativeName}.`,
     keywords: `free online tools, developer tools, image tools, pdf tools, rovelin, ${dict.tools.toLowerCase()} ${dict.free.toLowerCase()}`,
-    h1: `${dict.free} ${dict.online} ${dict.tools}`,
-    subtitle: `${dict.browserSafe} ${dict.fastSecure}.`,
-    searchPlaceholder: dict.search,
+    h1: pageCopy.h1,
+    subtitle: pageCopy.subtitle,
+    searchPlaceholder: pageCopy.searchPlaceholder,
     allCategories: dict.allCategories,
     categoryNames: dict.catNames,
     totalToolsBadge: (count: number) => `${count} ${dict.tools}`,

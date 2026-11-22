@@ -1,65 +1,108 @@
 "use client";
 
-import dynamic from 'next/dynamic';
 import React from 'react';
-
-const LoadingFallback = () => (
-  <div className="flex items-center justify-center p-12 min-h-[300px]">
-    <div className="w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>
-  </div>
-);
+import ImageConverter from '@/app/tools/image-converter/page';
+import JpgToPng from '@/app/tools/jpg-to-png/page';
+import PngToJpg from '@/app/tools/png-to-jpg/page';
+import WebpToJpg from '@/app/tools/webp-to-jpg/page';
+import HeicToJpg from '@/app/tools/heic-to-jpg/page';
+import SvgConverter from '@/app/tools/svg-converter/page';
+import ImageToPdf from '@/app/tools/image-to-pdf/page';
+import PdfToJpg from '@/app/tools/pdf-to-jpg/page';
+import PdfToPng from '@/app/tools/pdf-to-png/page';
+import ImageResizer from '@/app/tools/image-resizer/page';
+import ImageCropper from '@/app/tools/image-cropper/page';
+import ImageCompressor from '@/app/tools/image-compressor/page';
+import WebpCompressor from '@/app/tools/webp-compressor/page';
+import PngCompressor from '@/app/tools/png-compressor/page';
+import JpegCompressor from '@/app/tools/jpeg-compressor/page';
+import GifCompressor from '@/app/tools/gif-compressor/page';
+import ColorPicker from '@/app/tools/color-picker/page';
+import Base64Image from '@/app/tools/base64-image/page';
+import VideoCompressor from '@/app/tools/video-compressor/page';
+import EmojiGenerator from '@/app/tools/emoji-generator/page';
+import GradientGenerator from '@/app/tools/gradient-generator/page';
+import VideoToAudio from '@/app/tools/video-to-audio/page';
+import ImageToText from '@/app/tools/image-to-text/page';
+import QrGenerator from '@/app/tools/qr-generator/page';
+import Base64Converter from '@/app/tools/base64-converter/page';
+import CssMinifier from '@/app/tools/css-minifier/page';
+import UrlEncoderDecoder from '@/app/tools/url-encoder-decoder/page';
+import PasswordGenerator from '@/app/tools/password-generator/page';
+import TextDiff from '@/app/tools/text-diff/page';
+import PhoneGenerator from '@/app/tools/phone-generator/page';
+import LoremGenerator from '@/app/tools/lorem-generator/page';
+import CommaSeparator from '@/app/tools/comma-separator/page';
+import RandomNameGenerator from '@/app/tools/random-name-generator/page';
+import MarkdownToHtml from '@/app/tools/markdown-to-html/page';
+import WordCounter from '@/app/tools/word-counter/page';
+import CreditCardGenerator from '@/app/tools/credit-card-generator/page';
+import JsMinifier from '@/app/tools/js-minifier/page';
+import WordToPdf from '@/app/tools/word-to-pdf/page';
+import UnitConverter from '@/app/tools/unit-converter/page';
+import NameWheel from '@/app/tools/name-wheel/page';
+import ArchiveConverter from '@/app/tools/archive-converter/page';
+import PdfToWord from '@/app/tools/pdf-to-word/page';
+import EmailExtractor from '@/app/tools/email-extractor/page';
+import PhoneNumberExtractor from '@/app/tools/phone-number-extractor/page';
+import DigitalSignature from '@/app/tools/digital-signature/page';
+import PdfTools from '@/app/tools/pdf-tools/page';
+import JsonFormatter from '@/app/tools/json-formatter/page';
+import HtmlFormatter from '@/app/tools/html-formatter/page';
+import TextParagraphSplitter from '@/app/tools/text-paragraph-splitter/page';
+import BlogGenerator from '@/app/tools/blog-generator/page';
 
 export const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
-  'archive-converter': dynamic(() => import('@/app/tools/archive-converter/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'base64-converter': dynamic(() => import('@/app/tools/base64-converter/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'base64-image': dynamic(() => import('@/app/tools/base64-image/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'blog-generator': dynamic(() => import('@/app/tools/blog-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'color-picker': dynamic(() => import('@/app/tools/color-picker/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'comma-separator': dynamic(() => import('@/app/tools/comma-separator/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'credit-card-generator': dynamic(() => import('@/app/tools/credit-card-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'css-minifier': dynamic(() => import('@/app/tools/css-minifier/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'digital-signature': dynamic(() => import('@/app/tools/digital-signature/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'email-extractor': dynamic(() => import('@/app/tools/email-extractor/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'emoji-generator': dynamic(() => import('@/app/tools/emoji-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'gif-compressor': dynamic(() => import('@/app/tools/gif-compressor/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'gradient-generator': dynamic(() => import('@/app/tools/gradient-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'heic-to-jpg': dynamic(() => import('@/app/tools/heic-to-jpg/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'html-formatter': dynamic(() => import('@/app/tools/html-formatter/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'image-compressor': dynamic(() => import('@/app/tools/image-compressor/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'image-converter': dynamic(() => import('@/app/tools/image-converter/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'image-cropper': dynamic(() => import('@/app/tools/image-cropper/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'image-resizer': dynamic(() => import('@/app/tools/image-resizer/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'image-to-pdf': dynamic(() => import('@/app/tools/image-to-pdf/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'image-to-text': dynamic(() => import('@/app/tools/image-to-text/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'jpeg-compressor': dynamic(() => import('@/app/tools/jpeg-compressor/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'jpg-to-png': dynamic(() => import('@/app/tools/jpg-to-png/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'js-minifier': dynamic(() => import('@/app/tools/js-minifier/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'json-formatter': dynamic(() => import('@/app/tools/json-formatter/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'lorem-generator': dynamic(() => import('@/app/tools/lorem-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'markdown-to-html': dynamic(() => import('@/app/tools/markdown-to-html/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'name-wheel': dynamic(() => import('@/app/tools/name-wheel/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'password-generator': dynamic(() => import('@/app/tools/password-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'pdf-to-jpg': dynamic(() => import('@/app/tools/pdf-to-jpg/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'pdf-to-png': dynamic(() => import('@/app/tools/pdf-to-png/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'pdf-to-word': dynamic(() => import('@/app/tools/pdf-to-word/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'pdf-tools': dynamic(() => import('@/app/tools/pdf-tools/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'phone-generator': dynamic(() => import('@/app/tools/phone-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'phone-number-extractor': dynamic(() => import('@/app/tools/phone-number-extractor/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'png-compressor': dynamic(() => import('@/app/tools/png-compressor/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'png-to-jpg': dynamic(() => import('@/app/tools/png-to-jpg/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'qr-generator': dynamic(() => import('@/app/tools/qr-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'random-name-generator': dynamic(() => import('@/app/tools/random-name-generator/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'svg-converter': dynamic(() => import('@/app/tools/svg-converter/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'text-diff': dynamic(() => import('@/app/tools/text-diff/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'text-paragraph-splitter': dynamic(() => import('@/app/tools/text-paragraph-splitter/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'unit-converter': dynamic(() => import('@/app/tools/unit-converter/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'url-encoder-decoder': dynamic(() => import('@/app/tools/url-encoder-decoder/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'video-compressor': dynamic(() => import('@/app/tools/video-compressor/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'video-to-audio': dynamic(() => import('@/app/tools/video-to-audio/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'webp-compressor': dynamic(() => import('@/app/tools/webp-compressor/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'webp-to-jpg': dynamic(() => import('@/app/tools/webp-to-jpg/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'word-counter': dynamic(() => import('@/app/tools/word-counter/page'), { loading: () => <LoadingFallback />, ssr: false }),
-  'word-to-pdf': dynamic(() => import('@/app/tools/word-to-pdf/page'), { loading: () => <LoadingFallback />, ssr: false }),
+  'image-converter': ImageConverter,
+  'jpg-to-png': JpgToPng,
+  'png-to-jpg': PngToJpg,
+  'webp-to-jpg': WebpToJpg,
+  'heic-to-jpg': HeicToJpg,
+  'svg-converter': SvgConverter,
+  'image-to-pdf': ImageToPdf,
+  'pdf-to-jpg': PdfToJpg,
+  'pdf-to-png': PdfToPng,
+  'image-resizer': ImageResizer,
+  'image-cropper': ImageCropper,
+  'image-compressor': ImageCompressor,
+  'webp-compressor': WebpCompressor,
+  'png-compressor': PngCompressor,
+  'jpeg-compressor': JpegCompressor,
+  'gif-compressor': GifCompressor,
+  'color-picker': ColorPicker,
+  'base64-image': Base64Image,
+  'video-compressor': VideoCompressor,
+  'emoji-generator': EmojiGenerator,
+  'gradient-generator': GradientGenerator,
+  'video-to-audio': VideoToAudio,
+  'image-to-text': ImageToText,
+  'qr-generator': QrGenerator,
+  'base64-converter': Base64Converter,
+  'css-minifier': CssMinifier,
+  'url-encoder-decoder': UrlEncoderDecoder,
+  'password-generator': PasswordGenerator,
+  'text-diff': TextDiff,
+  'phone-generator': PhoneGenerator,
+  'lorem-generator': LoremGenerator,
+  'comma-separator': CommaSeparator,
+  'random-name-generator': RandomNameGenerator,
+  'markdown-to-html': MarkdownToHtml,
+  'word-counter': WordCounter,
+  'credit-card-generator': CreditCardGenerator,
+  'js-minifier': JsMinifier,
+  'word-to-pdf': WordToPdf,
+  'unit-converter': UnitConverter,
+  'name-wheel': NameWheel,
+  'archive-converter': ArchiveConverter,
+  'pdf-to-word': PdfToWord,
+  'email-extractor': EmailExtractor,
+  'phone-number-extractor': PhoneNumberExtractor,
+  'digital-signature': DigitalSignature,
+  'pdf-tools': PdfTools,
+  'json-formatter': JsonFormatter,
+  'html-formatter': HtmlFormatter,
+  'text-paragraph-splitter': TextParagraphSplitter,
+  'blog-generator': BlogGenerator
 };
 
 export function getToolComponent(slug: string): React.ComponentType<any> | undefined {
