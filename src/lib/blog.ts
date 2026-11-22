@@ -15,7 +15,7 @@ let cachedPosts: BlogPost[] | null = null;
 const postCache = new Map<string, BlogPost | null>();
 
 export function getAllPosts(): BlogPost[] {
-  if (cachedPosts) {
+  if (process.env.NODE_ENV === 'production' && cachedPosts) {
     return cachedPosts;
   }
 
